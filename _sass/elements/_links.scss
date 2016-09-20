@@ -2,10 +2,20 @@ a {
   transition: all .1s;
   color:$black80;
   text-decoration:none;
-  font-weight:600;
-  //border-bottom-style: solid;
+  //font-weight:600;
+  //text-shadow:.05em 0 $white, 0 .05em $white;
+  //border-bottom: 1px solid;
+  //background-color:$black;
+  //background-size:1px 100%;
+  //background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient(#FF3530,#FF3530);
+  //background-size: .05em 1px, .05em 1px, 1px 1px;
+  //background-repeat: no-repeat, no-repeat,repeat-x;
+  //background-position: 0 95%,100% 95%,0 95%;
+  //&:after{
+    //width:100%;
+  //}
   //border-bottom-width: $border-width;
-//  box-shadow:0 1px 0 0 $black40;
+  //box-shadow:0 2px 0 0 $black60;
 }
 a:link,
 a:visited{
@@ -14,6 +24,7 @@ a:visited{
 .link { text-decoration: none; }
 a:hover {
   color:$black;
+  //box-shadow:0 0 0 0 $black40;
   //padding-bottom:.25rem;
   //box-shadow:0 2px 0 0;
   //border-bottom-width: $border-width-hover;

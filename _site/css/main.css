@@ -1556,8 +1556,7 @@ a.btn-big {
 a {
   transition: all .1s;
   color: rgba(0, 0, 0, 0.8);
-  text-decoration: none;
-  font-weight: 600; }
+  text-decoration: none; }
 
 .link {
   text-decoration: none; }
