@@ -80,8 +80,8 @@
     </nav>
     <nav class="float-right absolute right-0 mar-l">
         <ul class="list-reset cf">
-          <li class="col col-12 s-col-6"> <a href="about" class="inline-block pad-r-m">About</a></li>
-          <li class="col col-12 s-col-6"> <a href="thoughts" class="inline-block pad-r-m">Thoughts</a></li>
+          <li class="col col-12 s-col-6"> <a href="/about/" class="inline-block pad-r-m">About</a></li>
+          <li class="col col-12 s-col-6"> <a href="/workbench/" class="inline-block pad-r-m">Workbench</a></li>
           <!-- <li class="col col-12 s-col-4"> <a href="mailto:hello@alexbloom.co" class="inline-block pad-r-m"> Contact </a></li> -->
         </ul>
     </nav>
@@ -89,7 +89,8 @@
 </header>
 
 
-    <div class="main wrap">
+    <main class="main">
+      <div class="ajaxWrap">
         <div id="userLocation" class="pad-t-xl pad-x-l relative z2">
   <p class="h4 mar-t-s">  Designer + Developer </p>
 </div>
@@ -242,7 +243,8 @@
 
 </section>
 
-    </div>
+      </div>
+    </main>
 
     
 <footer class=" cf z3 relative pad-t-m pad-t-l pad-x-l pad-b-m border-bottom">
@@ -326,6 +328,82 @@
     </p>
   </div>
 </footer>
+
+<script>
+/*
+https://www.smashingmagazine.com/2016/07/improving-user-flow-through-page-transitions/
+
+You can copy paste this code in your console on smashingmagazine.com
+in order to have cross-fade transition when change page.
+*/
+
+var cache = {};
+function loadPage(url) {
+if (cache[url]) {
+  return new Promise(function(resolve) {
+    resolve(cache[url]);
+  });
+}
+
+return fetch(url, {
+  method: 'GET'
+}).then(function(response) {
+  cache[url] = response.text();
+  return cache[url];
+});
+}
+
+var main = document.querySelector('main');
+
+function changePage() {
+var url = window.location.href;
+
+loadPage(url).then(function(responseText) {
+  var wrapper = document.createElement('div');
+      wrapper.innerHTML = responseText;
+
+  var oldContent = document.querySelector('.ajaxWrap');
+  var newContent = wrapper.querySelector('.ajaxWrap');
+
+  main.appendChild(newContent);
+  animate(oldContent, newContent);
+});
+}
+
+function animate(oldContent, newContent) {
+oldContent.style.position = 'absolute';
+
+var fadeOut = oldContent.animate({
+  opacity: [1, 0]
+}, 1000);
+
+var fadeIn = newContent.animate({
+  opacity: [0, 1]
+}, 1000);
+
+fadeIn.onfinish = function() {
+  oldContent.parentNode.removeChild(oldContent);
+};
+}
+
+window.addEventListener('popstate', changePage);
+
+document.addEventListener('click', function(e) {
+var el = e.target;
+
+while (el && !el.href) {
+  el = el.parentNode;
+}
+
+if (el) {
+  e.preventDefault();
+  history.pushState(null, null, el.href);
+  changePage();
+
+  return;
+}
+});
+</script>
 
 
   </body>
