@@ -43,6 +43,8 @@
 .inline-block { display: inline-block }
 .table        { display: table }
 .table-cell   { display: table-cell }
+.table-row    { display: table-row }
+
 
 // Flex Box
 .flex         { display: flex; display:-webkit-flex;}
@@ -97,7 +99,7 @@
   min-height: 0; /* 1 */
 }
 .flex-none { flex: none }
-
+.flex-1 { flex: 1 }
 .order-0 { order: 0 }
 .order-1 { order: 1 }
 .order-2 { order: 2 }

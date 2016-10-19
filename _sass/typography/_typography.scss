@@ -10,6 +10,17 @@ $heading-font-family: 'aktiv-grotesk', -apple-system, BlinkMacSystemFont,
   "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
   "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
+$monospace-font-family: SFMono, menlo, /* mac */
+                      inconsolata, consolas, /* windows */
+                      'fira mono', /* firefox os */
+                      'noto mono', 'droid sans mono', /* android */
+                      'dejavu sans mono', 'liberation mono', 'ubuntu mono', /* linux */
+                      monaco, 'courier new', /* older systems */
+                      monospace; /* fallback */
+.monospace {
+  font-family:  $monospace-font-family;
+}
+
 $condensed-font-family:'alternate-gothic-no-1-d', "Roboto Condensed", "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
 .condensed{
   font-family:$condensed-font-family;
@@ -37,7 +48,7 @@ $leading-headline: 1.25;
 $leading-text: 1.5;
 
 // Addtl Style & Weight Variables
-$caps-letter-spacing: .2em;
+$caps-letter-spacing: .1em;
 $bold-font-weight: 600;
 
 h1, .h1 { font-size: $h1 }
@@ -69,7 +80,7 @@ strong { font-weight: $bold-font-weight}
 .regular { font-weight: normal }
 .italic  { font-style: italic }
 .caps    { text-transform: uppercase; letter-spacing: $caps-letter-spacing; }
-.bold {font-weight:bold;}
+.bold {font-weight:$bold-font-weight;}
 .text-left   { text-align: left }
 .text-center       { text-align: center }
 .text-right  { text-align: right }

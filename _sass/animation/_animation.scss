@@ -1,3 +1,13 @@
+.ajaxWrap{
+  transition:all 300ms;
+}
+.pageTransOut{
+  opacity:0;
+}
+.pageTransIn{
+  opacity:1;
+}
+
 .rotate-45{
   transform:rotate(45deg);
 }

@@ -1,25 +1,10 @@
 button{
-  background-color:none;
+  background-color:$white;
   border:none;
   font-weight:600;
   font-size:$h5;
 }
-a.btn{
-  text-decoration:none;
-  padding:$space-s $space-m;
-  //box-shadow: 0 4px 8px 2px $black10;
-  padding:$space-s $space-m;
-  &:hover{
-    
-    //box-shadow: 0 6px 10px 2px $black10;
-  }
-  &:active{
-    //box-shadow: 0 2px 4px 2px $black20;
-  }
-}
-a.btn-big{
-    padding:$space-m $space-l;
-}
+
 .btn-circle{
   display:block;
   margin:auto;

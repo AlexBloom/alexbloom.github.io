@@ -1,35 +1,16 @@
 ---
 layout: default
-title: Alex Bloom
+title: Designer + Developer
 ---
-<div id="userLocation" class="pad-t-xl pad-x-l relative z2">
-  <p class="h4 mar-t-s">  Designer + Developer </p>
-</div>
+
 
 <section id="gradientDiv" class="fixed top-0 left-0 right-0 bottom-0 z-0">
 
 </section>
-<script>
-  	// Random Background Color for Home Page
-  	var hue = 'rgb(' +
-  		(Math.floor(Math.random() *(360-120+1)+100)) + ',' +
-  		(Math.floor(Math.random() *(360-120+1)+100)) + ',' +
-  	    (Math.floor(Math.random() *(360-120+1)+100)) + ')';
 
-  	var huetwo = 'rgb(' +
-  		(Math.floor(Math.random() *(360-110+1)+100)) + ',' +
-  		(Math.floor(Math.random() *(360-110+1)+100)) + ',' +
-  	    (Math.floor(Math.random() *(360-110+1)+100)) + ')';
-
-    document.getElementById('gradientDiv').style.backgroundImage= "linear-gradient( 45deg, " + hue + " , " + huetwo + ")";
-    document.getElementById('gradientDiv').style.backgroundColor = hue;
-
-
-</script>
 
 <section id="" class="cf relative z2">
   <div class="col col-12 pad-y-xl pad-x-l ">
-
     <div class="col col-12 m-col-4 l-col-3">
       <div class="logo-wrap pad-l cf">
     	  <div id="logo" class="cf mar-b-l"  title="The Traveling Office of Alex Bloom">
@@ -46,28 +27,28 @@ title: Alex Bloom
     	  </div>
     	</div>
     </div>
-    <div class="col col-12 m-col-6 ">
+    <div class="col col-12 m-col-8 ">
       <div class="pad-b-xl">
-        <p class="h1 bold type-grow black-8"> Creative direction, design, code and consulting for non-profits, for-profits, and people with purpose. </p>
+
+        <p class="h1 type-grow black-8"> As much good, for as many people, for as much profit, with as much freedom &amp; fun as possible before death. <br> <span class="bold black-8">#goals</span></p>
+
+        <!-- <p class="h1 bold type-grow black-8"> Creative direction, design, code and consulting for non-profits, for-profits, and people with purpose. </p> -->
         <!-- <p class="h1 bold type-grow black-8"> Throwing 24 hour accessibility parties, and everyone's invited. </p> -->
         <!-- <p class="h1 bold type-grow"> Making artistic choices for function&apos;s sake. </p> -->
         <!-- <p class="h1 bold type-grow"> Creative partnership and responsive service for clients of all sizes. </p> -->
         <!-- <p class="h1 bold type-grow black-8"> Asking who, what, and why, without overlooking how it's all gonna work. </p> -->
         <ul class="pad-0 mar-y-xl ">
-          <li class="inline-block float-left pad-r-l"> <a href="http://designinc.com/alexbloom" target="_blank" class="btn border"> Hire Me on Design Inc. </a>  </li>
-          <li class="inline-block float-left pad-r-l"> <a href="mailto:hello@alexbloom.co" target="_blank" class=""> Contact Me </a>  </li>
+          <li class="inline-block float-left pad-r-l"> <a href="{{site.baseurl}}/contact" class="btn">Contact&nbsp;</a>  </li>
+          <li class="inline-block float-left pad-r-l"> <a href="{{site.baseurl}}/about" class=""> About Me </a>  </li>
         </ul>
       </div>
     </div>
   </div>
-
-
 </section>
 
 
 <section class="relative z2 bg-white ">
-
-  <section id="Currently" class="cf pad-y-xl pad-x-l">
+  <!-- <section id="Currently" class="cf pad-y-xl pad-x-l">
     <div class="col col-12 m-col-3">
       <h2 class="h4">Currently</h2>
     </div>
@@ -84,52 +65,100 @@ title: Alex Bloom
         </li>
       </ul>
     </div>
-  </section>
-
-
+  </section> -->
   <section id="Work" class="cf pad-y-xl pad-x-l">
     <div class="col col-12 m-col-3">
-      <h2 class="h4">Recently</h2>
+      <h2 class="h4">Projects</h2>
       <!-- <hr> -->
     </div>
     <div class="col col-12 m-col-9">
+
       <ul class="list-reset">
-        <li class="col col-12 m-col-6 pad-b-l pad-r-l">
-          <a href="https://bikeandbuild.org/2015annualreport/" target="_blank">
-            <h3 class="h4">Bike & Build 2015 Annual Report</h3>
-            <p>Responsive website design, prototyping &amp; data visualization.</p>
+
+        <li class="mar-b-l cf black-1 border-thin m-col-12 l-col-10">
+          <a href="https://bikeandbuild.org/2015annualreport/" target="_blank" class="cf">
+            <div class="pad-m col-12 m-col-6 col">
+              <img src="img/work/babar.jpg" alt="">
+            </div>
+            <div class="pad-m col col-12 m-col-6">
+                <div class="">
+                  <h3 class="h1">Bike &amp; Build</h3>
+                  <p>Interactive annual reports, jerseys, and printed material for the best way to ride a bike across the USA.</p>
+                </div>
+            </div>
           </a>
+          <div class="cf pad-t-s pad-b-m mar-x-m border-top-thin">
+            <span class="h6 caps black-6 ">Responsive web design, prototyping, data visualization, apparel</span>
+          </div>
         </li>
-        <li class="col col-12 m-col-6 pad-b-l pad-r-l">
-          <a href="http://cinereach.org" target="_blank">
-            <h3 class="h4"> Cinereach </h3>
-            <p>User experience consulting, prototyping, and development.</p>
+
+        <li class=" mar-b-l cf black-1 border-thin m-col-6">
+          <a href="/suffoca/" target="_blank">
+            <div class="">
+              <img src="" alt="">
+            </div>
+            <div class="pad-m">
+              <h3 class="h1"> Suffoca </h3>
+              <p>A web experience for a brand built on culture and whimsy. </p>
+            </div>
           </a>
+          <div class="cf pad-t-s pad-b-m mar-x-m border-top-thin">
+            <span class="h6 caps black-6 ">UX Design, UI Design, Development</span>
+          </div>
         </li>
-        <li class="col col-12 m-col-6 pad-b-l pad-r-l">
+
+        <li class=" mar-b-l cf black-1 border-thin m-col-6">
           <a href="/the-woolley-market/" target="_blank">
-            <h3 class="h4"> The Woolley Market </h3>
-            <p>Creative direction, brand strategy, environmental graphic design.</p>
+            <div class="">
+              <img src="img/work/woolley.jpg" alt="">
+            </div>
+            <div class="pad-m">
+              <h3 class="h1"> The Woolley Market </h3>
+              <p>Revitalizing a town with history as rich as it's soil. </p>
+            </div>
+          </a>
+          <div class="cf pad-t-s pad-b-m mar-x-m border-top-thin">
+            <span class="h6 caps black-6">Creative direction, branding, environmental design.</span>
+          </div>
+        </li>
+
+        <li class=" mar-b-l cf black-1 border-thin m-col-6">
+          <a href="/gnarrboro/" target="_blank">
+            <div class="">
+              <img src="" alt="">
+            </div>
+            <div class="pad-m">
+              <h3 class="h1">Gnarrboro</h3>
+              <p>Building a community on a platform of trash and bicycles.</p>
+            </div>
+          </a>
+          <div class="cf pad-t-s pad-b-m mar-x-m border-top-thin">
+              <span class="h6 caps black-6">Experience Design, Spatial Engineering, Event Marketing, Installation.</span>
+          </div>
+        </li>
+
+        <li class="mar-b-l cf black-1 border-thin m-col-6">
+          <a href="http://cinereach.org" target="_blank">
+            <div class="">
+              <img src="img/work/cinereach.jpg" alt="">
+            </div>
+            <div class="pad-m">
+              <h3 class="h1"> Cinereach </h3>
+              <p>Architecting and building film archives and marketing tools.</p>
+            </div>
+            <div class="cf pad-t-s pad-b-m mar-x-m border-top-thin">
+              <span class="h6 caps black-6">User experience consulting, prototyping, and development. </span>
+            </div>
           </a>
         </li>
-        <li class="col col-12 m-col-6 pad-b-l pad-r-l">
-          <a href="http://bagelbarbagels.com" target="_blank">
-            <h3 class="h4"> The Bagel Bar </h3>
-            <p>Branding, visual design.</p>
-          </a>
-        </li>
-        <li class="col col-12 m-col-6 pad-b-l pad-r-l">
-          <a href="/tfi-sandbox/" target="_blank">
-            <h3 class="h4">TFI Sandbox</h3>
-            <p>User experience design, visual design, development.</p>
-          </a>
-        </li>
+
       </ul>
-      <div class="more col col-12">
+      <div class="more col col-12 pad-y-m border-top-thin">
         <p>More samples on <a href="http://dribbble.com/alexbloom">Dribbble</a> and <a href="http://be.net/alexbloom">Behance</a></p>
       </div>
     </div>
   </section>
+
   <section id="Archive" class="cf pad-y-xl pad-x-l">
     <div class="col col-12 m-col-3">
       <h2 class="h4"> Previously </h2>
@@ -151,5 +180,4 @@ title: Alex Bloom
       </ul>
     </div>
   </section>
-
 </section>
