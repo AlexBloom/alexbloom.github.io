@@ -10,7 +10,7 @@ permalink: /contact/
 ## Full Time
 
 As of {{site.time | date: "%b %-d, %Y"}} I'm not looking for full-time work.
-As of 12.01.2016 I will be looking for full-time remote contracts.
+As of 12.01.2016 I will be looking for full-time remote contracts of 1-3 Month Duration.
 
 ## Part Time
 I'm currently available for part-time contracts.
@@ -25,8 +25,8 @@ I'm currently available for part-time contracts.
 
 - Logo Design 2-3 weeks $3,000
 - Full Branding Exercise 5-6 weeks $12,000
-- Website - 1 page custom design, no content management system
-- Website - multi-page design, with content management system
+- Website - 1 page custom design, no content management system - 1 Week, $1500
+- Website - multi-page design, with content management system - [Calculate Here.] http://howmuchdoesawebsiteco.st/
 - Web Application, App Design - 3, 1-Week Sprints $3,500
 
 
