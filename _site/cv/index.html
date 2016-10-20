@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> Alex Bloom </title>
+    <title> CVAlex Bloom </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <link rel="shortcut icon" id="favicon" href="/favicon.ico" type="image/x-icon">
@@ -73,29 +73,30 @@
 </svg>
 
     
-<div id="site-notification" class=" relative bg-black white pad-m text-center z3">
-  👋 &nbsp; Welcome! I'm currently seeking full-time &amp; contract work. <!-- <a href="contact" class="btn mar-x-m"> Hire/Inquire.</a> <button class="caps bold h6 mar-x-m"> Dismiss ❌</button> -->
-</div>
+<!-- <div id="site-notification" class=" relative bg-black white pad-m text-center z3">
+  👋 &nbsp; Welcome! I'm currently seeking full-time &amp; contract work. <a href="contact" class="btn mar-x-m"> Hire/Inquire.</a> <button class="caps bold h6 mar-x-m"> Dismiss ❌</button>
+</div> -->
 <header id="site-header" class="site-header relative left-0 right-0 border-top z3">
   <div class="wrapper cf ">
     <nav class="float-left  mar-x-l mar-t-l">
-      <a href="/" class="h4 link bold mar-0"> Alex Bloom </a>
+      <a href="/" class="h5 link bold mar-0"> Alex Bloom </a>
     </nav>
     <nav class="float-right right-0 mar-x-l mar-t-l">
         <ul class="list-reset cf">
-          <li class="inline-block"> <a href="/about/" class="link bold mar-r-m">About</a></li>
+          <li class="inline-block"> <a href="/info/" class="h5 link bold mar-r-m color-inherit">Info</a></li>
+          <li class="inline-block"> <a href="/projects/" class="h5 link bold mar-r-m color-inherit">Projects</a></li>
           <!-- <li class="inline-block"> <a href="/workbench/" class="link bold mar-r-m">Workbench</a></li> -->
-          <li class="inline-block"> <a href="/contact/" class="link bold mar-r-m">Contact</a></li>
+          <li class="inline-block"> <a href="/contact/" class="h5 link bold mar-r-m color-inherit">Contact</a></li>
         </ul>
     </nav>
   </div>
 </header>
 
 
-    <main class="main relative">
+    <main class="main relative cf">
       <div class="ajaxWrap">
         <div id="userLocation" class="pad-x-l absolute top-0 z2">
-          <p class="h4"> CV </p>
+          <p class="h5"> CV </p>
         </div>
         <div class="page pad-y-xxl pad-x-l">
 
@@ -203,56 +204,6 @@ May 2010</p>
          </a>
         </li>
 
-        
-        <li class="col pad-r-m">
-         <a href="http://instagram.com/alexbloom">
-           <span class="icon-instagram"> </span>
-           Instagram
-           <!-- <span class="username"> alexbloom </span> -->
-         </a>
-        </li>
-        
-
-        
-        <li class="col pad-r-m">
-         <a href="http://medium.com/alexbloom">
-           <span class="icon-medium">	</span>
-           Medium
-           <!-- <span class="username"> alexbloom </span> -->
-         </a>
-        </li>
-        
-
-        
-           <li class="col pad-r-m">
-             <a href="https://github.com/alexbloom">
-               <span class="icon-github"> </span>
-               Github
-               <!-- <span class="username">alexbloom</span> -->
-             </a>
-           </li>
-        
-
-        
-           <li class="col pad-r-m">
-             <a href="https://dribbble.com/alexbloom">
-               <span class="icon-github"> </span>
-               Dribbble
-               <!-- <span class="username">alexbloom</span> -->
-             </a>
-           </li>
-        
-
-        
-           <li class="col pad-r-m">
-             <a href="https://twitter.com/alexbloom">
-               <span class=" icon-twitter">  </span>
-               Twitter
-               <!-- <span class="username">alexbloom</span> -->
-             </a>
-           </li>
-        
-
        </ul>
 
 
@@ -294,84 +245,6 @@ function homeBackgroundColor(){
 homeBackgroundColor();
 
 
-
-/*
-https://www.smashingmagazine.com/2016/07/improving-user-flow-through-page-transitions/
-
-You can copy paste this code in your console on smashingmagazine.com
-in order to have cross-fade transition when change page.
-*/
-
-var cache = {};
-function loadPage(url) {
-if (cache[url]) {
-  return new Promise(function(resolve) {
-    resolve(cache[url]);
-  });
-}
-return fetch(url, {
-  method: 'GET'
-}).then(function(response) {
-  cache[url] = response.text();
-  return cache[url];
-});
-}
-
-var main = document.querySelector('main');
-
-function changePage() {
-var url = window.location.href;
-
-loadPage(url).then(function(responseText) {
-  var wrapper = document.createElement('div');
-      wrapper.innerHTML = responseText;
-
-  var oldContent = document.querySelector('.ajaxWrap');
-  var newContent = wrapper.querySelector('.ajaxWrap');
-
-  main.appendChild(newContent);
-  animate(oldContent, newContent);
-});
-}
-
-function animate(oldContent, newContent) {
-//oldContent.style.position = 'absolute';
-
-//var transOut = oldContent.classList.add('pageTransOut');
-var fadeOut = oldContent.animate({
-  opacity: [1, 0]
-}, 300);
-
-
-//var transIn = newContent.classlist.add('pageTransIn');
-var fadeIn = newContent.animate({
-  opacity: [0, 1]
-}, 300);
-
-fadeIn.onfinish = function() {
-  document.body.scrollTop = 0;
-  oldContent.parentNode.removeChild(oldContent);
-  homeBackgroundColor();
-};
-}
-
-window.addEventListener('popstate', changePage);
-
-document.addEventListener('click', function(e) {
-var el = e.target;
-
-while (el && !el.href) {
-  el = el.parentNode;
-}
-
-if (el) {
-  e.preventDefault();
-  history.pushState(null, null, el.href);
-  changePage();
-
-  return;
-}
-});
 </script>
 
 

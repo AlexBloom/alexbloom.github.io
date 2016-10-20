@@ -1,0 +1,164 @@
+---
+layout: default
+title: Info
+permalink: /info/
+---
+
+<div class="pad-y-xl cf">
+
+
+  <div class="col col-12 m-col-4 fixed z0">
+    <div class="float-center col-9 s-col-6 m-col-12 overflow-hidden pad-l ">
+      <img class="circle" src="{{site.baseurl}}/img/alex.jpg" alt="A portrait of Alex Bloom">
+    </div>
+  </div>
+  <div class="col col-12 m-col-3"> <br> </div>
+
+  <div class="col col-12 m-col-9 pad-y-xl relative z3">
+    <div class="pad-l max-width-l">
+      <h2 class="h6 caps bold">BIO</h2>
+      <p class="h2 l-h1"> I'm Alex Bloom, a multi-disciplinary designer, director, &amp; developer: proudly working in <a href="" title="Carrboro? Yup. It's Chapel Hill's progressive sister. Go visit sometime.">Carrboro, North Carolina</a>. I've designed &amp; built brand identities, websites, experiences, and physical environments. I've worked with institutions across the globe, from global enterprises to grassroots organizations, but they all share a common thread &mdash;<br> purpose = profit.</p>
+    </div>
+
+    <div class="pad-x-l pad-y-xl">
+      <h2 class="h6 caps bold">Professional Philosophy</h2>
+      <p class="h3 l-h2 max-width-m"> Remember the point, fear not to dream big, and don't overlook how it's all gonna work. </p>
+      <ul class="list-reset cf max-width-m">
+        <li class="col col-6 m-col-4 mar-b-l pad-r-m"> <span class="h1 black mar-r-s"> 🙋 </span> <br> Question early, often, and always.</li>
+        <li class="col col-6 m-col-4 mar-b-l pad-r-m"> <span class="h1 black mar-r-s"> 🌎 </span> <br> The entire world is your audience.</li>
+        <li class="col col-6 m-col-4 mar-b-l pad-r-m"> <span class="h1 black mar-r-s"> ⌛ </span> <br> Everyone's time is precious.</li>
+        <li class="col col-6 m-col-4 mar-b-l pad-r-m"> <span class="h1 black mar-r-s"> 🛠 </span> <br> Use, find, or build the right tools for the job.</li>
+        <li class="col col-6 m-col-4 mar-b-l pad-r-m"> <span class="h1 black mar-r-s"> 😊 </span> <br> Love your process.</li>
+      </ul>
+
+    </div>
+
+    <div class="pad-l">
+      <div class="cf pad-b-l">
+        <div class="col col-12 s-col-3 m-col-2">
+          <h2 class="h6 caps bold "> Currently </h2>
+        </div>
+        <div class="col col-12 s-col-9 m-col-10">
+          <ul class="list-reset">
+            <li>Partner &amp; Director at <a href="http://morf.studio" target=_blank> Morf Studio </a>.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cf pad-b-l">
+        <div class="col col-12 s-col-3 m-col-2">
+            <h2 class="h6 caps bold "> Previously </h2>
+        </div>
+        <div class="col col-12 s-col-9 m-col-10">
+          <ul class="list-reset">
+            <li> Independent Designer &amp; Developer </li>
+            <li> Tyler School of Art - Adjunct Professor</li>
+            <li> Bluecadet - Designer &amp; Rookie Developer</li>
+            <li> Fort Franklin > Acquired > Connelly Partners - Art Director / Ad Man </li>
+            <li> The Heads of State - Freelance Designer </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cf pad-b-l">
+        <div class="col col-12 s-col-3 m-col-2">
+            <h2 class="h6 caps bold "> Location </h2>
+        </div>
+        <div class="col col-12 s-col-9 m-col-10">
+            <p><a href="https://www.google.com/maps/@35.9394124,-79.0780189,15z">35.9394124, -79.0780189</a> 🇺🇸 </p>
+            <p>Remote OK ✈ Travel OK</p>
+        </div>
+      </div>
+      <div class="cf pad-b-l">
+        <div class="col col-12 s-col-3 m-col-2">
+            <h2 class="h6 caps bold"> Social </h2>
+        </div>
+        <div class="col col-12 s-col-9 m-col-10">
+          <ul class="list-reset">
+            {% if site.instagram_username %}
+            <li class="col pad-r-m">
+             <a href="http://instagram.com/{{ site.instagram_username }}">
+               <span class="icon-instagram"> </span>
+               Instagram
+               <!-- <span class="username"> {{site.instagram_username}} </span> -->
+             </a>
+            </li>
+            {% endif %}
+
+            {% if site.medium_username %}
+            <li class="col pad-r-m">
+             <a href="http://medium.com/{{ site.medium_username }}">
+               <span class="icon-medium">	</span>
+               Medium
+               <!-- <span class="username"> {{site.medium_username}} </span> -->
+             </a>
+            </li>
+            {% endif %}
+
+            {% if site.github_username %}
+               <li class="col pad-r-m">
+                 <a href="https://github.com/{{ site.github_username }}">
+                   <span class="icon-github"> </span>
+                   Github
+                   <!-- <span class="username">{{ site.github_username }}</span> -->
+                 </a>
+               </li>
+            {% endif %}
+
+            {% if site.dribbble_username %}
+               <li class="col pad-r-m">
+                 <a href="https://dribbble.com/{{ site.dribbble_username }}">
+                   <span class="icon-github"> </span>
+                   Dribbble
+                   <!-- <span class="username">{{ site.dribbble_username }}</span> -->
+                 </a>
+               </li>
+            {% endif %}
+
+            {% if site.twitter_username %}
+               <li class="col pad-r-m">
+                 <a href="https://twitter.com/{{ site.twitter_username }}">
+                   <span class=" icon-twitter">  </span>
+                   Twitter
+                   <!-- <span class="username">{{ site.twitter_username }}</span> -->
+                 </a>
+               </li>
+            {% endif %}
+
+          </ul>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <!--
+
+      <h2 class="h6 caps bold"> Bucket List</h2>
+      <ul class="list-reset">
+        <li> Design and build a tiny office</li>
+        <li> Improve the design of Scientific Posters and Science Data</li>
+        <li> Make a humorous &amp; educational video series on Design advocacy</li>
+        <li> Design + Build a Fun Charity Donation App</li>
+        <li> Build a better proposal system</li>
+        <li> Publish an semi-opinionated boilerplate for web projects</li>
+        <li> Design + Build a Torque Conversion App</li>
+        <li> Design a news website or app</li>
+        <li> Make a line of lightweight, portable furniture</li>
+      </ul> -->
+
+    </div>
+
+  </div>
+
+  <!-- <h2>Quotes</h2>
+  <p> Words that have influenced my life in some way.</p>
+  <q>Be useful.</q>
+  <q>This is it, f^*k it, it is what it is.</q>
+  <q>No one puts baby in the corner.</q>
+  <q>There's nothing new under the sun.</q>
+  <q>For the people, by the people.</q>
+  <q>Buy low. Sell high.</q>
+  <q>Stealth &amp; deception.</q> -->
+</div>

@@ -1332,18 +1332,18 @@ dl, dd, ol, ul, figure {
   -moz-column-count: 3; }
 
 /* fallback */
+.sans {
+  font-family: "aktiv-grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
+
+.serif {
+  font-family: "freight-text-pro", Palatino, Garamond, Georgia, Cambria, "Times New Roman", Times, serif; }
+
 .monospace {
-  font-family: SFMono, menlo, inconsolata, consolas, "fira mono", "noto mono", "droid sans mono", "dejavu sans mono", "liberation mono", "ubuntu mono", monaco, "courier new", monospace; }
+  font-family: Roboto Mono, Source Code Pro, SFMono, menlo, inconsolata, consolas, "fira mono", "noto mono", "droid sans mono", "dejavu sans mono", "liberation mono", "ubuntu mono", monaco, "courier new", monospace; }
 
 .condensed {
   font-family: "alternate-gothic-no-1-d", "Roboto Condensed", "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   font-weight: normal; }
-
-.tall {
-  font-size: 2em; }
-
-.uppercase {
-  text-transform: uppercase; }
 
 /* Basscss Type Scale */
 h1, .h1 {
@@ -1359,10 +1359,36 @@ h4, .h4 {
   font-size: 1rem; }
 
 h5, .h5 {
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  line-height: 1.5rem; }
 
 h6, .h6 {
-  font-size: 0.75rem; }
+  font-size: 0.75rem;
+  line-height: 1.5rem; }
+
+@media screen and (min-width: 48em) {
+  .m-h1 {
+    font-size: 2rem; } }
+
+@media screen and (min-width: 48em) {
+  .m-h2 {
+    font-size: 1.5rem; } }
+
+@media screen and (min-width: 48em) {
+  .m-h3 {
+    font-size: 1.25rem; } }
+
+@media screen and (min-width: 64em) {
+  .l-h1 {
+    font-size: 2rem; } }
+
+@media screen and (min-width: 64em) {
+  .l-h2 {
+    font-size: 1.5rem; } }
+
+@media screen and (min-width: 64em) {
+  .l-h3 {
+    font-size: 1.25rem; } }
 
 .measure {
   max-width: 40em; }
@@ -1401,6 +1427,9 @@ strong {
 .caps {
   text-transform: uppercase;
   letter-spacing: 0.1em; }
+
+.uppercase {
+  text-transform: uppercase; }
 
 .bold {
   font-weight: 600; }
@@ -1444,7 +1473,7 @@ strong {
  */
 body {
   font-family: "aktiv-grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   font-weight: normal;
   -webkit-text-size-adjust: 100%;
@@ -1561,17 +1590,18 @@ a {
   transition: all .2s;
   color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
-  border-bottom: 2px solid;
-  border-color: #000; }
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 50%, transparent 50%);
+  background-repeat: repeat-x;
+  background-size: 2px .1em;
+  background-position: 0 1.08em; }
 
 a:link,
 a:visited {
-  color: rgba(0, 0, 0, 0.8);
-  border-color: #000; }
+  color: rgba(0, 0, 0, 0.8); }
 
 a:hover {
-  color: #000;
-  border-color: rgba(255, 255, 255, 0); }
+  transition: background-color .2s;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 50%, transparent 50%); }
 
 a:active {
   transition: all .3s;
@@ -1579,7 +1609,13 @@ a:active {
 
 .link {
   text-decoration: none;
-  border: none; }
+  background-image: none; }
+  .link:hover {
+    background-image: none; }
+
+.link-underline {
+  text-decoration: underline;
+  text-decoration-skip: ink; }
 
 a.btn {
   background-color: rgba(0, 0, 0, 0.9);
@@ -1594,6 +1630,9 @@ a.btn {
 
 a.btn-big {
   padding: 1rem 2rem; }
+
+.color-inherit {
+  color: inherit; }
 
 /**
  * Images
@@ -1706,6 +1745,24 @@ td {
 .wf-active #Intro {
   visibility: visible; }
 
+.bg-cover {
+  background-size: cover; }
+
+.bg-center {
+  background-position: center; }
+
+.bg-repeat {
+  background-repeat: repeat; }
+
+.bg-repeat-x {
+  background-repeat: repeat-x; }
+
+.bg-repeat-y {
+  background-repeat: repeat-y; }
+
+.bg-repeat-none {
+  background-repeat: none; }
+
 .visible-grid {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0) 1.5px);
   background-repeat: repeat-x;
@@ -1715,7 +1772,7 @@ td {
 body {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0) 1px);
   background-repeat: repeat-y;
-  background-size: 100% 1.5rem;
+  background-size: 100% .75rem;
   background-color: #FFF;
   color: rgba(0, 0, 0, 0.6); }
 

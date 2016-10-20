@@ -15,6 +15,11 @@ tumblr_username: alexbloom
 medium_username: alexbloom
 github_username: alexbloom
 
+collections: projects
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
 
 #assets:
 #  compress:
