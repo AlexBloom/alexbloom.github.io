@@ -1017,6 +1017,21 @@ dl, dd, ol, ul, figure {
   float: right;
   box-sizing: border-box; }
 
+.embed {
+  box-sizing: border-box;
+  position: relative;
+  height: 0;
+  padding: 0;
+  overflow: hidden; }
+  .embed iframe, .embed embed, .embed object {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+
 /* Basscss Align */
 .align-baseline {
   vertical-align: baseline; }
@@ -1308,7 +1323,7 @@ dl, dd, ol, ul, figure {
   height: 0; }
 
 /*
- * Aspect Ratio Control on divs with no, or variable content.
+ * Aspect Ratio Control on divs with fluid, none or variable content.
  */
 .ratio-16-9 {
   padding-top: 56.25%; }
@@ -1763,16 +1778,7 @@ td {
 .bg-repeat-none {
   background-repeat: none; }
 
-.visible-grid {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0) 1.5px);
-  background-repeat: repeat-x;
-  background-size: 16.6666667% 100%;
-  margin: 0 1rem; }
-
 body {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0, rgba(255, 255, 255, 0) 1px);
-  background-repeat: repeat-y;
-  background-size: 100% .75rem;
   background-color: #FFF;
   color: rgba(0, 0, 0, 0.6); }
 

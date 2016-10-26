@@ -4,21 +4,31 @@ title: Projects
 permalink: /projects/
 ---
 
-<h1>This is the Projects Page, not an auto-archive.</h1>
+<ol class="list-reset">
+  {% for project in site.projects %}
+  <li class="mar-b-l cf black-1 border-thin m-col-12 l-col-10">
+    <a href="{{site.baseurl}}/projects{{project.permalink}}" class="link">
+      {% if project.thumbnail %}
+        <div class="pad-m col-12 m-col-6 col">
+          <!-- <img src="../img/projects/{{ project.thumbnail }}" alt=" {{project.title}} "> -->
+        </div>
+      {% endif %}
 
-{% for project in site.projects %}
-  <h2>{{ project.title }}</h2>
-  {% if project.thumbnail %}
-    <img src="../img/work/{{ project.thumbnail }}" alt=" {{project.title}} ">
-  {% endif %}
-  {% if project.summary %}
-    <p> {{ project.summary }} </p>
-  {% endif %}
-  {% if project.tags %}
-    <ul>
-    {% for tag in project.tags %}
-      <li>{{ tag }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endfor %}
+      <div class="pad-m col col-12 m-col-6">
+        <h2>{{ project.title }}</h2>
+        {% if project.subtitle %}
+          <p> {{ project.subtitle }} </p>
+        {% endif %}
+      </div>
+    </a>
+    <!-- {% if project.tags %}
+      <ul class="list-reset">
+      {% for tag in project.tags %}
+        <li class="inline-block h6 caps bold pad-r-m">{{ tag }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %} -->
+
+  </li>
+  {% endfor %}
+</ol>
