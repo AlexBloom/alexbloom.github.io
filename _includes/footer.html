@@ -15,7 +15,6 @@
         {% if site.instagram_username %}
         <li class="inline-block pad-r-m">
          <a href="http://instagram.com/{{ site.instagram_username }}">
-           <span class="icon-instagram"> </span>
            Instagram
          </a>
         </li>
@@ -23,15 +22,13 @@
         {% if site.github_username %}
          <li class="inline-block pad-r-m">
            <a href="https://github.com/{{ site.github_username }}">
-             <span class="icon-github"> </span>
              Github
            </a>
          </li>
         {% endif %}
         {% if site.dribbble_username %}
-           <li class="col pad-r-m">
+           <li class="inline-block pad-r-m">
              <a href="https://dribbble.com/{{ site.dribbble_username }}">
-               <span class="icon-github"> </span>
                Dribbble
              </a>
            </li>
@@ -58,7 +55,6 @@
 <!-- <script src="../js/plugins.js"></script> -->
 <!-- <script>
     'use strict';
-
     document.addEventListener('DOMContentLoaded', function() {
         var slider = document.querySelector('.js_slider');
 

@@ -9,7 +9,7 @@ permalink: /projects/
     <h2 class="h6 caps bold"> Featured </h2>
     <ul class="list-reset">
       {% for project in site.projects %}
-      <li class="mar-b-l cf black-1 border-thin m-col-12 max-width-l shadow">
+      <li class="mar-b-l cf black-1 border-thin l-col-12 max-width-l shadow">
         <a href="../{{project.permalink}}" class="link">
           {% if project.thumbnail %}
             <div class="col col-12 m-col-6 l-col-4 ">
@@ -39,17 +39,31 @@ permalink: /projects/
     <ul class="list-reset">
       <li class="pad-y-s">
         <a href="http://cinereach.org" target=_blank>
-          <p class="h3"> Cinereach 🔗</p>
+          <p class="h3"> Cinereach </p>
+          <!-- <ul class="list-reset">
+            <li class="inline-block h6 caps bold pad-r-m">UX Consulting</li>
+            <li class="inline-block h6 caps bold pad-r-m">Development</li>
+          </ul> -->
         </a>
       </li>
       <li class="pad-y-s">
         <a href="http://thrillderness.co" target=_blank>
-          <p class="h3"> Thrillderness  🔗</p>
+          <p class="h3"> Thrillderness </p>
+          <!-- <ul class="class="list-reset"">
+            <li class="inline-block h6 caps bold pad-r-m">UX</li>
+            <li class="inline-block h6 caps bold pad-r-m">UI</li>
+            <li class="inline-block h6 caps bold pad-r-m">Development</li>
+          </ul> -->
         </a>
       </li>
       <li class="pad-y-s">
         <a href="http://sandbox.tribecafilminstitute.org" target=_blank>
-          <p class="h3"> TFI Sandbox  🔗</p>
+          <p class="h3"> TFI Sandbox </p>
+          <!-- <ul class="list-reset">
+            <li class="inline-block h6 caps bold pad-r-m">UX</li>
+            <li class="inline-block h6 caps bold pad-r-m">UI</li>
+            <li class="inline-block h6 caps bold pad-r-m">Development</li>
+          </ul> -->
         </a>
       </li>
     </ul>
@@ -57,10 +71,10 @@ permalink: /projects/
     <h2 class="h6 caps bold"> Other Samples </h2>
     <ul class="list-reset">
       <li class=" pad-y-s">
-        <p class="h3"><a class="link" href="http://" target=_blank> Dribbble </a></p>
+        <p class="h3"><a class="link" href="http://dribbble.com/{{site.dribbble-username}}" target=_blank> Dribbble </a></p>
       </li>
       <li class="pad-y-s">
-        <p class="h3"><a class="link" href="http://" target=_blank> Design Inc. </a></p>
+        <p class="h3"><a class="link" href="http://designinc.com/alexbloom" target=_blank> Design Inc. </a></p>
       </li>
     </ul>
   </div>
