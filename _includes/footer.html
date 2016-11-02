@@ -1,16 +1,41 @@
 
-<footer class=" cf z3 relative pad-t-m pad-t-l pad-x-l pad-b-m border-bottom">
-  <div class="col col-12 l-col-8">
+<footer class=" cf z3 relative pad-y-l pad-x-l border-bottom black bg-black-2">
+  <div class="col col-12 pad-b-m">
     <div class="site-description">
        <!-- Links to Everything -->
        <ul class="list-reset">
-
-        <li class="col pad-r-m">
-         <a href="mailto:{{site.email}}">
-           <span class="username">{{site.email}}</span>
+        <li class="inline-block pad-r-m">
+           <a href="mailto:{{site.email}}">
+             <span class="username">{{site.email}}</span>
+           </a>
+        </li>
+        <li class="inline-block pad-r-m">
+          <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
+        </li>
+        {% if site.instagram_username %}
+        <li class="inline-block pad-r-m">
+         <a href="http://instagram.com/{{ site.instagram_username }}">
+           <span class="icon-instagram"> </span>
+           Instagram
          </a>
         </li>
-
+        {% endif %}
+        {% if site.github_username %}
+         <li class="inline-block pad-r-m">
+           <a href="https://github.com/{{ site.github_username }}">
+             <span class="icon-github"> </span>
+             Github
+           </a>
+         </li>
+        {% endif %}
+        {% if site.dribbble_username %}
+           <li class="col pad-r-m">
+             <a href="https://dribbble.com/{{ site.dribbble_username }}">
+               <span class="icon-github"> </span>
+               Dribbble
+             </a>
+           </li>
+        {% endif %}
        </ul>
 
 
@@ -24,32 +49,22 @@
     </div>
 
   </div>
-  <div class="col col-12 l-col-4">
+  <div class="col col-12">
     <p class="copyright">
-      All content © Alex Bloom 2010-2016
+      <small>All content © Alex Bloom 2010-2016</small>
     </p>
   </div>
 </footer>
+<!-- <script src="../js/plugins.js"></script> -->
+<!-- <script>
+    'use strict';
 
-<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var slider = document.querySelector('.js_slider');
 
-function homeBackgroundColor(){
-  // Random Background Color for Home Page
-  var hue = 'rgb(' +
-    (Math.floor(Math.random() *(360-120+1)+100)) + ',' +
-    (Math.floor(Math.random() *(360-120+1)+100)) + ',' +
-      (Math.floor(Math.random() *(360-120+1)+100)) + ')';
-
-  var huetwo = 'rgb(' +
-    (Math.floor(Math.random() *(360-110+1)+100)) + ',' +
-    (Math.floor(Math.random() *(360-110+1)+100)) + ',' +
-      (Math.floor(Math.random() *(360-110+1)+100)) + ')';
-
-  document.getElementById('gradientDiv').style.backgroundImage= "linear-gradient( 45deg, " + hue + " , " + huetwo + ")";
-  document.getElementById('gradientDiv').style.backgroundColor = hue;
-}
-
-homeBackgroundColor();
-
-
-</script>
+        lory(slider, {
+            infinite: 1,
+            enableMouseEvents: true,
+        });
+    });
+</script> -->

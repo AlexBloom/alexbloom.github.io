@@ -2,11 +2,14 @@
 layout: default
 ---
 <div class="project pad-y-xxl pad-x-l">
-  <header class="pad-b-l">
-    <h1 class="page-title">{{ page.title }}</h1>
-    <h2>{{ page.subtitle }}</h2>
-  </header>
+
   <article class="page-content max-width-l float-center">
+    <header class="pad-b-l">
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}
+        <p class="h2 mx"> {{ page.subtitle }} </p>
+      {% endif %}
+    </header>
     {{ content }}
   </article>
 

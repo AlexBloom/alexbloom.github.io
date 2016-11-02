@@ -124,6 +124,33 @@ dl, dd, ol, ul, figure {
 .bg-black {
   background-color: #000; }
 
+.bg-black-1 {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.bg-black-2 {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.bg-black-3 {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.bg-black-4 {
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.bg-black-5 {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.bg-black-6 {
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.bg-black-7 {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.bg-black-8 {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.bg-black-9 {
+  background-color: rgba(0, 0, 0, 0.9); }
+
 .white {
   color: #FFF; }
 
@@ -1405,11 +1432,8 @@ h6, .h6 {
   .l-h3 {
     font-size: 1.25rem; } }
 
-.measure {
-  max-width: 40em; }
-
-.measure-narrow {
-  max-width: 22em; }
+.measure, .mx {
+  max-width: 32em; }
 
 .leading-solid {
   line-height: 1; }
@@ -1605,26 +1629,23 @@ a {
   transition: all .2s;
   color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 50%, transparent 50%);
-  background-repeat: repeat-x;
-  background-size: 2px .1em;
-  background-position: 0 1.08em; }
+  box-shadow: 0 0.05em 0 0 rgba(0, 0, 0, 0.5); }
 
 a:link,
 a:visited {
   color: rgba(0, 0, 0, 0.8); }
 
 a:hover {
-  transition: background-color .2s;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 50%, transparent 50%); }
+  transition: all .2s;
+  box-shadow: 0 0.05em 0 0 #000; }
 
 a:active {
-  transition: all .3s;
+  transition: all .2s;
   color: #000; }
 
 .link {
   text-decoration: none;
-  background-image: none; }
+  box-shadow: none; }
   .link:hover {
     background-image: none; }
 
@@ -1753,6 +1774,32 @@ td {
   -o-transition-timing-function: cubic-bezier(1, 0, 0, 1);
   transition-timing-function: cubic-bezier(1, 0, 0, 1);
   /* easeInOutExpo */ }
+
+/**
+ * (optional) define here the style definitions which should be applied on the slider container
+ * e.g. width including further controls like arrows etc.
+ */
+.frame {
+  /**
+   * (optional) wrapper width, specifies width of the slider frame.
+   */
+  width: 100%;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.slides {
+  display: inline-block; }
+
+.js_slide {
+  position: relative;
+  display: inline-block;
+  /**
+   * (optional) if the content inside the slide element has a defined size.
+   */
+  width: 25%; }
 
 .wf-loading #Intro {
   visibility: hidden; }

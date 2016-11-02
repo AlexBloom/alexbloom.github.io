@@ -1,8 +1,9 @@
 ---
 layout: project
-title: Gnarrboro
-thumbnail: gnarrboro.jpg
+title: Gnarrboro Ramp Jam
 subtitle: Building a community on a platform of trash and bicycles.
+thumbnail: gnarrboro.jpg
+permalink: projects/gnarrboro/
 tags:
   - UX
   - Creative Direction

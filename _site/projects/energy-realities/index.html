@@ -48,6 +48,7 @@
 
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.2.0/lory.min.js"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -72,11 +73,7 @@
   </defs>
 </svg>
 
-    
-<!-- <div id="site-notification" class=" relative bg-black white pad-m text-center z3">
-  👋 &nbsp; Welcome! I'm currently seeking full-time &amp; contract work. <a href="contact" class="btn mar-x-m"> Hire/Inquire.</a> <button class="caps bold h6 mar-x-m"> Dismiss ❌</button>
-</div> -->
-<header id="site-header" class="site-header relative left-0 right-0 border-top z3">
+    <header id="site-header" class="site-header relative left-0 right-0 border-top z3">
   <div class="wrapper cf ">
     <nav class="float-left  mar-x-l mar-t-l">
       <a href="/" class="h5 link bold mar-0"> Alex Bloom </a>
@@ -96,75 +93,94 @@
     <main class="main relative cf">
       <div class="ajaxWrap">
         <div id="userLocation" class="pad-x-l absolute top-0 z2">
-          <p class="h5"> Energy Realities </p>
+          <p class="h5 black-8"> Energy Realities </p>
         </div>
-        <div class="project pad-y-xxl pad-x-l">
-  <header class="pad-b-l">
-    <h1 class="page-title">Energy Realities</h1>
-    <h2>Stuff about the project.</h2>
-  </header>
-  <article class="page-content max-width-l float-center">
-    <img src="/img/projects/natgeo/01_energyrealities_overview.jpg" alt="Energy Realities Overview">
-
-<section id="grid" class="pad-y-xl">
-  <p>Sample #3</p>
-  <h1>Energy Realities</h1>
-  <h6>UX, UI</h6>
-  <div class="measure pad-y-m">
-    <p>National Geographic needed an iPad focused web application to visualize global energy consumption, production, and distribution across multiple sectors and years, giving users a clear picture of the past and a snapshot of the future.
-    </p>
-    <p>They provided extensive research data in spreadsheets, but had no preconceived plan for how to organize the information or make a compelling experience for digesting such important facts.
-    </p>
-    <p>I sketched, prototyped, and designed the final UI for the data exploration, giving users a method to explore changes in production and consumption over time, drill down into geographic locations, see layered comparisons between energy types, and measure between regions.</p>
-  </div>
-
-  <div class="pad-y-l">
-    <img src="/img/projects/energyrealities/ER_Infographics_2up_1.jpg" alt="">
-    <p><small><em></em></small></p>
-  </div>
-  <div class="pad-y-l">
-    <img src="/img/projects/energyrealities/ER_Infographics_2up_2.jpg" alt="">
-    <p><small><em></em></small></p>
-  </div>
-  <div class="pad-y-l">
-    <img src="/img/projects/energyrealities/ER_Article_Detail_1444.jpg" alt="">
-    <p><small><em>During the process, I also consulted with National Geographic's Map team to improve their GeoStories explorer tool, which is still in use today. </em></small></p>
+        <section class="pad-y-xl pad-x-m">
+  <section class="pad-m float-center max-width-l">
+    <h1>Energy Realities</h1>
+    <p class="h2">Visualizing global energy needs with National Geographic.</p>
+    <img src="/img/projects/energyrealities/01_energyrealities_overview.jpg" alt="Energy Realities Overview">
+    <section id="grid" class="pad-y-xl">
+      <div class=" pad-y-m">
+        <p>National Geographic needed an iPad focused web application to visualize global energy consumption, production, and distribution across multiple sectors and years, giving users a clear picture of the past and a snapshot of the future.
+        </p>
+        <p>They provided extensive research data in spreadsheets, but had no preconceived plan for how to organize the information or make a compelling experience for digesting such important facts.
+        </p>
+        <p>I sketched, prototyped, and designed the final UI for the data exploration, giving users a method to explore changes in production and consumption over time, drill down into geographic locations, see layered comparisons between energy types, and measure between regions.</p>
+      </div>
+    </section>
+  </section>
+  <section class="cf">
+    <div class="col col-12 m-col-6 pad-m">
+      <img src="/img/projects/energyrealities/ER_Infographics_2up_1.jpg" alt="">
+      <p><small><em></em></small></p>
+    </div>
+    <div class="col col-12 m-col-6 pad-m">
+      <img src="/img/projects/energyrealities/ER_Infographics_2up_2.jpg" alt="">
+      <p><small><em></em></small></p>
+    </div>
+  </section>
+    <section class="cf pad-m max-width-l float-center">
+      <img src="/img/projects/energyrealities/ER_Article_Detail_1444.jpg" alt="">
+      <p class="measure"><small><em>During the process, I also consulted with National Geographic's Map team to improve their GeoStories explorer tool, which is still in use today. </em></small></p>
+    </section>
+    <section class="cf">
+      <img class="pad-m block col col-12 l-col-6" src="/img/projects/energyrealities/er-datavis/Infographic_Biofuel.jpg"    alt="Infographic Biofuel">
+      <img class="pad-m block col col-12 l-col-6" src="/img/projects/energyrealities/er-datavis/Infographic_Consumption.jpg" alt="Infographic Consumption">
+      <img class="pad-m block col col-12 l-col-6" src="/img/projects/energyrealities/er-datavis/Infographic_KeyEvents.jpg"   alt="Infographic KeyEvents">
+      <img class="pad-m block col col-12 l-col-6" src="/img/projects/energyrealities/er-datavis/Infographic_Production.jpg"   alt="Infographic Production">
+      <img class="pad-m block col col-12 l-col-6" src="/img/projects/energyrealities/er-datavis/Infographic_Reserves_01.jpg"  alt="Infographic Reserves 01">
+      <img class="pad-m block col col-12 l-col-6" src="/img/projects/energyrealities/er-datavis/Infographic_Reserves_02.jpg"  alt="Infographic Reserves 02">
+      <img class="pad-m block col col-12 l-col-6" src="/img/projects/energyrealities/er-datavis/Infographic_Scenarios_01.jpg"  alt="Infographic Scenarios 01">
+      <img class="pad-m block col col-12 l-col-6" src="/img/projects/energyrealities/er-datavis/Infographic_Scenarios_02.jpg"  alt="Infographic Scenarios 02">
+    </section>
+    <section class="cf pad-m max-width-l float-center">
+      <p>Designed while working <a href="http://bluecadet.com">@Bluecadet</a></p>
+    </section>
+  </section>
 </section>
-
-
-
-
-<img src="/img/projects/natgeo/er-datavis/Infographic_Biofuel.jpg"    alt="Infographic Biofuel">
-<img src="/img/projects/natgeo/er-datavis/Infographic_Consumption.jpg" alt="Infographic Consumption">
-<img src="/img/projects/natgeo/er-datavis/Infographic_KeyEvents.jpg"   alt="Infographic KeyEvents">
-<img src="/img/projects/natgeo/er-datavis/Infographic_Production.jpg"   alt="Infographic Production">
-<img src="/img/projects/natgeo/er-datavis/Infographic_Reserves_01.jpg"  alt="Infographic Reserves 01">
-<img src="/img/projects/natgeo/er-datavis/Infographic_Reserves_02.jpg"  alt="Infographic Reserves 02">
-<img src="/img/projects/natgeo/er-datavis/Infographic_Scenarios_01.jpg"  alt="Infographic Scenarios 01">
-<img src="/img/projects/natgeo/er-datavis/Infographic_Scenarios_02.jpg"  alt="Infographic Scenarios 02">
-
-<h6>Designed <a href="http://bluecadet.com">@Bluecadet</a></h6>
-
-  </article>
-
-</div>
 
       </div>
     </main>
 
     
-<footer class=" cf z3 relative pad-t-m pad-t-l pad-x-l pad-b-m border-bottom">
-  <div class="col col-12 l-col-8">
+<footer class=" cf z3 relative pad-y-l pad-x-l border-bottom black bg-black-2">
+  <div class="col col-12 pad-b-m">
     <div class="site-description">
        <!-- Links to Everything -->
        <ul class="list-reset">
-
-        <li class="col pad-r-m">
-         <a href="mailto:hello@alexbloom.co">
-           <span class="username">hello@alexbloom.co</span>
+        <li class="inline-block pad-r-m">
+           <a href="mailto:hello@alexbloom.co">
+             <span class="username">hello@alexbloom.co</span>
+           </a>
+        </li>
+        <li class="inline-block pad-r-m">
+          <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
+        </li>
+        
+        <li class="inline-block pad-r-m">
+         <a href="http://instagram.com/alexbloom">
+           <span class="icon-instagram"> </span>
+           Instagram
          </a>
         </li>
-
+        
+        
+         <li class="inline-block pad-r-m">
+           <a href="https://github.com/alexbloom">
+             <span class="icon-github"> </span>
+             Github
+           </a>
+         </li>
+        
+        
+           <li class="col pad-r-m">
+             <a href="https://dribbble.com/alexbloom">
+               <span class="icon-github"> </span>
+               Dribbble
+             </a>
+           </li>
+        
        </ul>
 
 
@@ -178,35 +194,25 @@
     </div>
 
   </div>
-  <div class="col col-12 l-col-4">
+  <div class="col col-12">
     <p class="copyright">
-      All content © Alex Bloom 2010-2016
+      <small>All content © Alex Bloom 2010-2016</small>
     </p>
   </div>
 </footer>
+<!-- <script src="../js/plugins.js"></script> -->
+<!-- <script>
+    'use strict';
 
-<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var slider = document.querySelector('.js_slider');
 
-function homeBackgroundColor(){
-  // Random Background Color for Home Page
-  var hue = 'rgb(' +
-    (Math.floor(Math.random() *(360-120+1)+100)) + ',' +
-    (Math.floor(Math.random() *(360-120+1)+100)) + ',' +
-      (Math.floor(Math.random() *(360-120+1)+100)) + ')';
-
-  var huetwo = 'rgb(' +
-    (Math.floor(Math.random() *(360-110+1)+100)) + ',' +
-    (Math.floor(Math.random() *(360-110+1)+100)) + ',' +
-      (Math.floor(Math.random() *(360-110+1)+100)) + ')';
-
-  document.getElementById('gradientDiv').style.backgroundImage= "linear-gradient( 45deg, " + hue + " , " + huetwo + ")";
-  document.getElementById('gradientDiv').style.backgroundColor = hue;
-}
-
-homeBackgroundColor();
-
-
-</script>
+        lory(slider, {
+            infinite: 1,
+            enableMouseEvents: true,
+        });
+    });
+</script> -->
 
 
   </body>

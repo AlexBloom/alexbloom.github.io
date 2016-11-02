@@ -1,12 +1,39 @@
 ---
 layout: default
-title: Design + Direction + Development
+title: Designer
 ---
 
 
 <section id="gradientDiv" class="fixed top-0 left-0 right-0 bottom-0 z-0">
 
 </section>
+<script>
+function homeBackgroundColor(){
+  // Random Background Color for Home Page
+  // var hue = 'rgb(' +
+  //   (Math.floor(Math.random() *(360-120+1)+100)) + ',' +
+  //   (Math.floor(Math.random() *(360-120+1)+100)) + ',' +
+  //     (Math.floor(Math.random() *(360-120+1)+100)) + ')';
+  // var huetwo = 'rgb(' +
+  //   (Math.floor(Math.random() *(360-110+1)+100)) + ',' +
+  //   (Math.floor(Math.random() *(360-110+1)+100)) + ',' +
+  //     (Math.floor(Math.random() *(360-110+1)+100)) + ')';
+
+  var random = (Math.floor(Math.random()*(360)));
+  var hue = 'hsl(' + random + ',' + '95%,' + '65%)';
+    //(Math.floor(Math.random() *(100-50+1)+100)) + '%,' +
+      //(Math.floor(Math.random() *(100-50+1)+100)) + '%)';
+  var huetwo = 'hsl(' +
+    (Math.floor(Math.random() *(360))) + ',' + '95%,' + '80%)';
+    //(Math.floor(Math.random() *(100-50+1)+100)) + '%,' +
+      //(Math.floor(Math.random() *(100-50+1)+100)) + '%)';
+
+
+  document.getElementById('gradientDiv').style.backgroundImage= "linear-gradient( 45deg, " + hue + " , " + huetwo + ")";
+  document.getElementById('gradientDiv').style.backgroundColor = huetwo;
+}
+homeBackgroundColor();
+</script>
 
 
 <section id="" class="cf relative z2">
@@ -29,18 +56,19 @@ title: Design + Direction + Development
     </div>
     <div class="col col-12 m-col-8 ">
       <div class="pad-b-xl">
-        I provide Creative Direction, Design, and Development services to clients with missions of good.
-        What matters to me is that our visions align.
-        I won't get too heady, but things I enjoy working on are:
-        Internet products that help people get off the internet faster.
-        <!-- <p class="h1 type-grow black-8"> As much good, for as many people, for as much profit, with as much freedom &amp; fun as possible before death. <br> <span class="bold black-8">#goals</span></p> -->
-        <!-- <p class="h1 bold type-grow black-8"> Creative direction, design, code and consulting for non-profits, for-profits, and people with purpose. </p> -->
-        <!-- <p class="h1 bold type-grow"> Making artistic choices for function&apos;s sake. </p> -->
-        <!-- <p class="h1 bold type-grow"> Creative partnership and responsive service for clients of all sizes. </p> -->
-        <p class="h1 bold type-grow black-8"> Asking who, what, and why, without overlooking how it's all gonna work. </p>
-        <ul class="pad-0 mar-y-xl ">
-          <li class="inline-block float-left pad-r-l"> <a href="{{site.baseurl}}/contact" class="btn">Contact&nbsp;</a>  </li>
-          <li class="inline-block float-left pad-r-l"> <a href="{{site.baseurl}}/about" class=""> About Me </a>  </li>
+        <p class="h1 type-grow black-8"> Multi-disciplinary design, direction, and development for nonprofits, for-profits, and people with purpose. </p>
+        <!-- <div class="slider js_slider cf">
+          <div class="frame js_frame">
+            <ul class="slides js_slides">
+              <li class="js_slide"> </li>
+              <li class="js_slide"> <p class="h1 type-grow black-8 measure"> Asking who, what, and why, without overlooking how it's all gonna work. </p> </li>
+              <li class="js_slide"> <p class="h1 type-grow black-8"> Firm belief in the power of mid-day exercise and siestas. </p> </li>
+              <li class="js_slide"> <p class="h1 type-grow black-8"> If you've got the money honey, I've got the time. </p></li>
+            </ul>
+          </div>
+        </div>-->
+        <ul class="pad-0 mar-y-xl">
+          <li class="inline-block float-left pad-r-l h5"> <a href="{{site.baseurl}}/info/" class="caps bold link"> More Info &rarr; </a>  </li>
         </ul>
       </div>
     </div>
@@ -50,24 +78,32 @@ title: Design + Direction + Development
 
 <section class="relative z2 bg-white ">
   <section id="Currently" class="cf pad-y-xl pad-x-l">
-    <div class="col col-12 m-col-3">
-      <h2 class="h4">Currently</h2>
+    <div class="col col-12 m-col-4 l-col-3">
+      &nbsp;
     </div>
-    <div class="col col-12 m-col-6">
-      <ul class="">
-        <li class="h3 pad-b-l">
-          Partner at <a href="http://morf.studio">Morf Studio</a> &mdash; a collaborative design practice with <a href="http://twitter.com/spenhar">@spenhar</a>.
-        </li>
-        <li class="h3 pad-b-l">
-          Improving internal and user-facing web experiences and physical product design at <a href="">Swift Industries</a>.
-        </li>
-        <li class="h3 pad-b-l">
-          Hobbying at <a href="http://thrillderness.co">Thrillderness</a> &mdash; a love letter to the outdoors.
-        </li>
-      </ul>
+    <div class="col col-12 m-col-8">
+      <div class="col col-12 m-col-2">
+        <h2 class="h6 caps bold">Currently</h2>
+      </div>
+      <div class="col col-12 m-col-9">
+        <ul class="">
+          <li class="h3 pad-b-l">
+            Available for Freelance on <a href="http://designinc.com/alexbloom" target=_blank>Design Inc.</a> - A community of hand-picked designers with transparent rates and a money-back guarantee.
+          </li>
+          <li class="h3 pad-b-l">
+            Partner at <a href="http://morf.studio">Morf Studio</a> &mdash; a collaborative design practice with <a href="http://twitter.com/spenhar">@spenhar</a>.
+          </li>
+          <li class="h3 pad-b-l">
+            Improving internal and user-facing web experiences and physical product design at <a href="">Swift Industries</a>.
+          </li>
+          <li class="h3 pad-b-l">
+            Devising fun &amp; content at <a href="http://thrillderness.co">Thrillderness.</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
-  <section id="Work" class="cf pad-y-xl pad-x-l">
+  <!-- <section id="Work" class="cf pad-y-xl pad-x-l">
     <div class="col col-12 m-col-3">
       <h2 class="h4">Projects</h2>
     </div>
@@ -157,27 +193,42 @@ title: Design + Direction + Development
         <p>More samples on <a href="http://dribbble.com/alexbloom">Dribbble</a> and <a href="http://be.net/alexbloom">Behance</a></p>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section id="Archive" class="cf pad-y-xl pad-x-l">
-    <div class="col col-12 m-col-3">
-      <h2 class="h4"> Previously </h2>
+    <div class="col col-12 m-col-4 l-col-3">
+      &nbsp;
     </div>
-    <div class="col col-12 m-col-9">
-      <ul>
-        <li>
-          Adjunct Professor of Design at Tyler School of Art
-        </li>
-        <li>
-          Design @bluecadet, @theheadsofstate, @fortfranklin
-        </li>
-        <li>
-          <a href="/archives/">Old Thesis Projects</a>
-        </li>
-        <li>
-          <a href="/graveyard/">The Graveyard</a>
-        </li>
-      </ul>
+    <div class="col col-12 m-col-8">
+      <div class="col col-12 m-col-2">
+        <h2 class="h6 caps bold"> Previously </h2>
+      </div>
+      <div class="col col-12 m-col-8">
+        <ul>
+          <li>
+            Adjunct Professor of Design <a href="https://tyler.temple.edu/programs/graphic-interactive-design" target=_blank>@Tyler School of Art</a>
+          </li>
+          <li>
+            Various Shades of Design <a href="https://twitter.com/exprmnt?lang=en" target=_blank>@exprmnt</a>, <a href="http://bluecadet.com" target=_blank>@bluecadet</a>, <a href="http://theheadsofstate.com" target=_blank>@theheadsofstate</a>.
+          </li>
+          <!-- <li>
+            Coming Soon! <span class="black-4">THE DUMP - Samples of things I've made since roughly 2006.</span> </a>
+          </li> -->
+        </ul>
+      </div>
     </div>
   </section>
+
+  <section id="Work" class="cf pad-y-xl pad-x-l">
+    <div class="col col-12 m-col-4 l-col-3">
+      &nbsp;
+    </div>
+    <div class="col col-12 m-col-8">
+      <div class="col col-12">
+        <h2 class="h6 caps bold"> Portfolio </h2>
+        <p class="h1"><a href="projects">Browse Some Projects</a></p>
+      </div>
+    </div>
+  </section>
+
 </section>

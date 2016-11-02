@@ -99,13 +99,9 @@ h6, .h6 { font-size: $h6; line-height:1.5rem; }
 
 }
 
-$measure-width:40em;
-$measure-width-narrow:22em;
-.measure{
+$measure-width:32em;
+.measure, .mx{
   max-width:$measure-width;
-}
-.measure-narrow{
-  max-width:$measure-width-narrow;
 }
 .leading-solid { line-height: $leading-solid }
 .leading-headline { line-height: $leading-headline }

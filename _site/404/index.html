@@ -48,6 +48,7 @@
 
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.2.0/lory.min.js"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -72,11 +73,7 @@
   </defs>
 </svg>
 
-    
-<!-- <div id="site-notification" class=" relative bg-black white pad-m text-center z3">
-  👋 &nbsp; Welcome! I'm currently seeking full-time &amp; contract work. <a href="contact" class="btn mar-x-m"> Hire/Inquire.</a> <button class="caps bold h6 mar-x-m"> Dismiss ❌</button>
-</div> -->
-<header id="site-header" class="site-header relative left-0 right-0 border-top z3">
+    <header id="site-header" class="site-header relative left-0 right-0 border-top z3">
   <div class="wrapper cf ">
     <nav class="float-left  mar-x-l mar-t-l">
       <a href="/" class="h5 link bold mar-0"> Alex Bloom </a>
@@ -96,7 +93,7 @@
     <main class="main relative cf">
       <div class="ajaxWrap">
         <div id="userLocation" class="pad-x-l absolute top-0 z2">
-          <p class="h5"> 404 </p>
+          <p class="h5 black-8"> 404 </p>
         </div>
         <div class="float-center text-center pad-y-xl">
 
@@ -109,18 +106,43 @@
     </main>
 
     
-<footer class=" cf z3 relative pad-t-m pad-t-l pad-x-l pad-b-m border-bottom">
-  <div class="col col-12 l-col-8">
+<footer class=" cf z3 relative pad-y-l pad-x-l border-bottom black bg-black-2">
+  <div class="col col-12 pad-b-m">
     <div class="site-description">
        <!-- Links to Everything -->
        <ul class="list-reset">
-
-        <li class="col pad-r-m">
-         <a href="mailto:hello@alexbloom.co">
-           <span class="username">hello@alexbloom.co</span>
+        <li class="inline-block pad-r-m">
+           <a href="mailto:hello@alexbloom.co">
+             <span class="username">hello@alexbloom.co</span>
+           </a>
+        </li>
+        <li class="inline-block pad-r-m">
+          <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
+        </li>
+        
+        <li class="inline-block pad-r-m">
+         <a href="http://instagram.com/alexbloom">
+           <span class="icon-instagram"> </span>
+           Instagram
          </a>
         </li>
-
+        
+        
+         <li class="inline-block pad-r-m">
+           <a href="https://github.com/alexbloom">
+             <span class="icon-github"> </span>
+             Github
+           </a>
+         </li>
+        
+        
+           <li class="col pad-r-m">
+             <a href="https://dribbble.com/alexbloom">
+               <span class="icon-github"> </span>
+               Dribbble
+             </a>
+           </li>
+        
        </ul>
 
 
@@ -134,35 +156,25 @@
     </div>
 
   </div>
-  <div class="col col-12 l-col-4">
+  <div class="col col-12">
     <p class="copyright">
-      All content © Alex Bloom 2010-2016
+      <small>All content © Alex Bloom 2010-2016</small>
     </p>
   </div>
 </footer>
+<!-- <script src="../js/plugins.js"></script> -->
+<!-- <script>
+    'use strict';
 
-<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var slider = document.querySelector('.js_slider');
 
-function homeBackgroundColor(){
-  // Random Background Color for Home Page
-  var hue = 'rgb(' +
-    (Math.floor(Math.random() *(360-120+1)+100)) + ',' +
-    (Math.floor(Math.random() *(360-120+1)+100)) + ',' +
-      (Math.floor(Math.random() *(360-120+1)+100)) + ')';
-
-  var huetwo = 'rgb(' +
-    (Math.floor(Math.random() *(360-110+1)+100)) + ',' +
-    (Math.floor(Math.random() *(360-110+1)+100)) + ',' +
-      (Math.floor(Math.random() *(360-110+1)+100)) + ')';
-
-  document.getElementById('gradientDiv').style.backgroundImage= "linear-gradient( 45deg, " + hue + " , " + huetwo + ")";
-  document.getElementById('gradientDiv').style.backgroundColor = hue;
-}
-
-homeBackgroundColor();
-
-
-</script>
+        lory(slider, {
+            infinite: 1,
+            enableMouseEvents: true,
+        });
+    });
+</script> -->
 
 
   </body>
