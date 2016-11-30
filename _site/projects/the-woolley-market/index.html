@@ -50,6 +50,19 @@
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.2.0/lory.min.js"></script>
 
+    <script type="text/javascript">
+    (function() {
+        var path = '//easy.myfonts.net/v2/js?sid=189446(font-family=PF+DIN+Mono+Medium)&sid=189455(font-family=PF+DIN+Mono)&sid=189457(font-family=PF+DIN+Mono+Light)&sid=189459(font-family=PF+DIN+Mono+Bold)&key=vZJrmKrZxR',
+            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+            trial = document.createElement('script');
+        trial.type = 'text/javascript';
+        trial.async = true;
+        trial.src = protocol + path;
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(trial);
+    })();
+  </script>
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -73,17 +86,17 @@
   </defs>
 </svg>
 
-    <header id="site-header" class="site-header relative left-0 right-0 border-top z3">
-  <div class="wrapper cf ">
-    <nav class="float-left  mar-x-l mar-t-l">
+    <header id="site-header" class="site-header relative left-0 right-0 border-top z3 pad-x-l">
+  <div class="wrapper cf max-width-xl float-center">
+    <nav class="float-left   mar-t-l mar-r-l">
       <a href="/" class="h5 link bold mar-0"> Alex Bloom </a>
     </nav>
-    <nav class="float-right right-0 mar-x-l mar-t-l">
+    <nav class="col right-0  mar-t-l">
         <ul class="list-reset cf">
-          <li class="inline-block"> <a href="/info/" class="h5 link bold mar-r-m color-inherit">Info</a></li>
-          <li class="inline-block"> <a href="/projects/" class="h5 link bold mar-r-m color-inherit">Projects</a></li>
+          <li class="inline-block"> <a href="/info/" class="h5 link mar-r-m color-inherit">Info</a></li>
+          <!-- <li class="inline-block"> <a href="/projects/" class="h5 link mar-r-m color-inherit">Projects</a></li> -->
           <!-- <li class="inline-block"> <a href="/workbench/" class="link bold mar-r-m">Workbench</a></li> -->
-          <li class="inline-block"> <a href="/contact/" class="h5 link bold mar-r-m color-inherit">Contact</a></li>
+          <li class="inline-block"> <a href="/contact/" class="h5 link mar-r-m color-inherit">Contact</a></li>
         </ul>
     </nav>
   </div>
@@ -92,14 +105,56 @@
 
     <main class="main relative cf">
       <div class="ajaxWrap">
-        <div id="userLocation" class="pad-x-l absolute top-0 z2">
+        <!-- <div id="userLocation" class="pad-x-l absolute top-0 z2">
           <p class="h5 black-8"> The Woolley Market </p>
-        </div>
-        <section class="pad-m">
-  <section class="pad-m float-center max-width-l">
-    <h1>The Woolley Market</h1>
-    <p class="h2">Revitalizing a town with history as rich as it's soil.</p>
-    <h2>Context</h2>
+        </div> -->
+        <div class="project pad-b-xxl pad-x-l">
+  <article class="page-content max-width-xl float-center">
+    <nav class="breadcrumb small pad-b-m cf">
+      <div class="col col-12 m-col-6">
+        <a href="/projects/">Projects</a> / <a href="#">The Woolley Market</a>
+      </div>
+      <div class="float-right col-12 m-col-6 text-right">
+        
+        <a href="/projects/suffoca/">Prev</a>
+        
+        |
+        
+      </div>
+    </nav>
+    <header class="pad-b-l">
+    <img src="/img/projects/woolleymarket/metcalf.jpg" alt="">
+      <!-- <h1 class="mar-t-l">The Woolley Market</h1> -->
+      
+      <p class="h2"> Revitalizing a town with history as rich as it's soil. </p>
+      
+    </header>
+    <div class="col col-12">
+      <h2 class="h4"> <a href="http://woolleymarket.com">woolleymarket.com</a></h2>
+      <p> 2014 </p>
+      
+      <h2 class="h4 pad-t-m">Partners</h2>
+        
+        <ul class="list-reset">
+          <li class="inline-block"><a href="http://truehandsociety.com">True Hand Society</a><br> Brand, Illustration</li>
+        </ul>
+        
+        <ul class="list-reset">
+          <li class="inline-block"><a href="http://nathankane.com">Nathan Kane</a> <br>Photography</li>
+        </ul>
+        
+        <ul class="list-reset">
+          <li class="inline-block"><a href="http://signmartusa.com">Sign Mart</a>  <br>Neon, Production</li>
+        </ul>
+        
+        <ul class="list-reset">
+          <li class="inline-block"><a href="http://skagitvalleysigns.com">Skagit Valley Signs</a><br>Digital Printing</li>
+        </ul>
+        
+      
+    </div>
+    <div class="col  ">
+          <h2>Context</h2>
     <p>In January of 2014, I fell into one of the most interesting places and projects I've ever been able to work on. I was approached by Will Honea, the founder of the Market and a team of highly-dedicated people with uniquely focused experience in farming and market operations. They had little aesthetic direction other than a few key facts—
     </p>
     <ul>
@@ -252,91 +307,72 @@
       <dd>Production             </dd>
       <dd>UX, IXD, &amp; Development</dd>
     </dl>
-    <dl>
-      <dt><h6>Partners</h6></dt>
-      <dd> <strong> <a href="http://truehandsociety.com">True Hand Society</a></strong> <br>
-         Brand Execution, Illustration
-       </dd>
-      <dd> <strong> <a href="http://nathankane.com">Nathan Kane</a></strong> <br>
-         Sign Painting
-       </dd>
-      <dd> <strong> <a href="http://signmartusa.com">Sign Mart</a></strong> <br>
-         Neon Execution, Paint Masks
-       </dd>
-      <dd> <strong> <a href="http://skagitvalleysigns.com">Skagit Valley Signs</a></strong> <br>
-         Digital Print + Install
-       </dd>
-    </dl>
+
     <dl>
       <dt><h6>Visit</h6></dt>
       <dd><a href="https://www.google.com/maps/place/829+Metcalf+St,+Sedro-Woolley,+WA+98284/@48.5033237,-122.2379412,17z/data=!4m2!3m1!1s0x548512c04523c2b7:0xa510cc9ca9452120">Go There!</a></dd>
       <dd><a href="http://woolleymarket.com">woolleymarket.com</a></dd>
     </dl>
-  </section>
 
-
-
-
-
-
-
-</section>
+    </div>
+  </article>
+</div>
 
       </div>
     </main>
 
     
-<footer class=" cf z3 relative pad-y-l pad-x-l border-bottom black bg-black-2">
-  <div class="col col-12 pad-b-m">
-    <div class="site-description">
-       <!-- Links to Everything -->
-       <ul class="list-reset">
-        <li class="inline-block pad-r-m">
-           <a href="mailto:hello@alexbloom.co">
-             <span class="username">hello@alexbloom.co</span>
+<footer class="cf z3 relative pad-y-l pad-x-l border-bottom black-5 bg-white">
+  <div class="max-width-xl float-center">
+    <div class="col col-12 pad-b-m">
+      <div class="site-description">
+         <!-- Links to Everything -->
+         <ul class="list-reset small">
+          <li class="inline-block pad-r-m">
+             <a href="mailto:hello@alexbloom.co">
+               <span class="username">hello@alexbloom.co</span>
+             </a>
+          </li>
+          <li class="inline-block pad-r-m">
+            <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
+          </li>
+          
+          <li class="inline-block pad-r-m">
+           <a href="http://instagram.com/alexbloom">
+             Instagram
            </a>
-        </li>
-        <li class="inline-block pad-r-m">
-          <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
-        </li>
-        
-        <li class="inline-block pad-r-m">
-         <a href="http://instagram.com/alexbloom">
-           Instagram
-         </a>
-        </li>
-        
-        
-         <li class="inline-block pad-r-m">
-           <a href="https://github.com/alexbloom">
-             Github
-           </a>
-         </li>
-        
-        
+          </li>
+          
+          
            <li class="inline-block pad-r-m">
-             <a href="https://dribbble.com/alexbloom">
-               Dribbble
+             <a href="https://github.com/alexbloom">
+               Github
              </a>
            </li>
-        
-       </ul>
+          
+          
+             <li class="inline-block pad-r-m">
+               <a href="https://dribbble.com/alexbloom">
+                 Dribbble
+               </a>
+             </li>
+          
+         </ul>
 
+        <!-- <p class="rss-subscribe">
+          <a href="/feed.xml">
+           <span class="icon-rss"></span> <br>
+         Subscribe via RSS
+            </a>
+       </p> -->
+      </div>
 
-
-      <!-- <p class="rss-subscribe">
-        <a href="/feed.xml">
-         <span class="icon-rss"></span> <br>
-       Subscribe via RSS
-          </a>
-     </p> -->
     </div>
-
-  </div>
-  <div class="col col-12">
-    <p class="copyright">
-      <small>All content © Alex Bloom 2010-2016</small>
-    </p>
+    <div class="col col-12">
+      <p class="copyright">
+        <small>All content © Alex Bloom 2010-2016</small>
+      </p>
+    </div>
   </div>
 </footer>
 <!-- <script src="../js/plugins.js"></script> -->

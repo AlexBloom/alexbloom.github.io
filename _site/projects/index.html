@@ -50,6 +50,19 @@
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.2.0/lory.min.js"></script>
 
+    <script type="text/javascript">
+    (function() {
+        var path = '//easy.myfonts.net/v2/js?sid=189446(font-family=PF+DIN+Mono+Medium)&sid=189455(font-family=PF+DIN+Mono)&sid=189457(font-family=PF+DIN+Mono+Light)&sid=189459(font-family=PF+DIN+Mono+Bold)&key=vZJrmKrZxR',
+            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+            trial = document.createElement('script');
+        trial.type = 'text/javascript';
+        trial.async = true;
+        trial.src = protocol + path;
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(trial);
+    })();
+  </script>
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -73,17 +86,17 @@
   </defs>
 </svg>
 
-    <header id="site-header" class="site-header relative left-0 right-0 border-top z3">
-  <div class="wrapper cf ">
-    <nav class="float-left  mar-x-l mar-t-l">
+    <header id="site-header" class="site-header relative left-0 right-0 border-top z3 pad-x-l">
+  <div class="wrapper cf max-width-xl float-center">
+    <nav class="float-left   mar-t-l mar-r-l">
       <a href="/" class="h5 link bold mar-0"> Alex Bloom </a>
     </nav>
-    <nav class="float-right right-0 mar-x-l mar-t-l">
+    <nav class="col right-0  mar-t-l">
         <ul class="list-reset cf">
-          <li class="inline-block"> <a href="/info/" class="h5 link bold mar-r-m color-inherit">Info</a></li>
-          <li class="inline-block"> <a href="/projects/" class="h5 link bold mar-r-m color-inherit">Projects</a></li>
+          <li class="inline-block"> <a href="/info/" class="h5 link mar-r-m color-inherit">Info</a></li>
+          <!-- <li class="inline-block"> <a href="/projects/" class="h5 link mar-r-m color-inherit">Projects</a></li> -->
           <!-- <li class="inline-block"> <a href="/workbench/" class="link bold mar-r-m">Workbench</a></li> -->
-          <li class="inline-block"> <a href="/contact/" class="h5 link bold mar-r-m color-inherit">Contact</a></li>
+          <li class="inline-block"> <a href="/contact/" class="h5 link mar-r-m color-inherit">Contact</a></li>
         </ul>
     </nav>
   </div>
@@ -92,200 +105,183 @@
 
     <main class="main relative cf">
       <div class="ajaxWrap">
-        <div id="userLocation" class="pad-x-l absolute top-0 z2">
+        <!-- <div id="userLocation" class="pad-x-l absolute top-0 z2">
           <p class="h5 black-8"> Projects </p>
-        </div>
-        <div class="pad-y-xl cf pad-x-m">
-  <div class="col col-12 m-col-9  pad-m">
-    <h2 class="h6 caps bold"> Featured </h2>
-    <ul class="list-reset">
+        </div> -->
+        <div class="page pad-y-xl pad-x-l">
+
+  <article class="page-content max-width-xl float-center cf">
+    <div class="pad-y-l cf">
+  <div class="col col-12">
+    <h2 class="h6 caps bold"> Projects </h2>
+    <div class="flex flex-wrap">
       
-      <li class="mar-b-l cf black-1 border-thin l-col-12 max-width-l shadow">
-        <a href="../projects/bikeandbuild/" class="link">
-          
-            <div class="col col-12 m-col-6 l-col-4 ">
-              <img src="../img/projects/thumbnails/babar.jpg" alt=" Bike And Build ">
-            </div>
-          
-          <div class="col col-12 m-col-6 l-col-8 pad-x-m pad-y-m">
-            <h2 class=" bold">Bike And Build</h2>
+      <div class="mar-b-l black-5 col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
+        <a href="../projects/bike-and-build/" class="link">
+          <div class="pad-y-m">
+            <h2 class="h5 bold mar-b-0">Bike and Build</h2>
             
               <p> <small>Interactive annual reports, jerseys, and printed material for the best way to ride a bike across the USA.</small> </p>
+              <small class="black-5"> 2012 </small>
             
           </div>
         </a>
-        <!-- 
-          <ul class="list-reset">
-          
-            <li class="inline-block h6 caps bold pad-r-m">Data Visualization</li>
-          
-            <li class="inline-block h6 caps bold pad-r-m">Apparel Design</li>
-          
-            <li class="inline-block h6 caps bold pad-r-m">Responsive Web Design</li>
-          
-          </ul>
-         -->
-      </li>
+      </div>
       
-      <li class="mar-b-l cf black-1 border-thin l-col-12 max-width-l shadow">
+      <div class="mar-b-l black-5 col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
+        <a href="../projects/cinereach/" class="link">
+          <div class="pad-y-m">
+            <h2 class="h5 bold mar-b-0">Cinereach</h2>
+            
+              <p> <small>Architecting and building film archives and marketing tools.</small> </p>
+              <small class="black-5"> 2014 </small>
+            
+          </div>
+        </a>
+      </div>
+      
+      <div class="mar-b-l black-5 col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
         <a href="../projects/energy-realities/" class="link">
-          
-            <div class="col col-12 m-col-6 l-col-4 ">
-              <img src="../img/projects/thumbnails/energyrealities.jpg" alt=" Energy Realities ">
-            </div>
-          
-          <div class="col col-12 m-col-6 l-col-8 pad-x-m pad-y-m">
-            <h2 class=" bold">Energy Realities</h2>
+          <div class="pad-y-m">
+            <h2 class="h5 bold mar-b-0">Energy Realities</h2>
             
               <p> <small>Visualizing global energy needs with National Geographic.</small> </p>
+              <small class="black-5"> 2012 </small>
             
           </div>
         </a>
-        <!-- 
-          <ul class="list-reset">
-          
-            <li class="inline-block h6 caps bold pad-r-m">UX</li>
-          
-            <li class="inline-block h6 caps bold pad-r-m">UI</li>
-          
-            <li class="inline-block h6 caps bold pad-r-m">Data Visualization</li>
-          
-          </ul>
-         -->
-      </li>
+      </div>
       
-      <li class="mar-b-l cf black-1 border-thin l-col-12 max-width-l shadow">
+      <div class="mar-b-l black-5 col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
+        <a href="../projects/gnarrboro/" class="link">
+          <div class="pad-y-m">
+            <h2 class="h5 bold mar-b-0">Gnarrboro</h2>
+            
+              <p> <small>Building a community on a platform of trash and bicycles.</small> </p>
+              <small class="black-5"> 2015-2016 </small>
+            
+          </div>
+        </a>
+      </div>
+      
+      <div class="mar-b-l black-5 col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
+        <a href="../projects/suffoca/" class="link">
+          <div class="pad-y-m">
+            <h2 class="h5 bold mar-b-0">Suffoca</h2>
+            
+              <p> <small>Website for the english Retail brand.</small> </p>
+              <small class="black-5"> 2016 </small>
+            
+          </div>
+        </a>
+      </div>
+      
+      <div class="mar-b-l black-5 col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
         <a href="../projects/the-woolley-market/" class="link">
-          
-            <div class="col col-12 m-col-6 l-col-4 ">
-              <img src="../img/projects/thumbnails/woolley.jpg" alt=" The Woolley Market ">
-            </div>
-          
-          <div class="col col-12 m-col-6 l-col-8 pad-x-m pad-y-m">
-            <h2 class=" bold">The Woolley Market</h2>
+          <div class="pad-y-m">
+            <h2 class="h5 bold mar-b-0">The Woolley Market</h2>
             
               <p> <small>Revitalizing a town with history as rich as it's soil.</small> </p>
+              <small class="black-5"> 2014 </small>
             
           </div>
         </a>
-        <!-- 
-          <ul class="list-reset">
-          
-            <li class="inline-block h6 caps bold pad-r-m">UX</li>
-          
-            <li class="inline-block h6 caps bold pad-r-m">Creative Direction</li>
-          
-            <li class="inline-block h6 caps bold pad-r-m">Environmental Design</li>
-          
-            <li class="inline-block h6 caps bold pad-r-m">other</li>
-          
-          </ul>
-         -->
-      </li>
+      </div>
       
-    </ul>
+    </div>
   </div>
-  <div class="col col-12 m-col-3 pad-m">
-    <h2 class="h6 caps bold"> Website Links </h2>
+  <div class="">
+    <!-- <h2 class="h6 caps bold"> Website Links </h2>
     <ul class="list-reset">
       <li class="pad-y-s">
         <a href="http://cinereach.org" target=_blank>
           <p class="h3"> Cinereach </p>
-          <!-- <ul class="list-reset">
-            <li class="inline-block h6 caps bold pad-r-m">UX Consulting</li>
-            <li class="inline-block h6 caps bold pad-r-m">Development</li>
-          </ul> -->
         </a>
       </li>
       <li class="pad-y-s">
         <a href="http://thrillderness.co" target=_blank>
           <p class="h3"> Thrillderness </p>
-          <!-- <ul class="class="list-reset"">
-            <li class="inline-block h6 caps bold pad-r-m">UX</li>
-            <li class="inline-block h6 caps bold pad-r-m">UI</li>
-            <li class="inline-block h6 caps bold pad-r-m">Development</li>
-          </ul> -->
         </a>
       </li>
       <li class="pad-y-s">
         <a href="http://sandbox.tribecafilminstitute.org" target=_blank>
           <p class="h3"> TFI Sandbox </p>
-          <!-- <ul class="list-reset">
-            <li class="inline-block h6 caps bold pad-r-m">UX</li>
-            <li class="inline-block h6 caps bold pad-r-m">UI</li>
-            <li class="inline-block h6 caps bold pad-r-m">Development</li>
-          </ul> -->
         </a>
       </li>
-    </ul>
+    </ul> -->
     <hr class="mar-y-xl">
     <h2 class="h6 caps bold"> Other Samples </h2>
     <ul class="list-reset">
-      <li class=" pad-y-s">
-        <p class="h3"><a class="link" href="http://dribbble.com/" target=_blank> Dribbble </a></p>
+      <li class="inline-block pad-r-l pad-y-s">
+        <p class=""><a class="link bold" href="http://dribbble.com/" target=_blank> Dribbble </a></p>
       </li>
-      <li class="pad-y-s">
-        <p class="h3"><a class="link" href="http://designinc.com/alexbloom" target=_blank> Design Inc. </a></p>
+      <li class="inline-block pad-r-l pad-y-s">
+        <p class=""><a class="link bold" href="http://designinc.com/alexbloom" target=_blank> Design Inc. </a></p>
       </li>
     </ul>
   </div>
+</div>
+
+
+  </article>
+
 </div>
 
       </div>
     </main>
 
     
-<footer class=" cf z3 relative pad-y-l pad-x-l border-bottom black bg-black-2">
-  <div class="col col-12 pad-b-m">
-    <div class="site-description">
-       <!-- Links to Everything -->
-       <ul class="list-reset">
-        <li class="inline-block pad-r-m">
-           <a href="mailto:hello@alexbloom.co">
-             <span class="username">hello@alexbloom.co</span>
+<footer class="cf z3 relative pad-y-l pad-x-l border-bottom black-5 bg-white">
+  <div class="max-width-xl float-center">
+    <div class="col col-12 pad-b-m">
+      <div class="site-description">
+         <!-- Links to Everything -->
+         <ul class="list-reset small">
+          <li class="inline-block pad-r-m">
+             <a href="mailto:hello@alexbloom.co">
+               <span class="username">hello@alexbloom.co</span>
+             </a>
+          </li>
+          <li class="inline-block pad-r-m">
+            <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
+          </li>
+          
+          <li class="inline-block pad-r-m">
+           <a href="http://instagram.com/alexbloom">
+             Instagram
            </a>
-        </li>
-        <li class="inline-block pad-r-m">
-          <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
-        </li>
-        
-        <li class="inline-block pad-r-m">
-         <a href="http://instagram.com/alexbloom">
-           Instagram
-         </a>
-        </li>
-        
-        
-         <li class="inline-block pad-r-m">
-           <a href="https://github.com/alexbloom">
-             Github
-           </a>
-         </li>
-        
-        
+          </li>
+          
+          
            <li class="inline-block pad-r-m">
-             <a href="https://dribbble.com/alexbloom">
-               Dribbble
+             <a href="https://github.com/alexbloom">
+               Github
              </a>
            </li>
-        
-       </ul>
+          
+          
+             <li class="inline-block pad-r-m">
+               <a href="https://dribbble.com/alexbloom">
+                 Dribbble
+               </a>
+             </li>
+          
+         </ul>
 
+        <!-- <p class="rss-subscribe">
+          <a href="/feed.xml">
+           <span class="icon-rss"></span> <br>
+         Subscribe via RSS
+            </a>
+       </p> -->
+      </div>
 
-
-      <!-- <p class="rss-subscribe">
-        <a href="/feed.xml">
-         <span class="icon-rss"></span> <br>
-       Subscribe via RSS
-          </a>
-     </p> -->
     </div>
-
-  </div>
-  <div class="col col-12">
-    <p class="copyright">
-      <small>All content © Alex Bloom 2010-2016</small>
-    </p>
+    <div class="col col-12">
+      <p class="copyright">
+        <small>All content © Alex Bloom 2010-2016</small>
+      </p>
+    </div>
   </div>
 </footer>
 <!-- <script src="../js/plugins.js"></script> -->

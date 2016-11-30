@@ -69,6 +69,7 @@ input[type="password"]:after,
 .border-box:before,
 .border-box:after {
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 /**

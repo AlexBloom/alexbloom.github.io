@@ -68,7 +68,8 @@ input[type="password"]:after,
 .border-box,
 .border-box:before,
 .border-box:after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
 
 /**
  * Reset some basic elements
@@ -1037,12 +1038,10 @@ dl, dd, ol, ul, figure {
   *zoom: 1; }
 
 .col {
-  float: left;
-  box-sizing: border-box; }
+  float: left; }
 
 .col-right {
-  float: right;
-  box-sizing: border-box; }
+  float: right; }
 
 .embed {
   box-sizing: border-box;
@@ -1375,13 +1374,13 @@ dl, dd, ol, ul, figure {
 
 /* fallback */
 .sans {
-  font-family: "aktiv-grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
+  font-family: "PF DIN Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
 
 .serif {
   font-family: "freight-text-pro", Palatino, Garamond, Georgia, Cambria, "Times New Roman", Times, serif; }
 
 .monospace {
-  font-family: Roboto Mono, Source Code Pro, SFMono, menlo, inconsolata, consolas, "fira mono", "noto mono", "droid sans mono", "dejavu sans mono", "liberation mono", "ubuntu mono", monaco, "courier new", monospace; }
+  font-family: "PF DIN Mono", Roboto Mono, Source Code Pro, SFMono, menlo, inconsolata, consolas, "fira mono", "noto mono", "droid sans mono", "dejavu sans mono", "liberation mono", "ubuntu mono", monaco, "courier new", monospace; }
 
 .condensed {
   font-family: "alternate-gothic-no-1-d", "Roboto Condensed", "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
@@ -1511,7 +1510,7 @@ strong {
  * Basic styling
  */
 body {
-  font-family: "aktiv-grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "PF DIN Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   font-weight: normal;
@@ -1527,14 +1526,13 @@ ul, ol, dl, figure, small {
   margin-top: 0;
   margin-bottom: 0.75rem; }
 
-small {
+small, .small {
   font-size: 0.875rem;
-  display: block;
   line-height: 1.5rem;
   margin-top: 0.125rem; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "aktiv-grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "PF DIN Mono" -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   line-height: 1.25;
   color: rgba(0, 0, 0, 0.9); }
 
@@ -1577,8 +1575,6 @@ li > ol {
   margin-bottom: 0; }
 
 .list-reset {
-  margin: 0;
-  padding: 0;
   list-style: none; }
   .list-reset li {
     padding-bottom: 0; }

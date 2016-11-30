@@ -1,55 +1,55 @@
 
-<footer class=" cf z3 relative pad-y-l pad-x-l border-bottom black bg-black-2">
-  <div class="col col-12 pad-b-m">
-    <div class="site-description">
-       <!-- Links to Everything -->
-       <ul class="list-reset">
-        <li class="inline-block pad-r-m">
-           <a href="mailto:{{site.email}}">
-             <span class="username">{{site.email}}</span>
+<footer class="cf z3 relative pad-y-l pad-x-l border-bottom black-5 bg-white">
+  <div class="max-width-xl float-center">
+    <div class="col col-12 pad-b-m">
+      <div class="site-description">
+         <!-- Links to Everything -->
+         <ul class="list-reset small">
+          <li class="inline-block pad-r-m">
+             <a href="mailto:{{site.email}}">
+               <span class="username">{{site.email}}</span>
+             </a>
+          </li>
+          <li class="inline-block pad-r-m">
+            <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
+          </li>
+          {% if site.instagram_username %}
+          <li class="inline-block pad-r-m">
+           <a href="http://instagram.com/{{ site.instagram_username }}">
+             Instagram
            </a>
-        </li>
-        <li class="inline-block pad-r-m">
-          <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
-        </li>
-        {% if site.instagram_username %}
-        <li class="inline-block pad-r-m">
-         <a href="http://instagram.com/{{ site.instagram_username }}">
-           Instagram
-         </a>
-        </li>
-        {% endif %}
-        {% if site.github_username %}
-         <li class="inline-block pad-r-m">
-           <a href="https://github.com/{{ site.github_username }}">
-             Github
-           </a>
-         </li>
-        {% endif %}
-        {% if site.dribbble_username %}
+          </li>
+          {% endif %}
+          {% if site.github_username %}
            <li class="inline-block pad-r-m">
-             <a href="https://dribbble.com/{{ site.dribbble_username }}">
-               Dribbble
+             <a href="https://github.com/{{ site.github_username }}">
+               Github
              </a>
            </li>
-        {% endif %}
-       </ul>
+          {% endif %}
+          {% if site.dribbble_username %}
+             <li class="inline-block pad-r-m">
+               <a href="https://dribbble.com/{{ site.dribbble_username }}">
+                 Dribbble
+               </a>
+             </li>
+          {% endif %}
+         </ul>
 
+        <!-- <p class="rss-subscribe">
+          <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+           <span class="icon-rss"></span> <br>
+         Subscribe via RSS
+            </a>
+       </p> -->
+      </div>
 
-
-      <!-- <p class="rss-subscribe">
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-         <span class="icon-rss"></span> <br>
-       Subscribe via RSS
-          </a>
-     </p> -->
     </div>
-
-  </div>
-  <div class="col col-12">
-    <p class="copyright">
-      <small>All content © Alex Bloom 2010-2016</small>
-    </p>
+    <div class="col col-12">
+      <p class="copyright">
+        <small>All content © Alex Bloom 2010-2016</small>
+      </p>
+    </div>
   </div>
 </footer>
 <!-- <script src="../js/plugins.js"></script> -->

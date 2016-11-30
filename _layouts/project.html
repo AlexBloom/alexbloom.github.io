@@ -1,16 +1,43 @@
 ---
 layout: default
 ---
-<div class="project pad-y-xxl pad-x-l">
-
-  <article class="page-content max-width-l float-center">
+<div class="project pad-b-xxl pad-x-l">
+  <article class="page-content max-width-xl float-center">
+    <nav class="breadcrumb small pad-b-m cf">
+      <div class="col col-12 m-col-6">
+        <a href="{{site.baseurl}}/projects/">Projects</a> / <a href="#">{{page.title}}</a>
+      </div>
+      <div class="float-right col-12 m-col-6 text-right">
+        {% if page.previous.url %}
+        <a href="{{page.previous.url}}">Prev</a>
+        {% endif %}
+        |
+        {% if page.next.url %}
+        <a href="{{page.next.url}}">Next</a>
+        {% endif %}
+      </div>
+    </nav>
     <header class="pad-b-l">
-      <h1>{{ page.title }}</h1>
+    <img src="{{site.baseurl}}/img/projects/{{page.thumbnail}}" alt="">
+      <!-- <h1 class="mar-t-l">{{ page.title }}</h1> -->
       {% if page.subtitle %}
-        <p class="h2 mx"> {{ page.subtitle }} </p>
+      <p class="h2"> {{ page.subtitle }} </p>
       {% endif %}
     </header>
-    {{ content }}
+    <div class="col col-12">
+      <h2 class="h4"> {{page.launch-link}}</h2>
+      <p> {{page.year}} </p>
+      {% if page.partners %}
+      <h2 class="h4 pad-t-m">Partners</h2>
+        {% for partner in page.partners %}
+        <ul class="list-reset">
+          <li class="inline-block">{{ partner }}</li>
+        </ul>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div class="col  ">
+      {{ content }}
+    </div>
   </article>
-
 </div>

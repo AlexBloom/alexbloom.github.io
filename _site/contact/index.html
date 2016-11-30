@@ -50,6 +50,19 @@
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.2.0/lory.min.js"></script>
 
+    <script type="text/javascript">
+    (function() {
+        var path = '//easy.myfonts.net/v2/js?sid=189446(font-family=PF+DIN+Mono+Medium)&sid=189455(font-family=PF+DIN+Mono)&sid=189457(font-family=PF+DIN+Mono+Light)&sid=189459(font-family=PF+DIN+Mono+Bold)&key=vZJrmKrZxR',
+            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+            trial = document.createElement('script');
+        trial.type = 'text/javascript';
+        trial.async = true;
+        trial.src = protocol + path;
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(trial);
+    })();
+  </script>
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -73,17 +86,17 @@
   </defs>
 </svg>
 
-    <header id="site-header" class="site-header relative left-0 right-0 border-top z3">
-  <div class="wrapper cf ">
-    <nav class="float-left  mar-x-l mar-t-l">
+    <header id="site-header" class="site-header relative left-0 right-0 border-top z3 pad-x-l">
+  <div class="wrapper cf max-width-xl float-center">
+    <nav class="float-left   mar-t-l mar-r-l">
       <a href="/" class="h5 link bold mar-0"> Alex Bloom </a>
     </nav>
-    <nav class="float-right right-0 mar-x-l mar-t-l">
+    <nav class="col right-0  mar-t-l">
         <ul class="list-reset cf">
-          <li class="inline-block"> <a href="/info/" class="h5 link bold mar-r-m color-inherit">Info</a></li>
-          <li class="inline-block"> <a href="/projects/" class="h5 link bold mar-r-m color-inherit">Projects</a></li>
+          <li class="inline-block"> <a href="/info/" class="h5 link mar-r-m color-inherit">Info</a></li>
+          <!-- <li class="inline-block"> <a href="/projects/" class="h5 link mar-r-m color-inherit">Projects</a></li> -->
           <!-- <li class="inline-block"> <a href="/workbench/" class="link bold mar-r-m">Workbench</a></li> -->
-          <li class="inline-block"> <a href="/contact/" class="h5 link bold mar-r-m color-inherit">Contact</a></li>
+          <li class="inline-block"> <a href="/contact/" class="h5 link mar-r-m color-inherit">Contact</a></li>
         </ul>
     </nav>
   </div>
@@ -92,12 +105,15 @@
 
     <main class="main relative cf">
       <div class="ajaxWrap">
-        <div id="userLocation" class="pad-x-l absolute top-0 z2">
+        <!-- <div id="userLocation" class="pad-x-l absolute top-0 z2">
           <p class="h5 black-8"> Contact </p>
-        </div>
-        <div class="pad-y-xl pad-x-m float-center max-width-l fcf">
+        </div> -->
+        <div class="page pad-y-xl pad-x-l">
 
-  <div class="col col-12 pad-x-m mar-b-l">
+  <article class="page-content max-width-xl float-center cf">
+    <div class="pad-y-xl float-center max-width-xl cf">
+
+  <div class="col col-12 mar-b-l">
     <ul class="list-reset cf">
       <li class="mar-b-l col col-12 m-col-6">
         <span class="h6 caps bold black">Work Inquiries</span><br>
@@ -115,7 +131,7 @@
     </ul>
     <hr class="mar-y-l">
   </div>
-  <div class="col col-12 pad-x-m  mar-b-l">
+  <div class="col col-12  mar-b-l">
     <div class="cf pad-b-l">
       <div class="col col-12 m-col-3">
         <h2 class="h6 caps bold"> Full-Time </h2>
@@ -170,61 +186,65 @@
 
 </div>
 
+  </article>
+
+</div>
+
       </div>
     </main>
 
     
-<footer class=" cf z3 relative pad-y-l pad-x-l border-bottom black bg-black-2">
-  <div class="col col-12 pad-b-m">
-    <div class="site-description">
-       <!-- Links to Everything -->
-       <ul class="list-reset">
-        <li class="inline-block pad-r-m">
-           <a href="mailto:hello@alexbloom.co">
-             <span class="username">hello@alexbloom.co</span>
+<footer class="cf z3 relative pad-y-l pad-x-l border-bottom black-5 bg-white">
+  <div class="max-width-xl float-center">
+    <div class="col col-12 pad-b-m">
+      <div class="site-description">
+         <!-- Links to Everything -->
+         <ul class="list-reset small">
+          <li class="inline-block pad-r-m">
+             <a href="mailto:hello@alexbloom.co">
+               <span class="username">hello@alexbloom.co</span>
+             </a>
+          </li>
+          <li class="inline-block pad-r-m">
+            <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
+          </li>
+          
+          <li class="inline-block pad-r-m">
+           <a href="http://instagram.com/alexbloom">
+             Instagram
            </a>
-        </li>
-        <li class="inline-block pad-r-m">
-          <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
-        </li>
-        
-        <li class="inline-block pad-r-m">
-         <a href="http://instagram.com/alexbloom">
-           Instagram
-         </a>
-        </li>
-        
-        
-         <li class="inline-block pad-r-m">
-           <a href="https://github.com/alexbloom">
-             Github
-           </a>
-         </li>
-        
-        
+          </li>
+          
+          
            <li class="inline-block pad-r-m">
-             <a href="https://dribbble.com/alexbloom">
-               Dribbble
+             <a href="https://github.com/alexbloom">
+               Github
              </a>
            </li>
-        
-       </ul>
+          
+          
+             <li class="inline-block pad-r-m">
+               <a href="https://dribbble.com/alexbloom">
+                 Dribbble
+               </a>
+             </li>
+          
+         </ul>
 
+        <!-- <p class="rss-subscribe">
+          <a href="/feed.xml">
+           <span class="icon-rss"></span> <br>
+         Subscribe via RSS
+            </a>
+       </p> -->
+      </div>
 
-
-      <!-- <p class="rss-subscribe">
-        <a href="/feed.xml">
-         <span class="icon-rss"></span> <br>
-       Subscribe via RSS
-          </a>
-     </p> -->
     </div>
-
-  </div>
-  <div class="col col-12">
-    <p class="copyright">
-      <small>All content © Alex Bloom 2010-2016</small>
-    </p>
+    <div class="col col-12">
+      <p class="copyright">
+        <small>All content © Alex Bloom 2010-2016</small>
+      </p>
+    </div>
   </div>
 </footer>
 <!-- <script src="../js/plugins.js"></script> -->

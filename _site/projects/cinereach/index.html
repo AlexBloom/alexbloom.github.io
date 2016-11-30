@@ -50,6 +50,19 @@
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.2.0/lory.min.js"></script>
 
+    <script type="text/javascript">
+    (function() {
+        var path = '//easy.myfonts.net/v2/js?sid=189446(font-family=PF+DIN+Mono+Medium)&sid=189455(font-family=PF+DIN+Mono)&sid=189457(font-family=PF+DIN+Mono+Light)&sid=189459(font-family=PF+DIN+Mono+Bold)&key=vZJrmKrZxR',
+            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+            trial = document.createElement('script');
+        trial.type = 'text/javascript';
+        trial.async = true;
+        trial.src = protocol + path;
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(trial);
+    })();
+  </script>
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -73,17 +86,17 @@
   </defs>
 </svg>
 
-    <header id="site-header" class="site-header relative left-0 right-0 border-top z3">
-  <div class="wrapper cf ">
-    <nav class="float-left  mar-x-l mar-t-l">
+    <header id="site-header" class="site-header relative left-0 right-0 border-top z3 pad-x-l">
+  <div class="wrapper cf max-width-xl float-center">
+    <nav class="float-left   mar-t-l mar-r-l">
       <a href="/" class="h5 link bold mar-0"> Alex Bloom </a>
     </nav>
-    <nav class="float-right right-0 mar-x-l mar-t-l">
+    <nav class="col right-0  mar-t-l">
         <ul class="list-reset cf">
-          <li class="inline-block"> <a href="/info/" class="h5 link bold mar-r-m color-inherit">Info</a></li>
-          <li class="inline-block"> <a href="/projects/" class="h5 link bold mar-r-m color-inherit">Projects</a></li>
+          <li class="inline-block"> <a href="/info/" class="h5 link mar-r-m color-inherit">Info</a></li>
+          <!-- <li class="inline-block"> <a href="/projects/" class="h5 link mar-r-m color-inherit">Projects</a></li> -->
           <!-- <li class="inline-block"> <a href="/workbench/" class="link bold mar-r-m">Workbench</a></li> -->
-          <li class="inline-block"> <a href="/contact/" class="h5 link bold mar-r-m color-inherit">Contact</a></li>
+          <li class="inline-block"> <a href="/contact/" class="h5 link mar-r-m color-inherit">Contact</a></li>
         </ul>
     </nav>
   </div>
@@ -92,103 +105,122 @@
 
     <main class="main relative cf">
       <div class="ajaxWrap">
-        <div id="userLocation" class="pad-x-l absolute top-0 z2">
+        <!-- <div id="userLocation" class="pad-x-l absolute top-0 z2">
           <p class="h5 black-8"> Cinereach </p>
-        </div>
-        <div class="project pad-y-xxl pad-x-l">
-
-  <article class="page-content max-width-l float-center">
+        </div> -->
+        <div class="project pad-b-xxl pad-x-l">
+  <article class="page-content max-width-xl float-center">
+    <nav class="breadcrumb small pad-b-m cf">
+      <div class="col col-12 m-col-6">
+        <a href="/projects/">Projects</a> / <a href="#">Cinereach</a>
+      </div>
+      <div class="float-right col-12 m-col-6 text-right">
+        
+        <a href="/projects/bike-and-build/">Prev</a>
+        
+        |
+        
+        <a href="/projects/energy-realities/">Next</a>
+        
+      </div>
+    </nav>
     <header class="pad-b-l">
-      <h1>Cinereach</h1>
+    <img src="/img/projects/cinereach.jpg" alt="">
+      <!-- <h1 class="mar-t-l">Cinereach</h1> -->
       
-        <p class="h2 mx"> Stuff about the project. </p>
+      <p class="h2"> Architecting and building film archives and marketing tools. </p>
       
     </header>
-    Cinereach approached me in 2014 after seeing a website I had designed &amp; built for Tribeca Film Institute. They had a great in-house visual designer who was formally trained in print design but didn't have much UX experience. This was one of the first projects where I was developer first and designer second, but it taught me a lot of important lessons.
+    <div class="col col-12">
+      <h2 class="h4"> </h2>
+      <p> 2014 </p>
+      
+    </div>
+    <div class="col  ">
+      <p>
+  Cinereach approached me in 2014 after seeing a website I had designed &amp; built for Tribeca Film Institute. They had a great in-house visual designer who was formally trained in print design but didn't have much UX experience. This was one of the first projects where I was developer first and designer second, but it taught me a lot of important lessons.
 
-Reduce - Reduce - Reduce
+  Reduce - Reduce - Reduce
 
-Don't promise the impossible.
+  Don't promise the impossible.
 
-#1: Make everything understandable for the entire team.
-Technical, Visual, Functional. It all needs to be mapped and it all needs to be explained.
-#2: Explore independently, but if you like something, leave nothing to interpretation.
-#3: Performance Matters.
-#4: Workflow Matters.
-#5: Testing Matters.
+  #1: Make everything understandable for the entire team.
+  Technical, Visual, Functional. It all needs to be mapped and it all needs to be explained.
+  #2: Explore independently, but if you like something, leave nothing to interpretation.
+  #3: Performance Matters.
+  #4: Workflow Matters.
+  #5: Testing Matters.
 
-Prototypes are express lanes for clear conversation.
+  Prototypes are express lanes for clear conversation.
 
-Two heads are better than one.
+  Two heads are better than one.
 
+</p>
+
+    </div>
   </article>
-
 </div>
 
       </div>
     </main>
 
     
-<footer class=" cf z3 relative pad-y-l pad-x-l border-bottom black bg-black-2">
-  <div class="col col-12 pad-b-m">
-    <div class="site-description">
-       <!-- Links to Everything -->
-       <ul class="list-reset">
-        <li class="inline-block pad-r-m">
-           <a href="mailto:hello@alexbloom.co">
-             <span class="username">hello@alexbloom.co</span>
+<footer class="cf z3 relative pad-y-l pad-x-l border-bottom black-5 bg-white">
+  <div class="max-width-xl float-center">
+    <div class="col col-12 pad-b-m">
+      <div class="site-description">
+         <!-- Links to Everything -->
+         <ul class="list-reset small">
+          <li class="inline-block pad-r-m">
+             <a href="mailto:hello@alexbloom.co">
+               <span class="username">hello@alexbloom.co</span>
+             </a>
+          </li>
+          <li class="inline-block pad-r-m">
+            <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
+          </li>
+          
+          <li class="inline-block pad-r-m">
+           <a href="http://instagram.com/alexbloom">
+             Instagram
            </a>
-        </li>
-        <li class="inline-block pad-r-m">
-          <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
-        </li>
-        
-        <li class="inline-block pad-r-m">
-         <a href="http://instagram.com/alexbloom">
-           <span class="icon-instagram"> </span>
-           Instagram
-         </a>
-        </li>
-        
-        
-         <li class="inline-block pad-r-m">
-           <a href="https://github.com/alexbloom">
-             <span class="icon-github"> </span>
-             Github
-           </a>
-         </li>
-        
-        
-           <li class="col pad-r-m">
-             <a href="https://dribbble.com/alexbloom">
-               <span class="icon-github"> </span>
-               Dribbble
+          </li>
+          
+          
+           <li class="inline-block pad-r-m">
+             <a href="https://github.com/alexbloom">
+               Github
              </a>
            </li>
-        
-       </ul>
+          
+          
+             <li class="inline-block pad-r-m">
+               <a href="https://dribbble.com/alexbloom">
+                 Dribbble
+               </a>
+             </li>
+          
+         </ul>
 
+        <!-- <p class="rss-subscribe">
+          <a href="/feed.xml">
+           <span class="icon-rss"></span> <br>
+         Subscribe via RSS
+            </a>
+       </p> -->
+      </div>
 
-
-      <!-- <p class="rss-subscribe">
-        <a href="/feed.xml">
-         <span class="icon-rss"></span> <br>
-       Subscribe via RSS
-          </a>
-     </p> -->
     </div>
-
-  </div>
-  <div class="col col-12">
-    <p class="copyright">
-      <small>All content © Alex Bloom 2010-2016</small>
-    </p>
+    <div class="col col-12">
+      <p class="copyright">
+        <small>All content © Alex Bloom 2010-2016</small>
+      </p>
+    </div>
   </div>
 </footer>
 <!-- <script src="../js/plugins.js"></script> -->
 <!-- <script>
     'use strict';
-
     document.addEventListener('DOMContentLoaded', function() {
         var slider = document.querySelector('.js_slider');
 
