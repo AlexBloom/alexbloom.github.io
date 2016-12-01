@@ -1,0 +1,20 @@
+---
+layout: project
+title:
+subtitle:
+thumbnail:
+permalink:
+year:
+launch-link:
+partners:
+  -
+tags:
+  -
+hero-images:
+  -
+context:
+process:
+process-images:
+  -
+results:
+---
