@@ -53,14 +53,14 @@
   </div>
 </footer>
 <!-- <script src="../js/plugins.js"></script> -->
-<!-- <script>
+<script>
     'use strict';
-    document.addEventListener('DOMContentLoaded', function() {
-        var slider = document.querySelector('.js_slider');
-
-        lory(slider, {
-            infinite: 1,
-            enableMouseEvents: true,
+    document.addEventListener('DOMContentLoaded', function () {
+        Array.prototype.slice.call(document.querySelectorAll('.js_slider')).forEach(function (element, index) {
+            lory(element, {
+              infinite: 1,
+              enableMouseEvents: true,
+            });
         });
     });
-</script> -->
+</script>

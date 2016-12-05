@@ -1,16 +1,17 @@
+
 /**
  * (optional) define here the style definitions which should be applied on the slider container
  * e.g. width including further controls like arrows etc.
  */
-.slider {}
+.slider {
+  position:relative;
+}
 
 .frame {
     /**
      * (optional) wrapper width, specifies width of the slider frame.
      */
-  //  width: 880px;
-    width:100%;
-    //height:300px;
+    //width: 880px;
     position: relative;
     font-size: 0;
     line-height: 0;
@@ -20,14 +21,33 @@
 
 .slides {
     display: inline-block;
-
 }
-.js_slide {
+
+li {
     position: relative;
     display: inline-block;
 
     /**
      * (optional) if the content inside the slide element has a defined size.
      */
-    width: 25%;
+    //width: 880px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    display: block;
+    cursor: pointer;
+}
+
+.next {
+    right: -1.5em;
+}
+
+.prev {
+    left: -1.5em;
+}
+.next svg, .prev svg {
+    width: 25px;
 }

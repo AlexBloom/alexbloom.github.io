@@ -21,21 +21,29 @@ collections:
     output: true
     permalink: /projects/:path/
 
+sass:
+    style: compressed
+    
 #assets:
-#  compress:
-#    css: false | true | default - development: false, production: true
-#    js: false | true | default - development: false, production: true
-#  cache: false | directory | default: .asset-cache
-#  prefix: "/assets"
-#  assets:
-#    - "*.png"
-#    - "bundle.css"
-#  digest: true
-#  sources:
-#    - "_assets/folder"
+# compress:
+#   css: true
+  # js: false | true | default - development: false, production: true
+# cache: false | directory | default: .asset-cache
+# prefix: "/assets"
+# assets:
+#   - "*.png"
+#   - "bundle.css"
+# digest: true
+# sources:
+#   - "_assets/folder"
 
 # Build settings
 markdown: kramdown
 
 # Exclusions from Build
-exclude: [gulpfile, .sass-cache]
+exclude:
+  - package.json
+  - node_modules
+  - gulpfile.js
+  - .sass-cache
+# exclude: [gulpfile, .sass-cache]

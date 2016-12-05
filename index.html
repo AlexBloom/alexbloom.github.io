@@ -6,19 +6,6 @@ title: Designer
 
 <section id="gradientDiv" class="fixed top-0 left-0 right-0 bottom-0 z-0">
 </section>
-<script>
-
-  function homeBackgroundColor(){
-    var random = (Math.floor(Math.random()*(360)));
-    var hue = 'hsl(' + random + ',' + '95%,' + '65%)';
-    var huetwo = 'hsl(' +
-      (Math.floor(Math.random() *(360))) + ',' + '95%,' + '80%)';
-    document.getElementById('gradientDiv').style.backgroundImage= "linear-gradient( 45deg, " + hue + " , " + huetwo + ")";
-    document.getElementById('gradientDiv').style.backgroundColor = huetwo;
-  }
-  homeBackgroundColor();
-
-</script>
 
 <section id="" class="cf relative z2 pad-x-l">
     <div class="float-center max-width-xl">
@@ -38,8 +25,9 @@ title: Designer
           </div>
         </div>
       </div>
-      <div class="pad-b-l">
-        <p class="h2 black-8 measure"> Multi-disciplinary design &amp; development for the planet, people, and profit. </p>
+      <div class="pad-b-l black-8">
+        <p class="h1 measure"> Disciplined Designer in Multiple Disciplines. </p>
+        <p class="h2 measure"> Focused on effective brand strategy and delightful user experience across physical and digital contexts.</p>
         <ul class="pad-0 mar-y-xl list-reset ">
           <li class="h6"><a href="{{site.baseurl}}/info/" class="caps bold link"> More Info &rarr; </a>  </li>
         </ul>
@@ -196,3 +184,17 @@ title: Designer
   </section>
 
 </section>
+
+<script>
+
+  function homeBackgroundColor(){
+    var random = (Math.floor(Math.random()*(360)));
+    var hue = 'hsl(' + random + ',' + '95%,' + '65%)';
+    var huetwo = 'hsl(' +
+      (Math.floor(Math.random() *(360))) + ',' + '95%,' + '80%)';
+    document.getElementById('gradientDiv').style.backgroundImage= "linear-gradient( 45deg, " + hue + " , " + huetwo + ")";
+    document.getElementById('gradientDiv').style.backgroundColor = huetwo;
+  }
+  homeBackgroundColor();
+
+</script>

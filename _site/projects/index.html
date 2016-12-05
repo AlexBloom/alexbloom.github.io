@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.2.0/lory.min.js"></script>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
     (function() {
         var path = '//easy.myfonts.net/v2/js?sid=189446(font-family=PF+DIN+Mono+Medium)&sid=189455(font-family=PF+DIN+Mono)&sid=189457(font-family=PF+DIN+Mono+Light)&sid=189459(font-family=PF+DIN+Mono+Bold)&key=vZJrmKrZxR',
             protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
@@ -61,7 +61,7 @@
         var head = document.getElementsByTagName("head")[0];
         head.appendChild(trial);
     })();
-  </script>
+  </script> -->
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -117,12 +117,24 @@
     <div class="flex flex-wrap">
       
       <div class="mar-b-l black-5 col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
+        <a href="../projects/the-woolley-market/" class="link">
+          <div class="pad-y-m">
+            <h2 class="h3 bold mar-0">The Woolley Market</h2>
+            <p class="h5 black-5"> 2014 </p>
+            
+              <p> <small>Revitalizing a town with history as rich as its soil.</small> </p>
+            
+          </div>
+        </a>
+      </div>
+      
+      <div class="mar-b-l black-5 col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
         <a href="../projects/bike-and-build/" class="link">
           <div class="pad-y-m">
-            <h2 class="h5 bold mar-b-0">Bike and Build</h2>
+            <h2 class="h3 bold mar-0">Bike and Build</h2>
+            <p class="h5 black-5"> 2012–2015 </p>
             
               <p> <small>Interactive annual reports, jerseys, and printed material for the best way to ride a bike across the USA.</small> </p>
-              <small class="black-5"> 2012 </small>
             
           </div>
         </a>
@@ -131,10 +143,10 @@
       <div class="mar-b-l black-5 col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
         <a href="../projects/cinereach/" class="link">
           <div class="pad-y-m">
-            <h2 class="h5 bold mar-b-0">Cinereach</h2>
+            <h2 class="h3 bold mar-0">Cinereach</h2>
+            <p class="h5 black-5"> 2014 </p>
             
               <p> <small>Architecting and building film archives and marketing tools.</small> </p>
-              <small class="black-5"> 2014 </small>
             
           </div>
         </a>
@@ -143,10 +155,10 @@
       <div class="mar-b-l black-5 col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
         <a href="../projects/energy-realities/" class="link">
           <div class="pad-y-m">
-            <h2 class="h5 bold mar-b-0">Energy Realities</h2>
+            <h2 class="h3 bold mar-0">Energy Realities</h2>
+            <p class="h5 black-5"> 2012 </p>
             
               <p> <small>Visualizing global energy needs with National Geographic.</small> </p>
-              <small class="black-5"> 2012 </small>
             
           </div>
         </a>
@@ -155,10 +167,10 @@
       <div class="mar-b-l black-5 col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
         <a href="../projects/gnarrboro/" class="link">
           <div class="pad-y-m">
-            <h2 class="h5 bold mar-b-0">Gnarrboro</h2>
+            <h2 class="h3 bold mar-0">Gnarrboro</h2>
+            <p class="h5 black-5"> 2015-2016 </p>
             
               <p> <small>Building a community on a platform of trash and bicycles.</small> </p>
-              <small class="black-5"> 2015-2016 </small>
             
           </div>
         </a>
@@ -167,22 +179,10 @@
       <div class="mar-b-l black-5 col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
         <a href="../projects/suffoca/" class="link">
           <div class="pad-y-m">
-            <h2 class="h5 bold mar-b-0">Suffoca</h2>
+            <h2 class="h3 bold mar-0">Suffoca</h2>
+            <p class="h5 black-5"> 2016 </p>
             
               <p> <small>Website for the english Retail brand.</small> </p>
-              <small class="black-5"> 2016 </small>
-            
-          </div>
-        </a>
-      </div>
-      
-      <div class="mar-b-l black-5 col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
-        <a href="../projects/the-woolley-market/" class="link">
-          <div class="pad-y-m">
-            <h2 class="h5 bold mar-b-0">The Woolley Market</h2>
-            
-              <p> <small>Revitalizing a town with history as rich as it's soil.</small> </p>
-              <small class="black-5"> 2014 </small>
             
           </div>
         </a>
@@ -285,17 +285,17 @@
   </div>
 </footer>
 <!-- <script src="../js/plugins.js"></script> -->
-<!-- <script>
+<script>
     'use strict';
-    document.addEventListener('DOMContentLoaded', function() {
-        var slider = document.querySelector('.js_slider');
-
-        lory(slider, {
-            infinite: 1,
-            enableMouseEvents: true,
+    document.addEventListener('DOMContentLoaded', function () {
+        Array.prototype.slice.call(document.querySelectorAll('.js_slider')).forEach(function (element, index) {
+            lory(element, {
+              infinite: 1,
+              enableMouseEvents: true,
+            });
         });
     });
-</script> -->
+</script>
 
 
   </body>

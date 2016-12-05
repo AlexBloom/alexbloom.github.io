@@ -13,8 +13,9 @@ tags:
 hero-images:
   -
 context:
-process:
+challenge:
+strategy:
+results:
 process-images:
   -
-results:
 ---

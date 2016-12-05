@@ -1,11 +1,8 @@
 // Family Declarations
 
-$sans-font-family: 'PF DIN Mono', -apple-system, BlinkMacSystemFont,
+$sans-font-family: 'PF DIN', -apple-system, BlinkMacSystemFont,
   "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
   "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif ;
-$heading-font-family: 'PF DIN Mono' -apple-system, BlinkMacSystemFont,
-  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-  "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $serif-font-family: 'freight-text-pro', Palatino, Garamond, Georgia, Cambria, "Times New Roman", Times, serif;
 $monospace-font-family: 'PF DIN Mono', Roboto Mono, Source Code Pro, SFMono, menlo, /* mac */
                       inconsolata, consolas, /* windows */
@@ -15,6 +12,8 @@ $monospace-font-family: 'PF DIN Mono', Roboto Mono, Source Code Pro, SFMono, men
                       monaco, 'courier new', /* older systems */
                       monospace; /* fallback */
 $condensed-font-family:'alternate-gothic-no-1-d', "Roboto Condensed", "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+
+$heading-font-family: $sans-font-family;
 
 // Set base family globally:
 $base-font-family: $sans-font-family;
@@ -27,7 +26,7 @@ $base-font-family: $sans-font-family;
   font-family: $serif-font-family;
 }
 .monospace {
-  font-family:  $monospace-font-family;
+  font-family: $monospace-font-family;
 }
 .condensed{
   font-family:$condensed-font-family;

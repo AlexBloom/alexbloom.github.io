@@ -9,35 +9,44 @@ layout: default
       </div>
       <div class="float-right col-12 m-col-6 text-right">
         {% if page.previous.url %}
-        <a href="{{page.previous.url}}">Prev</a>
+        <a href="{{page.previous.url}}">&larr;</a>
         {% endif %}
-        |
+        {% if page.previous.url%} {% if page.next.url %} | {% endif %} {% endif %}
         {% if page.next.url %}
-        <a href="{{page.next.url}}">Next</a>
+        <a href="{{page.next.url}}">&rarr;</a>
         {% endif %}
       </div>
     </nav>
-    <header class="pad-b-l">
-    <img src="{{site.baseurl}}/img/projects/{{page.thumbnail}}" alt="">
-      <!-- <h1 class="mar-t-l">{{ page.title }}</h1> -->
+    <header class="pad-y-l">
+    <!-- <img src="{{site.baseurl}}/img/projects/{{page.thumbnail}}" alt=""> -->
+      <h3 class="h5 black-5">{{page.year}}</h3>
+      <h1 class="mar-t-m">{{ page.title }}</h1>
       {% if page.subtitle %}
-      <p class="h2"> {{ page.subtitle }} </p>
+      <p class="h2 measure"> {{ page.subtitle }} </p>
       {% endif %}
+      <div class="cf">
+        {% if page.context %}
+        <div class="col col-12 l-col-8 mar-b-l">
+          <p class="measure"> {{ page.context }} </p>
+        </div>
+        {% endif %}
+        <div class="col col-12 l-col-4 mar-b-l">
+          <p class="h5 mar-t-0 caps bold"> Link <br> {{page.launch-link}} </p>
+        </div>
+      </div>
     </header>
-    <div class="col col-12">
-      <h2 class="h4"> {{page.launch-link}}</h2>
-      <p> {{page.year}} </p>
-      {% if page.partners %}
-      <h2 class="h4 pad-t-m">Partners</h2>
-        {% for partner in page.partners %}
-        <ul class="list-reset">
-          <li class="inline-block">{{ partner }}</li>
-        </ul>
-        {% endfor %}
-      {% endif %}
-    </div>
-    <div class="col  ">
+
+
+    <div class="  ">
       {{ content }}
     </div>
+    {% if page.partners %}
+      <h2 class="h4 pad-t-m">Partners</h2>
+      {% for partner in page.partners %}
+      <ul class="list-reset">
+        <li class="inline-block">{{ partner }}</li>
+      </ul>
+      {% endfor %}
+    {% endif %}
   </article>
 </div>
