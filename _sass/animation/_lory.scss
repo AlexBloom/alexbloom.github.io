@@ -5,49 +5,42 @@
  */
 .slider {
   position:relative;
-}
-
-.frame {
-    /**
-     * (optional) wrapper width, specifies width of the slider frame.
-     */
-    //width: 880px;
-    position: relative;
-    font-size: 0;
-    line-height: 0;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.slides {
-    display: inline-block;
-}
-
-li {
-    position: relative;
-    display: inline-block;
-
-    /**
-     * (optional) if the content inside the slide element has a defined size.
-     */
-    //width: 880px;
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    margin-top: -25px;
-    display: block;
-    cursor: pointer;
-}
-
-.next {
-    right: -1.5em;
-}
-
-.prev {
-    left: -1.5em;
-}
-.next svg, .prev svg {
-    width: 25px;
+  .frame {
+      /**
+       * (optional) wrapper width, specifies width of the slider frame.
+       */
+      //width: 880px;
+      position: relative;
+      font-size: 0;
+      line-height: 0;
+      overflow: hidden;
+      white-space: nowrap;
+  }
+  .slides {
+      display: inline-block;
+      li {
+          position: relative;
+          display: inline-block;
+          /**
+           * (optional) if the content inside the slide element has a defined size.
+           */
+          //width: 880px;
+      }
+  }
+  .prev, .next {
+      position: absolute;
+      top: 50%;
+      margin-top: -25px;
+      display: block;
+      cursor: pointer;
+  }
+  .next {
+      right: -1.5em;
+  }
+  .prev {
+      left: -1.5em;
+  }
+  .next svg, .prev svg {
+      width: 25px;
+  }
 }

@@ -6,7 +6,7 @@ li {
  * Lists
  */
 ul, ol, dl {
-    padding-left: $space-s;
+    padding-left: $space-m;
     margin:0 auto $space-after;
 }
 
@@ -17,7 +17,6 @@ li {
     }
 }
 .list-reset {
-
     list-style: none;
     li{
       padding-bottom:0;
