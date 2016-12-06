@@ -8,7 +8,7 @@ year:
 launch-link:
 partners:
   -
-tags:
+services:
   -
 hero-images:
   -
@@ -16,6 +16,4 @@ context:
 challenge:
 strategy:
 results:
-process-images:
-  -
 ---

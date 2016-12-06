@@ -1,5 +1,6 @@
 
 h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
   font-family: $heading-font-family;
   line-height: $leading-headline;
   color:$black90;
@@ -7,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: $h1;
-  font-weight:600;
+  //font-weight:600;
   @include breakpoint(m) {
     font-size: 3rem;
   };
@@ -15,7 +16,7 @@ h1 {
 
 h2 {
   font-size: $h2;
-  font-weight:600;
+  //font-weight:600;
   @include breakpoint(l) {
     font-size: 2rem;
   };

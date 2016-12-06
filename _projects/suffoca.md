@@ -1,15 +1,16 @@
 ---
 layout: project
 title: Suffoca
-subtitle: Website for the english Retail brand.
+subtitle: Spinning tales of travel through a UI of British humour and whimsy.
 thumbnail: suffoca/suffoca.jpg
 permalink: projects/suffoca/
 year: 2016
 launch-link: <a href="http://suffoca.com">suffoca.com</a>
 partners:
-tags:
-  - tag
-  - tag
+services:
+  - UI Design
+  - HTML Prototyping
+  - Wordpress Development
 context:
 challenge:
 strategy:
