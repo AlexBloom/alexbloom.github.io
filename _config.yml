@@ -21,8 +21,8 @@ collections:
     output: true
     permalink: /projects/:path/
 
-#sass:
-    #style: compressed
+sass:
+    style: compressed
 
 #assets:
 # compress:
