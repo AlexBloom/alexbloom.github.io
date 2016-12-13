@@ -1,18 +1,22 @@
 <div class="pad-y-l cf">
   <div class="col col-12">
-    <h2 class="h6 caps bold"> Featured Projects </h2>
+    <h2 class="h6 caps bold"> Featured Work </h2>
     <div class="flex flex-wrap">
       {% for project in site.projects %}
-      <div class="mar-b-l black-5 col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
-        <a href="../{{project.permalink}}" class="link">
+      <div class="mar-b-l col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
+
           <div class="pad-y-m">
-            <h2 class="h3 bold mar-0">{{ project.title }}</h2>
-            <p class="h5 black-5"> {{project.year}} </p>
+            <div class="cf">
+              <h3 class="bold">
+                <a href="../{{project.permalink}}" class="">{{ project.title }}</a>
+              </h3>
+            </div>
             {% if project.subtitle %}
               <p> <small>{{ project.subtitle }}</small> </p>
             {% endif %}
+            <p class="h5 black-5"> {{project.year}} </p>
           </div>
-        </a>
+
       </div>
       {% endfor %}
     </div>

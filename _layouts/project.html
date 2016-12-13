@@ -2,45 +2,35 @@
 layout: default
 ---
 <div class="project pad-b-l pad-x-l">
-  <nav class="max-width-xl float-center small pad-b-m cf">
-    <div class="col col-6">
-      <!-- <a class="link" href="{{site.baseurl}}/projects/">Projects</a> / -->
-       <a href="#">{{page.title}}</a>
-    </div>
-    <div class="float-right col-6 text-right">
-      {% if page.previous.url %}
-      <a class="link uppercase" href="{{page.previous.url}}">&larr; Prev</a>
-      {% endif %}
-      {% if page.previous.url%} {% if page.next.url %} | {% endif %} {% endif %}
-      {% if page.next.url %}
-      <a class="link uppercase" href="{{page.next.url}}">Next &rarr;</a>
-      {% endif %}
-    </div>
-  </nav>
-  <article class="page-content max-width-xl float-center">
-    <header class="pad-y-l">
-      <h1 class="mar-t-m"> <span class="fw-800">{{ page.title }}</span></h1>
-      {% if page.subtitle %}
-      <div class="h2 measure mar-b-l">
-        <h2 class="h2 l-h1 fw-300 leading-solid"> {{ page.subtitle }} </h2>
-      </div>
-      {% endif %}
-      {% if page.context %}
-        <h2 class="h5 caps bold">Context</h2>
-        <p class="measure"> {{ page.context }} </p>
-      {% endif %}
-      {% if page.launch-link %}
-      <div class="mar-b-l">
-        <p class="h5 mar-t-0 caps bold"> <span class="bold"> Launch &rarr; </span>{{page.launch-link}} </p>
-      </div>
-      {% endif %}
-    </header>
 
+  <article class="page-content max-width-xl float-center pad-t-xl pad-b-l">
+    <div class="cf">
+      <nav class="float-right col-12 m-col-3 text-center pad-t-m pad-b-l">
+        {% include project-nav.html %}
+      </nav>
+      <header class="col col-12 m-col-9 pad-b-l">
+        <h1 class=""> <span class="fw-800">{{ page.title }}</span></h1>
+        {% if page.subtitle %}
+        <div class="h2  mar-b-l">
+          <h2 class="h2 l-h1 fw-300 leading-solid"> {{ page.subtitle }} </h2>
+        </div>
+        {% endif %}
+        {% if page.context %}
+          <h2 class="h5 caps bold">Context</h2>
+          <p class=""> {{ page.context }} </p>
+        {% endif %}
+        {% if page.launch-link %}
+        <div class="mar-b-l">
+          <p class="h5 mar-t-0 caps bold"> <span class="bold"> &rarr; </span>{{page.launch-link}} </p>
+        </div>
+        {% endif %}
+      </header>
+    </div>
 
     <div class="border-bottom-thin pad-b-l mar-b-l">
       {{ content }}
     </div>
-    <footer>
+    <footer class="cf border-bottom-thin mar-b-l">
        {% if page.partners %}
        <div class="col col-12 m-col-5 pad-r-l">
          <h3 class="h5 caps bold">Partners</h2>
@@ -69,5 +59,14 @@ layout: default
        </div>
        {% endif %}
     </footer>
+    <nav class="text-center pad-t-l">
+      {% if page.previous.url %}
+      <a class="link uppercase" href="{{page.previous.url}}">&larr; Prev</a> |
+      {% endif %}
+        <a class="link uppercase" href="{{site.baseurl}}/projects">&#9776; Projects</a>
+      {% if page.next.url %}
+      | <a class="link uppercase" href="{{page.next.url}}">Next &rarr;</a>
+      {% endif %}
+    </nav>
   </article>
 </div>

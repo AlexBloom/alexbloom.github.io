@@ -4,9 +4,9 @@ layout: default
 <div class="post pad-y-xl pad-x-l serif">
   <div class="max-width-xl float-center">
     <header class="post-header pad-y-l">
-        <h1 class="bold">{{ page.title }}</h1>
+        <h1 class="fw-800">{{ page.title }}</h1>
         {% if page.subtitle %}
-          <h2>  {{page.subtitle}} </h2>
+          <h2 class="fw-300">  {{page.subtitle}} </h2>
         {% endif %}
     </header>
 
@@ -14,7 +14,7 @@ layout: default
       <div class="col col-12 m-col-2 pad-r-l">
         <p class="h6 caps bold">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
       </div>
-      <div class="col col-12 m-col-10 measure h3 serif">
+      <div class="col col-12 m-col-10 measure h3">
         {{ content }}
       </div>
     </article>

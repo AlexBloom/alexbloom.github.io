@@ -31,6 +31,12 @@ h3 {
 }
 
 .type-grow{
-  font-size:5vw;
+  font-size: 2rem;
   line-height: $leading-solid;
+  @include breakpoint(m) {
+    font-size:5vw;
+  };
+  @include breakpoint(xl) {
+    font-size:7rem;
+  };
 }

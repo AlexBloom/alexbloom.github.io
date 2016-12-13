@@ -8,7 +8,7 @@ a {
   transition: all .2s;
   color:$link-color;
   text-decoration:none;
-  box-shadow: 0 .05em 0 0 $black50;
+  box-shadow: 0 2px 0 0 $black50;
   //background-image: linear-gradient(to bottom, $black50 50%, rgba(0,0,0,0) 50%);
   //background-repeat: repeat-x;
   //background-size: 2px .2em;
@@ -21,11 +21,10 @@ a {
 a:link,
 a:visited {
   color: $link-color;
-  //border-color:$link-color--hover;
 }
 a:hover   {
   transition: all .2s;
-  box-shadow: 0 .05em 0 0 $black;
+  box-shadow: 0 2px 0 0 $black;
 }
 a:active {
   transition: all .2s;
@@ -40,7 +39,7 @@ a:active {
 }
 .link-underline{
   text-decoration:underline;
-  text-decoration-skip: ink
+  text-decoration-skip: ink;
 }
 a.btn{
   background-color:$black90;

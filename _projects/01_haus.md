@@ -7,8 +7,9 @@ permalink: projects/haus/
 year: 2016
 launch-link:
 partners:
-  - Spencer Harrison / Morf Studio
-  - FamCom Inc.
+  - <a href="http://spenhar.com"> Spencer Harrison </a>  
+  - <a href="http://frommorf.com"> Morf Studio </a>
+  - <a href="http://famcominc.com/"> FamCom Inc. </a>
 services:
   - UX
   - UI

@@ -1,0 +1,11 @@
+{% if page.previous.url %}
+<a class="link uppercase" href="{{page.previous.url}}">&larr; Prev</a>
+{% else %}
+  <a class="link uppercase" href="{{site.baseurl}}/projects">&#9776; All</a>
+{% endif %}
+|
+{% if page.next.url %}
+<a class="link uppercase" href="{{page.next.url}}">Next &rarr;</a>
+{% else %}
+  <a class="link uppercase" href="{{site.baseurl}}/projects">&#9776; All</a>
+{% endif %}
