@@ -1,8 +1,10 @@
 # Site settings
 title: Alex Bloom
 email: hello@alexbloom.co
+phone: 9195379227
 author: Alex Bloom
 description: > # this means to ignore newlines until "baseurl:"
+current_location: 35.9394124,-79.0780189
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
@@ -14,6 +16,8 @@ dribbble_username: alexbloom
 tumblr_username: alexbloom
 medium_username: alexbloom
 github_username: alexbloom
+
+permalink: /writing/:categories/:title/
 
 collections: projects
 collections:

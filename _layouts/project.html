@@ -4,15 +4,16 @@ layout: default
 <div class="project pad-b-l pad-x-l">
   <nav class="max-width-xl float-center small pad-b-m cf">
     <div class="col col-6">
-      <a href="{{site.baseurl}}/projects/">Projects</a> / <a href="#">{{page.title}}</a>
+      <!-- <a class="link" href="{{site.baseurl}}/projects/">Projects</a> / -->
+       <a href="#">{{page.title}}</a>
     </div>
     <div class="float-right col-6 text-right">
       {% if page.previous.url %}
-      <a href="{{page.previous.url}}">&larr;</a>
+      <a class="link uppercase" href="{{page.previous.url}}">&larr; Prev</a>
       {% endif %}
       {% if page.previous.url%} {% if page.next.url %} | {% endif %} {% endif %}
       {% if page.next.url %}
-      <a href="{{page.next.url}}">&rarr;</a>
+      <a class="link uppercase" href="{{page.next.url}}">Next &rarr;</a>
       {% endif %}
     </div>
   </nav>
@@ -21,7 +22,7 @@ layout: default
       <h1 class="mar-t-m"> <span class="fw-800">{{ page.title }}</span></h1>
       {% if page.subtitle %}
       <div class="h2 measure mar-b-l">
-        <p class="h2 l-h1 fw-300 leading-solid"> {{ page.subtitle }} </p>
+        <h2 class="h2 l-h1 fw-300 leading-solid"> {{ page.subtitle }} </h2>
       </div>
       {% endif %}
       {% if page.context %}
@@ -30,7 +31,7 @@ layout: default
       {% endif %}
       {% if page.launch-link %}
       <div class="mar-b-l">
-        <p class="h5 mar-t-0 caps bold"> <span class="bold"> &rarr; </span>{{page.launch-link}} </p>
+        <p class="h5 mar-t-0 caps bold"> <span class="bold"> Launch &rarr; </span>{{page.launch-link}} </p>
       </div>
       {% endif %}
     </header>

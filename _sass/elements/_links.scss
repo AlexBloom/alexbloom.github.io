@@ -26,17 +26,6 @@ a:visited {
 a:hover   {
   transition: all .2s;
   box-shadow: 0 .05em 0 0 $black;
-  //color: $link-color--hover;
-  //border-color:rgba(255,255,255,0);
-  //background-image: linear-gradient(to bottom, $black90 50%, rgba(0,0,0,0) 50%);
-
-  &:after{
-    //bottom: 0px;
-    //width: 100%;
-    //height: 4px;
-    //background-color: rgba(255,255,255,0);
-    //transition: all 0.2s;
-  }
 }
 a:active {
   transition: all .2s;
@@ -45,7 +34,6 @@ a:active {
 .link {
   text-decoration: none;
   box-shadow:none;
-  //background-image:none;
   &:hover{
     background-image:none;
   }
@@ -54,30 +42,23 @@ a:active {
   text-decoration:underline;
   text-decoration-skip: ink
 }
-
 a.btn{
   background-color:$black90;
   color:$white;
   text-decoration:none;
-  //box-shadow: 0 4px 8px 2px $black10;
   padding:$space-m $space-l;
   border:none;
   text-transform:uppercase;
   letter-spacing:.1em;
   font-weight:600;
   font-size:.875rem;
-  &:hover{
-
-    //box-shadow: 0 6px 10px 2px $black10;
-  }
-  &:active{
-    //box-shadow: 0 2px 4px 2px $black20;
-  }
 }
 a.btn-big{
     padding:$space-m $space-l;
 }
-
 .color-inherit {
   color: inherit;
+}
+.current{
+  box-shadow: 0 .05em 0 0 $black;
 }

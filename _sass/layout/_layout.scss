@@ -5,6 +5,44 @@
 "borders"
 ;
 
+// HIDE from BASCSS
+.hide {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+//s: 32em,
+//m: 48em,
+//l: 64em,
+//xl: 96em,
+//xxl: 128em,
+
+@media (max-width: 32em) {
+  .s-hide { display: none !important }
+}
+
+@media (min-width: 32em) and (max-width: 48em) {
+  .s-m-hide { display: none !important }
+}
+
+@media (min-width: 48em) and (max-width: 64em) {
+  .m-l-hide { display: none !important }
+}
+
+@media (min-width: 64em) and (max-width: 96em) {
+  .l-xl-hide { display: none !important }
+}
+
+@media (min-width: 96em) {
+  .xl-hide { display: none !important }
+}
+
+.display-none { display: none !important }
+
+
 // FLOATS
 .float-left { float: left;  display: inline; }
 .float-right { float: right; display: inline; }

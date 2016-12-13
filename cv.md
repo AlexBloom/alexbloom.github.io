@@ -4,12 +4,14 @@ title: CV
 permalink: /cv/
 ---
 
-You Have Reached
+You Have Reached The CV of
 
 Alex Bloom
 ==========
+DESIGNER
 
-#### Experience
+
+##### EXPERIENCE
 
 * Freelance Designer-Developer  
   Alex Bloom - Serving Clients Nationally & Globally  
@@ -39,7 +41,8 @@ Alex Bloom
   The Heads of State, Philadelphia, PA  
   February 2010–June 2010
 
-#### Awards
+
+##### AWARDS
 
 * AIGA Philadelphia, The Fresh Award, 2013
 
@@ -51,7 +54,8 @@ Alex Bloom
 
 * CMYK Magazine, Top 100 New Creatives, Issue 47, June 2010
 
-#### Skills
+
+##### SKILLS
 
 In constant trial of new tools, and always happy to learn more.
 
@@ -64,7 +68,8 @@ HTML, Markdown, CSS, SASS, JavaScript, jQuery, Jekyll/Liquid, PHP, WordPress, Gi
 Software  
 Adobe Creative Suite / Cloud, Sketch, InVision, UXPin and many more.
 
-#### Education
+
+##### EDUCATION
 
 Tyler School of Art, Temple University  
 Bachelor of Fine Arts in Graphic and Interactive Design, Magna Cum Laude  

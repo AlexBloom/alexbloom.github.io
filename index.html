@@ -11,7 +11,7 @@ title: Designer
     <div class="float-center max-width-xl">
       <div class="pad-x-l col-12 m-col-4 l-col-3 pad-y-m">
         <div class="logo-wrap pad-y-l cf" onclick="homeBackgroundColor();">
-          <div id="logo" class="cf mar-b-l"  title="The Traveling Office of Alex Bloom">
+          <div id="logo" class="cf mar-b-l"  title="Current Location: {{site.current_location}}">
             <div id="cross-inner-ns" class="logo-cross"></div>
             <div id="cross-inner-ew" class="logo-cross"></div>
             <div id="cross-outer-nesw" class="logo-cross"></div>
@@ -25,9 +25,11 @@ title: Designer
           </div>
         </div>
       </div>
-      <div class="pad-b-l black-8 ">
-        <p class="h1 measure fw-700"> Disciplined designer. Multiple disciplines. </p>
-        <p class="h2 measure"> Focused on effective brand strategy and delightful user experience across physical and digital products and campaigns.</p>
+      <div class="pad-b-l black-9 ">
+        <h4 class="h1 measure fw-300 type-grow mar-b-l"> Disciplined design in <br>multiple disciplines. </h4>
+
+        <!-- <h4 class="h1 measure fw-700 type-grow mar-b-l"> Creative direction and design <br> by code, pen and power tool. </h4> -->
+        <p class="h4"> Available for collaboration <a class="bold" href="mailto:hello@alexbloom.co">hello@alexbloom.co </a> </p>
       </div>
     </div>
 
@@ -48,22 +50,12 @@ title: Designer
       <div class="col col-12 m-col-9 l-col-8">
         <ul class="">
           <li class="">
-            Partner at <a href="http://frommorf.com/">Morf Studio</a> &mdash; a collaborative design practice with <a href="http://twitter.com/spenhar">@spenhar</a>.
-          </li>
-          <li class="">
-            Freelance on <a href="http://designinc.com/alexbloom" target=_blank>Design Inc.</a> - A community of hand-picked designers with transparent rates and a money-back guarantee.
-          </li>
-          <li class="">
-            Improving internal and user-facing web experiences and physical product design at <a href="http://builtbyswift.com">Swift Industries</a>.
-          </li>
-          <li class="">
-            Devising fun &amp; content at <a href="http://thrillderness.co">Thrillderness.</a>
+            Freelancing &mdash; <a href="http://designinc.com/alexbloom" target=_blank>designinc.com/alexbloom</a>.
           </li>
         </ul>
       </div>
     </div>
   </section>
-
 
   <section id="Archive" class="cf pad-b-xl">
       <div class="col col-12 m-col-3 l-col-2">
@@ -71,11 +63,14 @@ title: Designer
       </div>
       <div class="col col-12 m-col-9 l-col-8">
         <ul class="">
-          <li>
-            Adjunct Professor of Design <a href="https://tyler.temple.edu/programs/graphic-interactive-design" target=_blank>@Tyler School of Art</a>
+          <li class="">
+            Partner at <a href="http://frommorf.com/">Morf Studio</a> &mdash; a collaborative design practice with <a href="http://twitter.com/spenhar">@spenhar</a>.
           </li>
           <li>
-            Various Shades of Design <a href="https://twitter.com/exprmnt?lang=en" target=_blank>@exprmnt</a>, <a href="http://bluecadet.com" target=_blank>@bluecadet</a>, <a href="http://theheadsofstate.com" target=_blank>@theheadsofstate</a>.
+            Adjunct professor of design <a href="https://tyler.temple.edu/programs/graphic-interactive-design" target=_blank>@Tyler School of Art</a>
+          </li>
+          <li>
+            Various shades of design <a href="https://twitter.com/exprmnt?lang=en" target=_blank>@exprmnt</a>, <a href="http://bluecadet.com" target=_blank>@bluecadet</a>, <a href="http://theheadsofstate.com" target=_blank>@theheadsofstate</a>.
           </li>
         </ul>
       </div>
@@ -94,6 +89,10 @@ title: Designer
       (Math.floor(Math.random() *(360))) + ',' + '95%,' + '80%)';
     document.getElementById('gradientDiv').style.backgroundImage= "linear-gradient( 45deg, " + hue + " , " + huetwo + ")";
     document.getElementById('gradientDiv').style.backgroundColor = huetwo;
+    //document.styleSheets[0].addRule('::selection','background-color: "'+huetwo+'";');
+    var sheet = document.createElement('style')
+    sheet.innerHTML = "::selection {background-color: " + huetwo + ";} a {box-shadow: 0 .05em 0 0 " + huetwo + ";} ";
+    document.body.appendChild(sheet);
   }
   homeBackgroundColor();
 

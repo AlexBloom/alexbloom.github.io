@@ -1,10 +1,11 @@
 
 <footer class="cf z3 relative pad-x-l border-bottom black-5 bg-white">
   <div class="max-width-xl float-center pad-y-l border-top-thin">
-    <div class="">
-      <div class="site-description">
+    <div class="cf">
+      <div class="col col-12 m-col-6">
          <!-- Links to Everything -->
-         <ul class="list-reset small">
+         <h3 class="h6 caps bold"> Contact / Hire </h3>
+         <ul class="list-reset small cf">
           <li class="inline-block pad-r-m">
              <a href="mailto:{{site.email}}">
                <span class="username">{{site.email}}</span>
@@ -13,41 +14,37 @@
           <li class="inline-block pad-r-m">
             <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
           </li>
-          {% if site.instagram_username %}
-          <li class="inline-block pad-r-m">
-           <a href="http://instagram.com/{{ site.instagram_username }}">
-             Instagram
-           </a>
-          </li>
-          {% endif %}
-          {% if site.github_username %}
-           <li class="inline-block pad-r-m">
-             <a href="https://github.com/{{ site.github_username }}">
-               Github
-             </a>
-           </li>
-          {% endif %}
-          {% if site.dribbble_username %}
-             <li class="inline-block pad-r-m">
-               <a href="https://dribbble.com/{{ site.dribbble_username }}">
-                 Dribbble
-               </a>
-             </li>
-          {% endif %}
          </ul>
+         <h3 class="h6 caps bold"> Connect </h3>
+         <ul class="list-reset small cf">
 
-        <!-- <p class="rss-subscribe">
-          <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-           <span class="icon-rss"></span> <br>
-         Subscribe via RSS
+           {% if site.instagram_username %}
+           <li class="inline-block pad-r-m">
+            <a href="http://instagram.com/{{ site.instagram_username }}">
+              Instagram
             </a>
-       </p> -->
-      </div>
-
+           </li>
+           {% endif %}
+           {% if site.github_username %}
+            <li class="inline-block pad-r-m">
+              <a href="https://github.com/{{ site.github_username }}">
+                Github
+              </a>
+            </li>
+           {% endif %}
+           {% if site.dribbble_username %}
+              <li class="inline-block pad-r-m">
+                <a href="https://dribbble.com/{{ site.dribbble_username }}">
+                  Dribbble
+                </a>
+              </li>
+           {% endif %}
+         </ul>
+       </div>
     </div>
-    <div class="x">
+    <div class="">
       <p class="copyright">
-        <small>All content © Alex Bloom 2010&ndash;{{'now'|date:"%Y"}} </small>
+        <small>All content © Alex Bloom 2010&ndash;{{'now'|date:"%Y"}} <br class="l-xl-hide xl-hide"> All code 100% &#9851; under GPL. </small>
       </p>
     </div>
   </div>
