@@ -28,6 +28,16 @@ $base-font-family: $monospace-font-family;
 .monospace {
   font-family: $monospace-font-family;
 }
+.inputmono-regular{
+    font-family: "Input Mono Nar Reg";
+    font-style: Normal;
+    font-weight: Normal;
+}
+.inputmono-bold{
+    font-family: "Input Mono Nar Bd";
+    font-style: Normal;
+    font-weight: Normal;
+}
 .condensed{
   font-family:$condensed-font-family;
   font-weight:normal;
