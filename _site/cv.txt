@@ -1,71 +1,65 @@
 ALEX BLOOM
 Designer
 
+hello@alexbloom.co
+610.301.5307
 
 EXPERIENCE
 ----------
 
-Freelance Designer-Developer
+Freelance Designer & Developer
 Alex Bloom
-July 2011–Present
+2011–Present
 
-Founder + Partner
+Partner & Designer
 Morf Studio
-January–December 2016
+2016
 
 Creative Director
-The Woolley Market, Sedro-Woolley, WA
-January 2014–June 2014
+The Woolley Market
+2014
 
 Adjunct Professor of Design
 Tyler School of Art, Temple University
-January 2013–May 2013
+2013
 
 Interaction Designer
-Bluecadet Philadelphia, PA
-November 2011–June 2013
+Bluecadet
+2011–2013
 
-Fort Franklin / Connelly Partners Boston, MA
-Designer / Art Director
-July 2010–July 2011
+Designer & Art Director
+Connelly Partners
+2010–2011
 
-The Heads of State, Philadelphia, PA
 Freelance Designer
-February 2010–June 2010
+The Heads of State
+2010
 
 
-AWARDS
-------
+AWARDS & PUBLICATIONS
+---------------------
 
-AIGA Philadelphia, The Fresh Award, 2013
-
-Communication Arts, Web Pick of the Week, January 2013
-
-Communication Arts, Web Pick of the Week, September 2012
-
-Design Work Life, Featured Designer, November 2010
-
-CMYK Magazine, Top 100 New Creatives, Issue 47, June 2010
+The Webby Awards, AIGA Philadelphia, Communication Arts, Design Work Life, CMYK Magazine
 
 
 SKILLS
 ------
 
-Methods / Practices
-User Personas, Card Sorting, UX Flows, Sitemapping, Wireframing, Mockups, Style Tiles, Prototyping (paper, digital, and code), AB Testing, QA.
+Methods & Practices
+Card Sorting, Sitemapping, Wireframing, Prototyping (Paper, Digital, Coded), Mockups, Living Style Guides, User Testing, A/B Testing
 
 Markup & Code
-HTML/Markdown, CSS/SASS, JavaScript, Grunt, Gulp, jQuery, Jekyll, Liquid, PHP, WordPress, Git/Github, CLI.
+HTML/Markdown, CSS/SASS/PostCSS, JavaScript/jQuery, NPM/Grunt/Gulp, WordPress, PHP, Jekyll, Liquid, Git/Github, CLI
 
 Software
-Sketch, Adobe Creative Suite/Cloud (Ps, Ai, Id, Ae), Figma, InVision, UXPin and more.
+Sketch, Adobe Creative Suite/Cloud (Ps, Ai, Id, Ae), Balsamiq, Figma, InVision, UXPin, and More
 
-Always learning and testing new tools.
+Continually adopting and testing new tools.
 
 
 EDUCATION
 ---------
 
+BFA, Graphic and Interactive Design, Magna Cum Laude
 Tyler School of Art, Temple University
-Bachelor of Fine Arts in Graphic and Interactive Design, Magna Cum Laude
-May 2010
+2010

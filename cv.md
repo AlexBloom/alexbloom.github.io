@@ -10,39 +10,41 @@ Alex Bloom
 ==========
 DESIGNER
 
-
 ##### EXPERIENCE
 
-* Freelance Designer-Developer  
-  Alex Bloom - Serving Clients Nationally & Globally  
-  July 2011–Present
+* Freelance
+  Designer + Developer
+  2011–Present
 
-* Founder + Partner  
-  Morf Studio  
-  January 2016–Present
+* Morf Studio
+  Founder + Designer  
+  2016
 
-* Creative Director  
-  The Woolley Market, Sedro-Woolley, WA  
-  January 2014–June 2014
+* The Woolley Market
+  Creative Director
+  2014
 
-* Adjunct Professor of Design  
-  Tyler School of Art, Temple University  
-  January 2013–May 2013
+* Tyler School of Art, Temple University
+  Adjunct Professor of Interaction Design  
+  2013
 
-* Interaction Designer  
-  Bluecadet Philadelphia, PA  
-  November 2011–June 2013
+* Bluecadet
+  Interactive Designer
+  2011–2013
 
-* Designer / Art Director  
-  Fort Franklin / Connelly Partners Boston, MA  
-  July 2010–July 2011
+* Fort Franklin / Connelly Partners
+  Designer + Art Director
+  2010–2011
 
-* Freelance Designer  
-  The Heads of State, Philadelphia, PA  
-  February 2010–June 2010
+##### BRANDS, CLIENTS, COLLABORATORS
 
+* National Geographic
+* Wired UK
+* Tribeca Film Institute
+* The Heads of State
+* The Experiment
 
-##### AWARDS
+<!-- ##### AWARDS
 
 * AIGA Philadelphia, The Fresh Award, 2013
 
@@ -53,7 +55,7 @@ DESIGNER
 * Design Work Life, Featured Designer, November 2010
 
 * CMYK Magazine, Top 100 New Creatives, Issue 47, June 2010
-
+ -->
 
 ##### SKILLS
 
