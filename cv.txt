@@ -52,9 +52,7 @@ Markup & Code
 HTML/Markdown, CSS/SASS/PostCSS, JavaScript/jQuery, NPM/Grunt/Gulp, WordPress, PHP, Jekyll, Liquid, Git/Github, CLI
 
 Software
-Sketch, Adobe Creative Suite/Cloud (Ps, Ai, Id, Ae), Balsamiq, Figma, InVision, UXPin, and More
-
-Continually adopting and testing new tools.
+Sketch, Adobe Creative Suite/Cloud (Ps, Ai, Id, Ae), Balsamiq, Figma, InVision, UXPin
 
 
 EDUCATION
