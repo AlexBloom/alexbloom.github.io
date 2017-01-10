@@ -20,7 +20,7 @@ strategy:
 results:
 ---
 
-<p> <a href="mailto:hello@alexbloom.co"> Email Me </a> for details or samples.</p>
+<p><a href="mailto:hello@alexbloom.co">Email Me</a> for details and samples.</p>
 
 <!-- There is no shortage of important data when it comes to real estate, but determining which data needs to be visible to a user is a tricky task. We designed an intuitive onboarding experience with search and lifestyle filters, to work with an algorithm that distilled all the relevant data into one number &mdash; a Hausmatch™. Users can understand whether a property is worth their research at a glance, and greatly reduce the time it takes to find a property worth touring and ultimately buying. -->
 
