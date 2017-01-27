@@ -1,6 +1,12 @@
+/*
+ * Grid System in Sass
+ */
+
+// Set your number of columns.
 $column-count: 12;
 
-// Grid Items CSS CLASS NAMES
+
+// Default media queries
 @for $i from 1 through $column-count{
 	.col-#{$i} {
 		width:calc( #{$i} / #{$column-count} * 100% );
