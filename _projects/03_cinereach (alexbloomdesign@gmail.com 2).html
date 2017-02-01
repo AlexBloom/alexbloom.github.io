@@ -1,0 +1,137 @@
+---
+layout: project
+title: Cinereach
+subtitle: Archiving a decade of independent films, and facilitating a design process.
+thumbnail: cinereach/cinereach.jpg
+permalink: projects/cinereach/
+year: 2014
+launch-link: <a href="http://cinereach.org">cinereach.org</a>
+partners:
+  - Reva Goldberg, Head of Communications
+  - Theresa Berens, Graphic Designer
+services:
+  - UX Consulting
+  - Systems Design
+  - Front End Development
+  - Wordpress Development
+  - Security Research &amp; Consulting
+context:
+  - Cinereach approached me for UX consulting and development on a redesign of their flagship website and film archive. Like many organizations, they were struggling to finalize agreement on design direction. Their in-house designer was continuously creating beautiful mockups, but stakeholders kept rejecting them, primarily because they did not understand the overall flow of information. I built responsive prototypes that showcased both the overall UX and designs across devices, which accellerated the design process and saved internal billable hours.
+challenge:
+strategy:
+solution:
+---
+
+<img class="mar-b-l" src="{{site.baseurl}}/img/projects/cinereach/cinereach_overview.jpg" alt="">
+
+<h3 class="fw-600"> The Challenges </h3>
+<ul class="measure ">
+  <li> Redesign and modernize an outdated, slow-performing website </li>
+  <li> Improve the grant application process </li>
+  <li> Create an archive with powerful search and sorting tools for a massive library of films with multiple taxonomies</li>
+  <li> Develop the website on a secure, maintainable, open-source platform</li>
+</ul>
+
+
+<div class="pad-y-xl">
+  <h3 class="fw-600">Research</h3>
+  <p class="measure">One of Cinereach's core offerings is grants to independent filmmakers. The team came to me with recurring reports of phone calls and filmmakers who couldn't find key information about applying for grants. I reviewed analytics reports, archived sitemaps, and the current site architecture to get a better understanding of the site's changes over time. </p>
+</div>
+
+<div class="cf pad-y-xl">
+  <div class="col-12 m-col-8 pad-y-l float-center">
+    <img class="shadow" src="{{site.baseurl}}/img/projects/cinereach/redirects.jpg" alt="">
+  </div>
+  <div class="col-12 m-col-8 float-center">
+    <p class="">Over the years, many urls changed without SEO consideration. A simple set of 301 redirects was a huge first step in improving the user experience&mdash;mapping content over time and planning for growth became major considerations in the new build.</p>
+  </div>
+</div>
+
+
+<div class="cf pad-y-xl">
+  <div class="pad-b-l">
+    <img class="shadow pad-y-xl" src="{{site.baseurl}}/img/projects/cinereach/sitemap_initial.gif" alt="">
+  </div>
+  <div class="m-col-6 float-center">
+    <h3 class="fw-600"> Pieces of the Picture </h3>
+    <p class="mar-b-l"> Their initial sitemap didn't articulate the flow of content between page views, or the organizational systems for the films archive. They had plans to sort films by date, type, director, themes, and more, but no way to explain how these loops worked to their internal team. </p>
+  </div>
+</div>
+
+<div class="cf pad-y-xl">
+  <div class="col col-12 m-col-8 pad-x-l">
+    <img class="shadow" src="{{site.baseurl}}/img/projects/cinereach/custom_field_documentation.png" alt="">
+  </div>
+  <div class="col col-12 m-col-4 pad-t-xl">
+    <h3 class="fw-600">Documentation</h3>
+    <p>They needed a suite of tools to easily edit their custom data for films. We needed to plan for this content upfront because the migration of the data was too big for manual entry, and we needed to map the fields for a CSV export.</p>
+  </div>
+</div>
+
+<div class="cf pad-y-xl">
+  <div class="float-right col-12 m-col-8 pad-x-l">
+    <img class="shadow" src="{{site.baseurl}}/img/projects/cinereach/aiweiwei.png" alt="">
+  </div>
+  <div class="col col-12 m-col-4 pad-t-xl">
+    <h3 class="fw-600"> Relational Taxonomies </h3>
+    <p class=""> Each film had 3 custom taxonomies that linked to archives.</p>
+    <ul>
+      <li><strong>Status</strong> - The availability of the release</li>
+      <li><strong>Type</strong> - Non Fiction Fiction or Hybrid</li>
+      <li><strong>Year</strong> - The year the film was released. This required special attention to navigate WordPress' default Year taxonomy. </li>
+    </ul>
+  </div>
+</div>
+
+<div class="pad-y-xl">
+  <div class="pad-b-l">
+    <img class="shadow" src="{{site.baseurl}}/img/projects/cinereach/sitemap_detailed.gif" alt="">
+  </div>
+  <div class="m-col-6 float-center">
+    <h3 class="fw-600">Connecting the Dots</h3>
+    <p class="measure small mar-b-l"> I developed a sitemap that articulated every possible user pathway and showed both urls, content structure, and development notes on each page &amp; view node, so that any stakeholder or future creative partner could quickly understand the user facing and technical architecture in tandem.</p>
+  </div>
+</div>
+
+
+<!-- <div class="pad-b-l">
+  <img class="pad-y-xl" src="{{site.baseurl}}/img/projects/cinereach/custom_field_explanation.jpg" alt="">
+</div>
+ -->
+
+
+<div class="cf pad-b-l">
+  <div class="float-right col-12 m-col-7 pad-l">
+    <div class="bg-white shadow">
+    <img class="" src="{{site.baseurl}}/img/projects/cinereach/relatedfilms.jpg" alt="">
+<pre class="pad-x-m">
+<code>
+&lt;div class="film-thumbnail">
+  &lt;?php
+    get_template_part(
+    'template-parts/module','thumbnailbg'
+    );
+  ?>;
+&lt;/div>
+</code>
+</pre>
+  </div>
+  </div>
+  <div class="col col-12 m-col-5 pad-t-xl">
+    <h3 class="fw-600">Component Based Architecture.</h3>
+    <p> I employed DRY and atomic principles to the build to increase performance and clarity of structure for future developers.</p>
+  </div>
+</div>
+
+<div class="cf pad-b-l">
+  <div class="col col-12 m-col-8 pad-l">
+    <img class="shadow" src="{{site.baseurl}}/img/projects/cinereach/whiplash.jpg" alt="Desktop Film Detail Layout">
+ </div>
+  <div class="col col-12 m-col-4 pad-l">
+    <img class="" src="{{site.baseurl}}/img/projects/cinereach/botsw.jpg" alt="Mobile Film Detail Layout">
+  </div>
+</div>
+
+<img class="mar-b-l" src="{{site.baseurl}}/img/projects/cinereach/cinereach_prototype_scroll.gif" alt="">
+<h3>Motion — The Secret Sauce</h3>
+<p class="measure">Prototypes are express lanes to clear conversations. Early in the process, the internal team repeatedly requested more visual impact and dynamism, but this is because they couldn't see fluid animation or interaction. As soon as we started to show motion in prototypes, the requests for complex illustrations reduced, and the simple nature of the site correlated to elegance, rather than dullness.</p>
