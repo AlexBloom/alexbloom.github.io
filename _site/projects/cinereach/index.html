@@ -108,7 +108,7 @@
     <div class="cf">
       <nav class="float-right col-12 m-col-3 text-center pad-t-m pad-b-l">
         
-<a class="link uppercase monospace" href="/projects/cinereach/">&larr; Prev</a>
+<a class="link uppercase monospace" href="/projects/haus/">&larr; Prev</a>
 
 |
 
@@ -190,25 +190,28 @@
 
 <div class="cf pad-y-xl">
   <div class="float-right col-12 m-col-8">
-    <img class="mar-b-l" src="/img/projects/cinereach/cinereach_prototype_scroll.gif" alt="">
+    <video autoplay loop muted playsinline>
+      <source src="/img/projects/cinereach/prototype_480.mp4">
+      <source src="/img/projects/cinereach/prototype_480.webm" onerror="fallback(parentNode)">
+      <img class="" src="/img/projects/cinereach/cinereach_prototype_scroll.gif" alt="">
+    </video>
+    <script>
+    function fallback(video)
+    {
+      var img = video.querySelector('img');
+      if (img)
+        video.parentNode.replaceChild(img, video);
+      }
+    </script>
   </div>
   <div class="col col-12 m-col-4">
     <h3 class="fw-600">The Prototype&mdash;An express lane to approval</h3>
     <p>I built a responsive, clickable prototype in code, to showcase the user flow and layout across devices, resulting in an accellerated internal design process and saving internal billable hours.
     </p>
+    <p>Early in our process, the stakeholder team repeatedly requested more visual impact and dynamism, but this is because they couldn't see fluid animation or interaction. As soon as we started to show motion in prototypes, the requests for complex illustrations reduced, and the simple nature of the site correlated to elegance, rather than dullness.</p>
   </div>
 </div>
 
-
-<div class="cf pad-y-xl">
-  <div class="col col-12 m-col-6 pad-x-l">
-    <img class="" src="/img/projects/cinereach/cinereach_prototype_scroll.gif" alt="">
-  </div>
-  <div class="col col-12 m-col-6 pad-t-l">
-    <h3>Motion — The Secret Sauce</h3>
-    <p class="measure">Early in our process, the stakeholder team repeatedly requested more visual impact and dynamism, but this is because they couldn't see fluid animation or interaction. As soon as we started to show motion in prototypes, the requests for complex illustrations reduced, and the simple nature of the site correlated to elegance, rather than dullness.</p>
-  </div>
-</div>
 
 
 <div class="cf pad-y-xl">
@@ -241,17 +244,17 @@
   <div class="col col-12 m-col-7 pad-l">
     <div class="bg-white shadow">
     <img class="" src="/img/projects/cinereach/relatedfilms.jpg" alt="">
-<pre class="pad-x-m">
-<code>
-&lt;div class="film-thumbnail">
-  &lt;?php
-    get_template_part(
-    'template-parts/module','thumbnailbg'
-    );
-  ?>;
-&lt;/div>
-</code>
-</pre>
+    <pre class="pad-x-m">
+    <code>
+    &lt;div class="film-thumbnail">
+      &lt;?php
+        get_template_part(
+        'template-parts/module','thumbnailbg'
+        );
+      ?>;
+    &lt;/div>
+    </code>
+    </pre>
   </div>
   </div>
   <div class="col col-12 m-col-5 pad-t-xl">
@@ -315,7 +318,7 @@
     </footer>
     <nav class="text-center pad-t-l">
       
-      <a class="link uppercase monospace" href="/projects/cinereach/">&larr; Prev</a> |
+      <a class="link uppercase monospace" href="/projects/haus/">&larr; Prev</a> |
       
         <a class="link uppercase monospace" href="/projects">&#9776; Projects</a>
       
