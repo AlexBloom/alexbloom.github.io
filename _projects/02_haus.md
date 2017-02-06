@@ -2,7 +2,7 @@
 layout: project
 title: InHaus
 subtitle: Simplifying the home buying process, and making sense of real-estate data.
-thumbnail:
+thumbnail: haus.jpg
 permalink: projects/haus/
 year: 2016
 launch-link:
