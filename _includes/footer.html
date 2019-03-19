@@ -4,41 +4,34 @@
     <div class="cf">
       <div class="col col-12 m-col-6">
          <!-- Links to Everything -->
-         <h3 class="h6 caps bold"> Contact / Hire </h3>
+         <h3 class="h6 caps bold"> Contact </h3>
          <ul class="list-reset small cf">
           <li class="inline-block pad-r-m">
              <a href="mailto:{{site.email}}">
                <span class="username">{{site.email}}</span>
              </a>
           </li>
+          {% if site.instagram_username %}
           <li class="inline-block pad-r-m">
-            <a href="http://designinc.com/alexbloom" target="_blank">Design Inc.</a>
+           <a href="http://instagram.com/{{ site.instagram_username }}">
+             Instagram
+           </a>
           </li>
-         </ul>
-         <h3 class="h6 caps bold"> Connect </h3>
-         <ul class="list-reset small cf">
-
-           {% if site.instagram_username %}
+          {% endif %}
+          {% if site.github_username %}
            <li class="inline-block pad-r-m">
-            <a href="http://instagram.com/{{ site.instagram_username }}">
-              Instagram
-            </a>
+             <a href="https://github.com/{{ site.github_username }}">
+               Github
+             </a>
            </li>
-           {% endif %}
-           {% if site.github_username %}
-            <li class="inline-block pad-r-m">
-              <a href="https://github.com/{{ site.github_username }}">
-                Github
-              </a>
-            </li>
-           {% endif %}
-           {% if site.dribbble_username %}
-              <li class="inline-block pad-r-m">
-                <a href="https://dribbble.com/{{ site.dribbble_username }}">
-                  Dribbble
-                </a>
-              </li>
-           {% endif %}
+          {% endif %}
+          {% if site.dribbble_username %}
+             <li class="inline-block pad-r-m">
+               <a href="https://dribbble.com/{{ site.dribbble_username }}">
+                 Dribbble
+               </a>
+             </li>
+          {% endif %}
          </ul>
        </div>
     </div>
