@@ -1,0 +1,26 @@
+{
+  "name": "alexbloom.github.io",
+  "version": "1.0.0",
+  "description": "## Author - Alex Bloom",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexBloom/alexbloom.github.io.git"
+  },
+  "author": "alexbloom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexBloom/alexbloom.github.io/issues"
+  },
+  "homepage": "https://github.com/AlexBloom/alexbloom.github.io#readme",
+  "devDependencies": {
+    "gulp-shell": "^0.7.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^3.9.1"
+  }
+}
