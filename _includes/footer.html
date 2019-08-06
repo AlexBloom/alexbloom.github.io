@@ -2,7 +2,7 @@
 <footer class="cf z3 relative pad-x-l border-bottom black-5 bg-white monospace">
   <div class="max-width-xl float-center pad-y-l border-top-thin">
     <div class="cf">
-      <div class="col col-12 m-col-6">
+      <div class="col col-12">
          <!-- Links to Everything -->
          <h3 class="h6 caps bold"> Contact </h3>
          <ul class="list-reset small cf">
@@ -11,6 +11,20 @@
                <span class="username">{{site.email}}</span>
              </a>
           </li>
+          {% if site.angellist_username %}
+          <li class="inline-block pad-r-m">
+           <a href="http://angel.co/{{ site.angellist_username }}">
+             AngelList
+           </a>
+          </li>
+          {% endif %}
+          {% if site.linkedin_username %}
+          <li class="inline-block pad-r-m">
+           <a href="http://linkedin.com/in/{{ site.linkedin_username }}">
+             LinkedIn
+           </a>
+          </li>
+          {% endif %}
           {% if site.instagram_username %}
           <li class="inline-block pad-r-m">
            <a href="http://instagram.com/{{ site.instagram_username }}">
