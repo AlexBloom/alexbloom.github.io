@@ -85,10 +85,16 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
 @import
   "colors/colors",
-  "layout/layout",
   "typography/typography",
+  "layout/layout",
   "elements/elements",
   "animation/animation",
   "animation/lory"

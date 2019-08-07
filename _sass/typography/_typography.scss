@@ -1,19 +1,16 @@
 // Family Declarations
 
-$sans-font-family: -apple-system, BlinkMacSystemFont,
+
+
+$sans-font-family: "Inter var", "Inter", -apple-system, BlinkMacSystemFont,
   "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
   "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif ;
-$serif-font-family: 'freight-text-pro', Athelas, Palatino, Garamond, Georgia, Cambria, "Times New Roman", Times, serif;
-$monospace-font-family: 'Input Mono Nar Reg', Roboto Mono, Source Code Pro, SFMono, menlo, /* mac */
-                      inconsolata, consolas, /* windows */
-                      'fira mono', /* firefox os */
-                      'noto mono', 'droid sans mono', /* android */
-                      'dejavu sans mono', 'liberation mono', 'ubuntu mono', /* linux */
-                      monaco, 'courier new', /* older systems */
-                      monospace; /* fallback */
-$condensed-font-family:'alternate-gothic-no-1-d', "Roboto Condensed", "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+$serif-font-family: Athelas, Palatino, Garamond, Georgia, Cambria, "Times New Roman", Times, serif;
+$monospace-font-family: Roboto Mono, Source Code Pro, SFMono, menlo, /* mac */
+                      inconsolata, consolas, 'fira mono', 'noto mono', 'droid sans mono', 'dejavu sans mono', 'liberation mono', 'ubuntu mono', monaco, 'courier new', monospace;
 
-$heading-font-family: $sans-font-family;
+
+
 
 // Set base family globally:
 $base-font-family: $sans-font-family;
@@ -28,24 +25,16 @@ $base-font-family: $sans-font-family;
 .monospace {
   font-family: $monospace-font-family;
 }
-.inputmono-regular{
-    font-family: "Input Mono Nar Reg";
-    font-style: Normal;
-    font-weight: Normal;
-}
-.inputmono-bold{
-    font-family: "Input Mono Nar Bd";
-    font-style: Normal;
-    font-weight: Normal;
-}
-.condensed{
-  font-family:$condensed-font-family;
-  font-weight:normal;
-}
+
 
 // Base Type Scales
 $base-font-size:   1rem;
 $base-line-height: 1.5;
+
+:root {
+  --h1: calc(2rem + 4vw);
+}
+
 
 /* Basscss Type Scale */
 // Font Scale    e.g.
@@ -63,8 +52,8 @@ $leading-headline: 1.25;
 $leading-text: 1.5;
 
 // Addtl Style & Weight Variables
-$caps-letter-spacing: .1em;
-$bold-font-weight: 600;
+$caps-letter-spacing: .075em;
+$bold-font-weight: 700;
 
 .fw-100{font-weight:100}
 .fw-200{font-weight:200}
@@ -83,40 +72,6 @@ h4, .h4 { font-size: $h4 }
 h5, .h5 { font-size: $h5; line-height:1.5rem; }
 h6, .h6 { font-size: $h6; line-height:1.5rem; }
 
-.m-h1{
-  @include breakpoint(m){
-    font-size:$h1;
-  }
-}
-.m-h2{
-  @include breakpoint(m){
-    font-size:$h2;
-  }
-}
-.m-h3{
-  @include breakpoint(m){
-    font-size:$h3;
-  }
-}
-.l-h1{
-  @include breakpoint(l){
-    font-size:$h1;
-  }
-}
-.l-h2{
-  @include breakpoint(l){
-    font-size:$h2;
-  }
-}
-.l-h3{
-  @include breakpoint(l){
-    font-size:$h3;
-  }
-}
-
-@include breakpoint(m){
-
-}
 
 $measure-width:32em;
 .measure, .mx{

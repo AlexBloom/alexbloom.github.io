@@ -29,7 +29,7 @@
 }
 
 @media (min-width: 48em) and (max-width: 64em) {
-  .m-l-hide { display: none !important }
+  .ml-hide { display: none !important }
 }
 
 @media (min-width: 64em) and (max-width: 96em) {
@@ -105,12 +105,12 @@
 .flex-wrap    { flex-wrap: wrap }
 .flex-row     { flex-direction:row }
 .m-flex-row   {
-  @include breakpoint(m) {
+  @include breakpoint(md) {
     flex-direction:row;
   };
 }
 .l-flex-row   {
-  @include breakpoint(l) {
+  @include breakpoint(lg) {
     flex-direction:row;
   };
 }
@@ -259,7 +259,7 @@ $width-xxxl: 128rem;
 
 
 .column-count-2{
-  @include breakpoint(m) {
+  @include breakpoint(md) {
   -webkit-column-count: 2;
      -moz-column-count: 2;
   }

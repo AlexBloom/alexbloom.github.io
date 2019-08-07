@@ -1,18 +1,21 @@
-<header id="site-header" class="site-header relative left-0 right-0 border-top z3 pad-x-l">
+<header id="site-header" class="site-header relative left-0 right-0 border-top z3 px-l">
   <div class="wrapper cf max-width-xl float-center">
 
     {% assign url_parts = page.url | split: '/' %}
 
-    <nav class="float-left mar-t-l mar-r-l ">
-      <a href="{{site.baseurl}}/" class="h5 link bold monospace mar-0 {% if page.url == '/' %} current black {% endif %}">{{site.title}} </a>
+    <nav class="float-left mt-l mr-l ">
+      <a href="{{site.baseurl}}/" class="h5 link bold m-0 {% if page.url == '/' %} current black {% endif %}">{{site.title}} </a>
     </nav>
-    <nav class="col right-0  mar-t-l monospace">
+    <nav class="float-right right-0 mt-l ">
         <ul class="list-reset cf">
           <li class="inline-block ">
-            <a href="{{site.baseurl}}/info/" class="h5 link mar-r-m {% if url_parts[1] == 'info' %} current black {% endif %}">Info</a>
+            <a href="{{site.baseurl}}/info/" class="h5 link mr-m {% if url_parts[1] == 'info' %} current black {% endif %}">Info</a>
           </li>
           <li class="inline-block ">
-            <a href="{{site.baseurl}}/projects/" class="h5 link mar-r-m {% if url_parts[1] == 'projects' %} current black {% endif %}">Projects</a>
+            <a href="{{site.baseurl}}/projects/" class="h5 link mr-m {% if url_parts[1] == 'projects' %} current black {% endif %}">Projects</a>
+          </li>
+          <li class="inline-block ">
+            <a href="{{site.baseurl}}/bookshelf/" class="h5 link mr-m {% if url_parts[1] == 'bookshelf' %} current black {% endif %}">Bookshelf</a>
           </li>
         </ul>
     </nav>

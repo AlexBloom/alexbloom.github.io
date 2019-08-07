@@ -23,11 +23,11 @@ a:visited {
   color: $link-color;
 }
 a:hover   {
-  transition: all .2s;
+  transition: all .1s ease-in-out;
   box-shadow: 0 2px 0 0 $black;
 }
 a:active {
-  transition: all .2s;
+  transition: all .1s ease-in-out;
   color: $link-color--active;
 }
 .link {
@@ -41,23 +41,35 @@ a:active {
   text-decoration:underline;
   text-decoration-skip: ink;
 }
-a.btn{
+a.button{
   background-color:$black90;
   color:$white;
   text-decoration:none;
-  padding:$space-m $space-l;
+  padding:$space-md $space-lg;
   border:none;
   text-transform:uppercase;
   letter-spacing:.1em;
   font-weight:600;
   font-size:.875rem;
 }
-a.btn-big{
-    padding:$space-m $space-l;
-}
 .color-inherit {
   color: inherit;
 }
 .current{
   box-shadow: 0 .05em 0 0 $black;
+}
+
+.postlink{
+  box-shadow:none;
+  img{
+    transition:all .1s ease;
+  }
+
+  &:hover {
+    //box-shadow:0 4px 16px -4px rgba(0,0,0,.1);
+    box-shadow:none;
+    img{
+      opacity:0.8;
+    }
+  }
 }

@@ -1,12 +1,12 @@
 li {
-  padding-bottom: $space-s;
+  padding-bottom: $space-sm;
 }
 
 /**
  * Lists
  */
 ul, ol, dl {
-    padding-left: $space-m;
+    padding-left: $space-md;
     margin-top:0;
     margin-bottom: $space-after;
 }
@@ -28,10 +28,10 @@ dl{
   list-style:square;
   dt{
     font-weight:bold;
-    padding: $space-s;
+    padding: $space-sm;
   }
   dd{
-    padding: $space-s;
+    padding: $space-sm;
     margin:0;
   }
 }

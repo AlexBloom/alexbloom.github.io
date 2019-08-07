@@ -4,9 +4,9 @@
 // Add or remove breakpoints as you desire
 // Incremental half-step powers of 16,
 $breakpoints:(
-s: 32em,
-m: 48em,
-l: 64em,
+sm: 32em,
+md: 48em,
+lg: 64em,
 xl: 96em,
 xxl: 128em,
 );
@@ -22,7 +22,7 @@ xxl: 128em,
 }
 // EXAMPLE
 //body, .classname {
-   //@include breakpoint(m) {
+   //@include breakpoint(md) {
    //font-size: 14px;
    //};
 // }
@@ -34,9 +34,9 @@ xxl: 128em,
 
 //Spacing Scale
 $space-xs: .25rem;
-$space-s: .5rem;
-$space-m: 1rem;
-$space-l: 2rem;
+$space-sm: .5rem;
+$space-md: 1rem;
+$space-lg: 2rem;
 $space-xl: 4rem;
 $space-xxl: 8rem;
 $space-xxxl: 16rem;

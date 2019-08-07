@@ -8,7 +8,7 @@
 }
 
 .story-icon{
-	@include breakpoint(m) {
+	@include breakpoint(md) {
 		font-size:2rem;
 	}
 }

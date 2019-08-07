@@ -4,8 +4,8 @@ title: Info
 permalink: /info/
 ---
 
-  <div class="pad-y-l relative z3">
-    <div class="pad-b-l">
+  <div class="py-l relative z3">
+    <div class="pb-l">
       <h2 class="h6 caps bold">BIO</h2>
 
       Alex Bloom b.1988
@@ -20,7 +20,7 @@ permalink: /info/
         I've designed &amp; built brand identities, websites, apps, and physical environments for <a href="http://bikeandbuild.org/" target="_blank">grassroots</a> <a href="http://tribecafilminstitute.org"target="_blank">initiatives</a> and <a href="http://nationalgeographic.com" target="_blank">global</a> <a href="http://wired.co.uk" target="_blank">enterprises</a>.
         </p>
     </div>
-    <div class="pad-b-l">
+    <div class="pb-l">
       <h2 class="h6 caps bold">BIO</h2>
       <p class="h2 measure">
         Alex Bloom, 1988–Present
@@ -30,62 +30,62 @@ permalink: /info/
         Working on brands, websites, apps, and physical environments.
         </p>
     </div>
-    <!-- <div class="pad-y-l">
+    <!-- <div class="py-l">
       <h2 class="h6 caps bold">Professional Philosophy</h2>
       <p class=" max-width-m"> Remember the point, fear not to dream big, and don't overlook how it's all gonna work. </p>
       <ul class="list-reset cf">
-        <li class="mar-b-m pad-r-m"> <span class="black mar-r-s"> 🙋 </span> Question early, often, and always.</li>
-        <li class="mar-b-m pad-r-m"> <span class="black mar-r-s"> 🌎 </span> The entire world is your audience.</li>
-        <li class="mar-b-m pad-r-m"> <span class="black mar-r-s"> ⌛ </span> Everyone's time is precious.</li>
-        <li class="mar-b-m pad-r-m"> <span class="black mar-r-s"> 🛠 </span> Use, find, or build the right tools for the job.</li>
-        <li class="mar-b-m pad-r-m"> <span class="black mar-r-s"> 😊 </span> Love your process.</li>
+        <li class="mb-m pr-m"> <span class="black mr-s"> 🙋 </span> Question early, often, and always.</li>
+        <li class="mb-m pr-m"> <span class="black mr-s"> 🌎 </span> The entire world is your audience.</li>
+        <li class="mb-m pr-m"> <span class="black mr-s"> ⌛ </span> Everyone's time is precious.</li>
+        <li class="mb-m pr-m"> <span class="black mr-s"> 🛠 </span> Use, find, or build the right tools for the job.</li>
+        <li class="mb-m pr-m"> <span class="black mr-s"> 😊 </span> Love your process.</li>
       </ul>
     </div> -->
 
-    <div class="pad-y-l">
-      <div class="cf pad-b-l">
-        <div class="col col-12 s-col-3 m-col-2">
+    <div class="py-l">
+      <div class="cf pb-l">
+        <div class="col col-12 sm-col-3 md-col-2">
           <h2 class="h6 caps bold "> Currently </h2>
         </div>
-        <div class="col col-12 s-col-9 m-col-10">
+        <div class="col col-12 sm-col-9 md-col-10">
           <ul class="list-reset">
             <li>Partner &amp; Designer at <a href="http://frommorf.com/" target=_blank>Morf Studio</a>.</li>
             <li>Independent Designer &amp; Developer </li>
           </ul>
         </div>
       </div>
-      <div class="cf pad-b-l">
-        <div class="col col-12 s-col-3 m-col-2">
+      <div class="cf pb-l">
+        <div class="col col-12 sm-col-3 md-col-2">
           <h2 class="h6 caps bold "> Previously </h2>
         </div>
-        <div class="col col-12 s-col-9 m-col-10">
-          <ul class="list-reset pad-b-l cf">
+        <div class="col col-12 sm-col-9 md-col-10">
+          <ul class="list-reset pb-l cf">
             <li> <a href="http://theexperiment.io" target="_blank">The Experiment</a> - Freelance Designer </li>
             <li> <a href="https://tyler.temple.edu/programs/graphic-interactive-design.com" target="_blank">Tyler School of Art</a> - Adjunct Professor</li>
             <li> <a href="http://bluecadet.com" target="_blank">Bluecadet</a> - Designer </li>
             <li> <a href="http://connellypartners.com" target="_blank">Fort Franklin > Acquired by Connelly Partners</a> - Ad Man </li>
             <li> <a href="http://theheadsofstate.com" target="_blank">The Heads of State</a> - Freelance Designer </li>
           </ul>
-          <p class="mar-t-m"><a href="{{site.baseurl}}/cv">CV</a> | <a href="http://linkedin.com/in/alexanderbloom" target=_blank>LinkedIn</a></p>
+          <p class="mt-m"><a href="{{site.baseurl}}/cv">CV</a> | <a href="http://linkedin.com/in/alexanderbloom" target=_blank>LinkedIn</a></p>
         </div>
       </div>
-      <div class="cf pad-b-l">
-        <div class="col col-12 s-col-3 m-col-2">
+      <div class="cf pb-l">
+        <div class="col col-12 sm-col-3 md-col-2">
             <h2 class="h6 caps bold "> Location </h2>
         </div>
-        <div class="col col-12 s-col-9 m-col-10">
+        <div class="col col-12 sm-col-9 md-col-10">
             <p><a href="https://www.google.com/maps/@35.9394124,-79.0780189,15z">35.9394124, -79.0780189</a> </p>
             <p>Remote OK ✈ Travel OK</p>
         </div>
       </div>
-      <div class="cf pad-b-l">
-        <div class="col col-12 s-col-3 m-col-2">
+      <div class="cf pb-l">
+        <div class="col col-12 sm-col-3 md-col-2">
             <h2 class="h6 caps bold"> Social </h2>
         </div>
-        <div class="col col-12 s-col-9 m-col-10">
+        <div class="col col-12 sm-col-9 md-col-10">
           <ul class="list-reset">
             {% if site.instagram_username %}
-            <li class="col pad-r-m">
+            <li class="col pr-m">
              <a href="http://instagram.com/{{ site.instagram_username }}">
                <span class="icon-instagram"> </span>
                Instagram
@@ -95,7 +95,7 @@ permalink: /info/
             {% endif %}
 
             {% if site.medium_username %}
-            <li class="col pad-r-m">
+            <li class="col pr-m">
              <a href="http://medium.com/{{ site.medium_username }}">
                <span class="icon-medium">	</span>
                Medium
@@ -105,7 +105,7 @@ permalink: /info/
             {% endif %}
 
             {% if site.github_username %}
-               <li class="col pad-r-m">
+               <li class="col pr-m">
                  <a href="https://github.com/{{ site.github_username }}">
                    <span class="icon-github"> </span>
                    Github
@@ -115,7 +115,7 @@ permalink: /info/
             {% endif %}
 
             {% if site.dribbble_username %}
-               <li class="col pad-r-m">
+               <li class="col pr-m">
                  <a href="https://dribbble.com/{{ site.dribbble_username }}">
                    <span class="icon-github"> </span>
                    Dribbble
@@ -125,7 +125,7 @@ permalink: /info/
             {% endif %}
 
             {% if site.twitter_username %}
-               <li class="col pad-r-m">
+               <li class="col pr-m">
                  <a href="https://twitter.com/{{ site.twitter_username }}">
                    <span class=" icon-twitter">  </span>
                    Twitter

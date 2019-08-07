@@ -1,12 +1,13 @@
-<div class="pad-t-l cf">
+<div class="pt-l cf">
   <div class="col col-12">
     <h2 class="h6 caps bold"> Featured Work </h2>
-    <div class="flex flex-wrap">
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));">
       {% for project in site.projects %}
-      <div class="mar-b-l col-12 m-col-6 l-col-4 pad-r-l align-top border-box">
+      <div class="mb-l border-box">
 
-          <div class="pad-y-m">
+          <div class="py-m">
             <div class="cf">
+              <img src="img/projects/thumbnails/{{project.thumbnail}}" alt="{{project.title}}">
               <h3 class="bold">
                 <a href="../{{project.permalink}}" class="">{{ project.title }}</a>
               </h3>
@@ -14,7 +15,7 @@
             {% if project.subtitle %}
               <p> <small>{{ project.subtitle }}</small> </p>
             {% endif %}
-            <p class="h5 black-5"> {{project.year}} </p>
+            <!-- <p class="h5 black-5"> {{project.year}} </p> -->
           </div>
 
       </div>
