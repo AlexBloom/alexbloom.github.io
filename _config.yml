@@ -3,7 +3,7 @@ title: Alex Bloom
 email: hello@alexbloom.co
 phone: 9195379227
 author: Alex Bloom
-description: The Traveling Office of Alex Bloom, designer and front-end developer.
+description: Disciplined design for people and planet.
 current_location: 35.9394124,-79.0780189
 
 baseurl: "" # the subpath of your site, e.g. /blog/
@@ -16,6 +16,8 @@ dribbble_username: alexbloom
 tumblr_username: alexbloom
 medium_username: alexbloom
 github_username: alexbloom
+angellist_username: alexbloom
+linkedin_username: alexanderbloom
 
 permalink: /writing/:categories/:title/
 

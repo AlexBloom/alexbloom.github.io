@@ -34,13 +34,7 @@ visibility: visible;
 .bg-repeat-none{
   background-repeat:none;
 }
-.visible-grid{
-  //background-image: linear-gradient(to right, rgba(0,0,0,.1) 0, rgba(255,255,255,0)1.5px);
-  //background-repeat: repeat-x;
-  //background-size: 16.6666667% 100%;
-  //margin:0 1rem;
 
-}
 body{
   //background-image: linear-gradient(to bottom,rgba(0,0,0,.1) 0,rgba(255,255,255,0)1px);
   //background-repeat: repeat-y;;
@@ -318,7 +312,7 @@ animation-delay:650ms;
 	height:6rem;
 	cursor:pointer;
 	@include quarter-second-transition;
-  @include breakpoint(l) {
+  @include breakpoint(lg) {
 		width:8rem;
 		height:8rem;
 	};
@@ -466,7 +460,7 @@ animation-delay:650ms;
 		background-color:$black;
 		margin:2.5em auto;
 		border-radius:100%;
-    @include breakpoint(l) {
+    @include breakpoint(lg) {
       width:.6em;
   		height:.6em;
       margin:3.25em auto;

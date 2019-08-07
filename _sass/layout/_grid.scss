@@ -4,7 +4,7 @@
 
 // Set your number of columns.
 $column-count: 12;
-
+$gutter: 2rem;
 
 // Default media queries
 @for $i from 1 through $column-count{
@@ -14,22 +14,22 @@ $column-count: 12;
 	 }
 }
 @for $i from 1 through $column-count{
-  .s-col-#{$i} {
-     @include breakpoint(s) {
+  .sm-col-#{$i} {
+     @include breakpoint(sm) {
       width:calc( #{$i} / #{$column-count} * 100% );
      };
    }
 }
 @for $i from 1 through $column-count{
-  .m-col-#{$i} {
-     @include breakpoint(m) {
+  .md-col-#{$i} {
+     @include breakpoint(md) {
        width:calc( #{$i} / #{$column-count} * 100% );
      };
    }
 }
 @for $i from 1 through $column-count{
-   .l-col-#{$i} {
-     @include breakpoint(l) {
+   .lg-col-#{$i} {
+     @include breakpoint(lg) {
        width:calc( #{$i} / #{$column-count} * 100% );
      };
    }
@@ -40,4 +40,11 @@ $column-count: 12;
         width:calc( #{$i} / #{$column-count} * 100% );
      };
    }
+}
+
+
+.grid{
+	display: grid;
+  //align-items: center;
+	grid-gap: $gutter;
 }

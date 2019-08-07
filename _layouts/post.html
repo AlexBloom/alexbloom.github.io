@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-<div class="post pad-y-xl pad-x-l serif">
+<div class="post py-xl px-l serif">
   <div class="max-width-xl float-center">
-    <header class="post-header pad-y-l">
+    <header class="post-header py-l">
         <h1 class="fw-800">{{ page.title }}</h1>
         {% if page.subtitle %}
           <h2 class="fw-300">  {{page.subtitle}} </h2>
@@ -11,10 +11,10 @@ layout: default
     </header>
 
     <article class="post-content sans cf">
-      <div class="col col-12 m-col-2 pad-r-l">
+      <div class="col col-12 md-col-2 pr-l">
         <p class="h6 caps bold">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
       </div>
-      <div class="col col-12 m-col-10 measure h3">
+      <div class="col col-12 md-col-10 measure h3">
         {{ content }}
       </div>
     </article>
