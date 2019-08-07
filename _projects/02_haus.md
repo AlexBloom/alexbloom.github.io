@@ -7,11 +7,11 @@ permalink: projects/haus/
 year: 2016
 launch-link:
 partners:
-  - <a href="http://spenhar.com"> Spencer Harrison </a>  
+  - <a href="http://spenhar.com"> Spencer Harrison </a>
 services:
   - UX
   - UI
-  - Brand Consulting
+  - Brand
 hero-images:
   -
 context: InHaus is a real-estate startup offering commission refunds for self-motivated home buyers and sellers. I co-led UX and UI for their beta release in early 2017.
@@ -20,17 +20,17 @@ strategy:
 results:
 ---
 
-
-There is no shortage of important data when it comes to real estate, but determining which data needs to be visible to a user is a tricky task. We designed an intuitive onboarding experience with search and lifestyle filters, to work with an algorithm that distilled all the relevant data into one number &mdash; a Hausmatch™. Users can understand whether a property is worth their research at a glance, and greatly reduce the time it takes to find a property worth touring and ultimately buying.
-
 ![A Tablet View]({{site.baseurl}}/img/projects/haus/overview-tablet.jpg)
 
 ![Business Cards]({{site.baseurl}}/img/projects/haus/businesscards.png)
 
 ![App Icons]({{site.baseurl}}/img/projects/haus/app-icons.png)
 
-![App Icons]({{site.baseurl}}/img/projects/haus/marketing-card_light.png)
+![Hausmatch]({{site.baseurl}}/img/projects/haus/marketing-card_light.png)
 
+<p class="measure">There is no shortage of important data when it comes to real estate, but determining which data needs to be visible to a user is a tricky task. We designed an intuitive onboarding experience with search and lifestyle filters, to work with an algorithm that distilled all the relevant data into one number &mdash; a Hausmatch™. Users can understand whether a property is worth their research at a glance, and greatly reduce the time it takes to find a property worth touring and ultimately buying.</p>
+
+![Documenting Content]({{site.baseurl}}img/projects/haus/trello.png)
 
 ![User Flow for the App]({{site.baseurl}}/img/projects/haus/flow.png)
 
