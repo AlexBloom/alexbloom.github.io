@@ -21,6 +21,7 @@
     "gulp-shell": "^0.7.1"
   },
   "dependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.7",
+    "swiper": "^5.3.6"
   }
 }

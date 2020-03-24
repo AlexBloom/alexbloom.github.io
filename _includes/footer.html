@@ -1,6 +1,6 @@
 
-<footer class="cf z3 relative px-l border-bottom black-5 bg-white">
-  <div class="max-width-xl float-center py-l border-top-thin">
+<footer class="cf z3 relative px-m border-bottom black-5">
+  <div class="max-width-xl float-center py-l">
     <div class="cf">
       <div class="col col-12">
          <!-- Links to Everything -->
@@ -25,27 +25,27 @@
            </a>
           </li>
           {% endif %}
-          {% if site.instagram_username %}
+          <!-- {% if site.instagram_username %}
           <li class="inline-block pr-m">
            <a href="http://instagram.com/{{ site.instagram_username }}">
              Instagram
            </a>
           </li>
-          {% endif %}
-          {% if site.github_username %}
+          {% endif %} -->
+          <!-- {% if site.github_username %}
            <li class="inline-block pr-m">
              <a href="https://github.com/{{ site.github_username }}">
                Github
              </a>
            </li>
-          {% endif %}
-          {% if site.dribbble_username %}
+          {% endif %} -->
+          <!-- {% if site.dribbble_username %}
              <li class="inline-block pr-m">
                <a href="https://dribbble.com/{{ site.dribbble_username }}">
                  Dribbble
                </a>
              </li>
-          {% endif %}
+          {% endif %} -->
          </ul>
        </div>
     </div>
@@ -56,16 +56,3 @@
     </div>
   </div>
 </footer>
-<!-- <script src="../js/plugins.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.2.0/lory.min.js"></script>
-<script>
-    'use strict';
-    document.addEventListener('DOMContentLoaded', function () {
-        Array.prototype.slice.call(document.querySelectorAll('.js_slider')).forEach(function (element, index) {
-            lory(element, {
-              infinite: 1,
-              enableMouseEvents: true,
-            });
-        });
-    });
-</script>

@@ -4,19 +4,65 @@
   {% include head.html %}
 
   <body>
-    {% include icons.html %}
-    {% include header.html %}
+    {% assign url_parts = page.url | split: '/' %}
 
-    <main class="main relative cf">
-      <div class="ajaxWrap">
-        <!-- <div id="userLocation" class="px-l absolute top-0 z2">
-          <p class="h5 black-8"> {{page.title}} </p>
-        </div> -->
-        {{ content }}
-      </div>
-    </main>
+      {% include icons.html %}
+      <!-- {% if page.url == '/' %}
+        <div class="banner bg-black-9 z4 relative white text-center py-m">Available for new projects in April 2020.</div>
+      {% endif %} -->
+      {% include header.html %}
 
-    {% include footer.html %}
+      <main class="main relative cf">
+        <div class="ajaxWrap">
+          <!-- <div id="userLocation" class="px-l absolute top-0 z2">
+            <p class="h5 black-8"> {{page.title}} </p>
+          </div> -->
+          {{ content }}
+        </div>
+      </main>
+
+      {% include footer.html %}
+
+    <script src="../js/swiper.min.js"></script>
+    <script>
+
+      //Swiper Initiation
+      var swiper3 = new Swiper ('.swiper-container-3', {
+        // Optional parameters
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination-3',
+          clickable: true,
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      })
+      var swiper2 = new Swiper ('.swiper-container-5', {
+        // Optional parameters
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination-5',
+          clickable: true,
+        },
+        //Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      })
+    </script>
+
 
   </body>
 

@@ -6,24 +6,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: calc(2rem + 3vw);
+  font-size: calc(1.25rem + 3vw);
   line-height:1;
   font-weight:800;
-  letter-spacing:-.025em;
+  letter-spacing:-.035em;
   @include breakpoint(lg) {
     font-size: 5rem;
   };
 }
+.custom-measure{
+    max-width:13em;
+}
 
 h2, .h2 {
-  font-size: calc(1rem + 1vw);
+  font-size: 1.5rem;
+  // font-weight:800;
+  letter-spacing:-.025em;
   @include breakpoint(lg) {
-    font-size: 1.5rem;
+    font-size: 2rem;
   };
   line-height: 1.25;
+}
+h2{
+  font-weight:700;
 }
 
 h3 {
   font-size: $h3;
   line-height:1.5;
+}
+
+p{
+  font-size:1.125rem;
+  @include  breakpoint(lg){
+    font-size: 1.25rem;
+  }
 }

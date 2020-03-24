@@ -7,6 +7,18 @@
         "variables",
         "base"
 ;
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+hr {
+  border-style:solid;
+  border-width: 1px;
+  border-top: none;
+  border-color:rgba(0,0,0,.1);
+}
 
 // INTRO FOUT
 .wf-loading #Intro {
@@ -455,15 +467,15 @@ animation-delay:650ms;
 	}
 	#pupil{
     transition: all .3s;
-		width:.5em;
-		height:.5em;
+		width:.5rem;
+		height:.5rem;
 		background-color:$black;
-		margin:2.5em auto;
-		border-radius:100%;
+		margin:2.5rem auto;
+		border-radius:3rem;
     @include breakpoint(lg) {
-      width:.6em;
-  		height:.6em;
-      margin:3.25em auto;
+      width:.625rem;
+  		height:.625rem;
+      margin:3.25rem auto;
     };
 	}
 	.eye-bracket{

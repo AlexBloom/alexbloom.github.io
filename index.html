@@ -4,13 +4,13 @@ title: Designer
 ---
 
 
-<section id="gradientDiv" class="fixed top-0 left-0 right-0 bottom-0 z-0">
+<section id="variableGradient" class="variableGradient fixed top-0 left-0 right-0 bottom-0 z-0">
 </section>
 
-<section id="" class="cf relative z2 px-l pb-xl">
+<section id="" class="cf relative z2 px-m pb-m">
     <div class="float-center max-width-xl">
       <div class="px-l col-12 md-col-4 lg-col-3 py-m">
-        <div class="logo-wrap py-l cf" onclick="homeBackgroundColor();">
+        <div class="logo-wrap py-l xl-px-m cf" onclick="homeBackgroundColor();">
           <div id="logo" class="cf mb-l"  title="Current Location: {{site.current_location}}">
             <div id="cross-inner-ns" class="logo-cross"></div>
             <div id="cross-inner-ew" class="logo-cross"></div>
@@ -26,66 +26,76 @@ title: Designer
         </div>
       </div>
       <div class="pb-l">
-        <h1 class="measure mb-l black-9"> Disciplined design for people and planet. </h1>
-        <p class="measure"> I partner with teams and founders to strategize and design products, brands, and systems that yield balanced societal, environmental, and business value.</p>
-        <p class="h3"> <a class="bold" href="mailto:hello@alexbloom.co"> hello@alexbloom.co &rarr; </a> </p>
+        <h1 class="custom-measure mb-m black-9">Disciplined design for people & planet.</h1>
+        <p class="measure">I partner with teams and founders to create and improve digital products, brands, and design systems that yield healthy outcomes for society and sustainable business growth.</p>.
       </div>
+      <div class="pb-l">
+        <h3>
+          <a href="{{site.baseurl}}/projects/" class="link p-m mr-m"> View Projects &rarr;</a>
+          <a href="#Experience" class="link py-m">Learn more &darr;</a> &nbsp;
+        </h3>
+      </div>
+    </div>
+    <div class="text-right black-5 caps" style="font-size:.5rem;">
+      Colors generated for you <br>
+      <span id="colorData"></span>
     </div>
 
 </section>
-
-
-<section class="relative z2 bg-white px-l">
+<section id="Experience" class="relative z2 bg-white py-l px-l">
   <div class="max-width-xl float-center">
-    <section class="py-xl">
-        <div class="cf">
-          <!-- <div class="">
-            <h6 class="caps bold"><span class="h6 label">NEW</span> Coming very, very, soon.</h6>
-            <h2 class="h3 m-0"><a class="bold" href="https://afreshtechnologies.com/">Afresh Technologies &rarr;</a></h2>
-            <p class="h5">Product Design Consultant<br>Reducing fresh food waste with human-centered AI.</p>
-          </div> -->
-          <div class="col col-12 md-col-3 lg-col-2">
-            <h6 class="caps bold">Currently</h6>
-          </div>
-          <div class="col col-12 md-col-9 lg-col-8">
-            <h2 class="h4">Product Designer at <a class="bold" href="https://drivecanvas.com/" target="_blank">Canvas &rarr;</a></h2>
-            <p class="">Rethinking car ownership with a flexible and fair alternative.</p>
-          </div>
-        </div>
-    </section>
+    <div class="cf py-l">
+      <h2>Context</h2>
+      <p class="measure">Over 10 years of experience on a not-so-linear path of branding, web design + engineering, print, product design, and physical environments. I’ve worked in agency, freelance, and in-house capacities for companies like Lyft, National Geographic, Lincoln, and Tribeca Film Institute.</p>
+    </div>
+    <hr>
+    <div class="cf py-l">
+      <div class="col col-12 md-col-3">
+        <h3 class="bold">Currently</h3>
+      </div>
+      <div class="col col-12 md-col-9">
+        <ul class="h3 list-reset">
+          <li class="mb-xs">Product Designer - <a class="" href="https://lyft.com/" target="_blank">Lyft</a></li>
+          <li class="mb-xs">Volunteer - <a href="https://www.instagram.com/typethursdaysf/" target="_blank">Type Thursday SF</a></li>
+        </ul>
 
-
-    <section id="Archive" class="cf pb-xl">
-        <div class="col col-12 md-col-3 lg-col-2">
-          <h2 class="h6 caps bold"> Previously </h2>
-        </div>
-        <div class="col col-12 md-col-9 lg-col-8">
-          <ul class="">
-            <li class="">
-              Partner at <a href="http://frommorf.com/">Morf Studio</a> &mdash; a design practice with <a href="http://twitter.com/spenhar">@spenhar</a>.
-            </li>
-            <li>
-              Adjunct professor of design <a href="https://tyler.temple.edu/programs/graphic-interactive-design" target=_blank>@Tyler School of Art</a>
-            </li>
-            <li>
-              Various shades of design <a href="https://twitter.com/exprmnt?lang=en" target=_blank>@exprmnt</a>, <a href="http://bluecadet.com" target=_blank>@bluecadet</a>, <a href="http://theheadsofstate.com" target=_blank>@theheadsofstate</a>.
-            </li>
-          </ul>
-        </div>
-    </section>
+      </div>
+    </div>
+    <hr>
+    <div class="cf py-l">
+      <div class="col col-12 md-col-3">
+        <h3 class="bold">Previously</h3>
+      </div>
+      <div class="col col-12 md-col-9">
+        <ul class="h3 list-reset">
+          <li class="mb-xs">Design Advisor - <a href="https://afreshtechnologies.com">Afresh</a> </li>
+          <li class="mb-xs">Product Designer - <a href="https://drivecanvas.com">Canvas</a> (Acquired by <a href="https://fair.com">Fair</a>) </li>
+          <li class="mb-xs">Adjunct Professor, Interaction Design - <a href="https://tyler.temple.edu/programs/graphic-interactive-design" target="_blank">Tyler School of Art</a></li>
+          <li class="mb-xs">Interaction Designer - <a href="https://bluecadet.com" target="_blank">Bluecadet</a></li>
+          <li class="mb-xs">And <a href="https://www.connellypartners.com/" target="_blank">many</a> <a href="https://theheadsofstate.com" target="_blank">more</a> before.</li>
+        </ul>
+      </div>
+    </div>
   </div>
-
 </section>
+
 <script>
   // Random Color Generation
   function homeBackgroundColor(){
     var random = (Math.floor(Math.random()*(360)));
-    var hue = 'hsl(' + random + ',' + '95%,' + '65%)';
-    var huetwo = 'hsl(' + (Math.floor(Math.random() *(360))) + ',' + '95%,' + '80%)';
-    document.getElementById('gradientDiv').style.backgroundImage= "linear-gradient( 45deg, " + hue + " , " + huetwo + ")";
-    document.getElementById('gradientDiv').style.backgroundColor = huetwo;
+    var hue = 'hsl(' + random + ',' + '95%,' + '70%)';
+    var huetwo = 'hsl(' + (Math.floor(Math.random()*(360))) + ',' + '95%,' + '90%)';
+    var colorShift = document.getElementsByClassName("variableGradient");
+    var i;
+    for (i = 0; i < colorShift.length; i++) {
+      colorShift[i].style.backgroundImage= "linear-gradient( 45deg, " + hue + " , " + huetwo + ")";
+      colorShift[i].style.backgroundColor = huetwo;
+    }
+    var colorData = document.getElementById("colorData");
+    colorData.innerHTML =  hue + ", " + huetwo;
+
     var sheet = document.createElement('style')
-    sheet.innerHTML = "::selection {background-color: " + huetwo + ";} a {box-shadow: 0 2px 0 0 " + huetwo + ";} ";
+    sheet.innerHTML = "::selection {background-color: " + huetwo + ";} hr{border-color: "+ hue +"}";
     document.body.appendChild(sheet);
   }
   homeBackgroundColor();
