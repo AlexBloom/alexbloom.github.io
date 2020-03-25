@@ -3,9 +3,9 @@ layout: page
 title: Info
 permalink: /info/
 ---
-<section id="variableGradient" class="variableGradient fixed top-0 left-0 right-0 bottom-0 z-0">
+<section id="variableGradient" class="variableGradient fixed top-0 left-0 right-0 bottom-0 z-0" style="background-color:#f2f2f2;">
 </section>
-  <div class=" relative z3">
+  <div class="z3 relative">
     <header class="cf py-l">
       <div class="float-right col-12 md-col-4" >
         <figure class="measure-narrow" style="max-width:16em;">
@@ -15,11 +15,11 @@ permalink: /info/
           <figcaption class="h6 black text-center pt-s">📷 <a class="black-5" href="https://studiokwong.com/">Kevin Kwong</a></figcaption>
         </figure>
       </div>
-      <div class="col col-12 md-col-8 pr-l py-m">
-        <h1 class="type-grow black-9"> Hello, I'm Alex.  </h1>
+      <div class="col col-12 md-col-8 pr-l">
+        <h1 class="custom-measure mb-m black-9"> Hello, I'm Alex.  </h1>
         <div class=" pb-l">
           <p class="measure">
-            I partner with teams and founders to create and improve digital products, brands, and design systems that yield healthy outcomes for society and sustainable business growth. I'm happiest working hands on and end-to-end, from strategic thinking through technical execution inside of nimble teams with diverse viewpoints.
+            I partner with teams and founders to create and improve digital products, brands, and design systems that yield healthy outcomes for society and sustainable business growth. I'm happiest working in lead roles, hands-on and end-to-end, from strategic thinking through technical execution with collaborative partners.
           </p>
         </div>
       </div>
@@ -52,8 +52,8 @@ permalink: /info/
           <ul class="h3 list-reset">
             <li class="pb-xs">Full-stack digital product design</li>
             <li class="pb-xs">Creative direction</li>
-            <li class="pb-xs">Scrappy prototyping and research</li>
-            <li class="pb-xs">Mentorship to young designers</li>
+            <li class="pb-xs">Prototyping and user testing</li>
+            <li class="pb-xs">Mentorship for young designers</li>
             <li class="pb-xs">Front-end engineering</li>
           </ul>
         </div>
@@ -81,7 +81,7 @@ permalink: /info/
         </div>
       </section>
       <div class="text-right black-5 caps" style="font-size:.5rem;">
-        Colors generated for you <br>
+        Your color is: <br>
         <span id="colorData"></span>
       </div>
     </div>
@@ -94,23 +94,23 @@ permalink: /info/
   </div>
 
   <script>
-    // Random Color Generation
-    function homeBackgroundColor(){
-      var random = (Math.floor(Math.random()*(360)));
-      var hue = 'hsl(' + random + ',' + '95%,' + '90%)';
-      var huetwo = 'hsl(' + (Math.floor(Math.random() *(360))) + ',' + '95%,' + '70%)';
-      var colorShift = document.getElementsByClassName('variableGradient');
-      var i;
-      for (i = 0; i < colorShift.length; i++) {
-        colorShift[i].style.backgroundImage= "linear-gradient( 45deg, " + hue + " , " + huetwo + ")";
-        colorShift[i].style.backgroundColor = hue;
-      }
-      var colorData = document.getElementById("colorData");
-      colorData.innerHTML =  hue + ", " + huetwo;
 
-      var sheet = document.createElement('style')
-      sheet.innerHTML = "::selection {background-color: " + huetwo + ";}";
-      document.body.appendChild(sheet);
-    }
-    homeBackgroundColor();
+    // var sheet = document.createElement('style')
+    // function homeBackgroundColor(){
+    //   var random = (Math.floor(Math.random()*(360)));
+    //   var hue = 'hsl(' + random + ',' + '95%,' + '90%)';
+    //   var huetwo = 'hsl(' + random + ',' + '95%,' + '75%)';
+    //   var colorShift = document.getElementsByClassName("variableGradient");
+    //   var i;
+    //   for (i = 0; i < colorShift.length; i++) {
+    //     colorShift[i].style.backgroundImage= "linear-gradient( 45deg, " + hue + " , " + huetwo + ")";
+    //     colorShift[i].style.backgroundColor = huetwo;
+    //   }
+    //   var colorData = document.getElementById("colorData");
+    //   colorData.innerHTML =  hue ;
+    //
+    //   sheet.innerHTML = "::selection {background-color: " + huetwo + ";} hr{border-color: "+ hue +"} .colorShift {border-color: " + huetwo + " }";
+    //   document.body.appendChild(sheet);
+    // }
+    // homeBackgroundColor();
   </script>

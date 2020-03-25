@@ -37,7 +37,7 @@ title: Designer
       </div>
     </div>
     <div class="text-right black-5 caps" style="font-size:.5rem;">
-      Colors generated for you <br>
+      Your color is: <br>
       <span id="colorData"></span>
     </div>
 
@@ -84,10 +84,11 @@ title: Designer
 
 <script>
   // Random Color Generation
+  var sheet = document.createElement('style')
   function homeBackgroundColor(){
     var random = (Math.floor(Math.random()*(360)));
     var hue = 'hsl(' + random + ',' + '95%,' + '70%)';
-    var huetwo = 'hsl(' + (Math.floor(Math.random()*(360))) + ',' + '95%,' + '90%)';
+    var huetwo = 'hsl(' + random + ',' + '95%,' + '98%)';
     var colorShift = document.getElementsByClassName("variableGradient");
     var i;
     for (i = 0; i < colorShift.length; i++) {
@@ -95,9 +96,8 @@ title: Designer
       colorShift[i].style.backgroundColor = huetwo;
     }
     var colorData = document.getElementById("colorData");
-    colorData.innerHTML =  hue + ", " + huetwo;
+    colorData.innerHTML =  hue ;
 
-    var sheet = document.createElement('style')
     sheet.innerHTML = "::selection {background-color: " + huetwo + ";} hr{border-color: "+ hue +"} .colorShift {border-color: " + huetwo + " }";
     document.body.appendChild(sheet);
   }
