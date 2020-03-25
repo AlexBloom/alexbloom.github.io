@@ -31,8 +31,8 @@ title: Designer
       </div>
       <div class="pb-l">
         <h3>
-          <a href="{{site.baseurl}}/projects/" class="link p-m mr-m"> View Projects &rarr;</a>
-          <a href="#Experience" class="link py-m">Learn more &darr;</a> &nbsp;
+          <a href="{{site.baseurl}}/projects/" class="link mr-m"> View Projects &rarr;</a>
+          <a href="#Experience" class="link ">Learn more &darr;</a> &nbsp;
         </h3>
       </div>
     </div>
@@ -42,11 +42,15 @@ title: Designer
     </div>
 
 </section>
-<section id="Experience" class="relative z2 bg-white py-l px-l">
+<section id="Experience" class="relative z2 bg-white py-l px-m">
   <div class="max-width-xl float-center">
     <div class="cf py-l">
-      <h2>Context</h2>
-      <p class="measure">Over 10 years of experience on a not-so-linear path of branding, web design + engineering, print, product design, and physical environments. I’ve worked in agency, freelance, and in-house capacities for companies like Lyft, National Geographic, Lincoln, and Tribeca Film Institute.</p>
+      <div class="col col-12 md-col-3">
+        <h3 class="bold">Context</h3>
+      </div>
+      <div class="col col-12 md-col-9">
+        <p class="h3 measure">I’m a strategic digital product designer, 10 years seasoned, with a background in branding, web design, and front-end engineering via a variety of agency, freelance, and in-house roles. I get *excited* about cultures of learning, design history, and healthy collaboration between brand and product.</p>
+      </div>
     </div>
     <hr>
     <div class="cf py-l">
@@ -58,7 +62,6 @@ title: Designer
           <li class="mb-xs">Product Designer - <a class="" href="https://lyft.com/" target="_blank">Lyft</a></li>
           <li class="mb-xs">Volunteer - <a href="https://www.instagram.com/typethursdaysf/" target="_blank">Type Thursday SF</a></li>
         </ul>
-
       </div>
     </div>
     <hr>
@@ -95,7 +98,7 @@ title: Designer
     colorData.innerHTML =  hue + ", " + huetwo;
 
     var sheet = document.createElement('style')
-    sheet.innerHTML = "::selection {background-color: " + huetwo + ";} hr{border-color: "+ hue +"}";
+    sheet.innerHTML = "::selection {background-color: " + huetwo + ";} hr{border-color: "+ hue +"} .colorShift {border-color: " + huetwo + " }";
     document.body.appendChild(sheet);
   }
   homeBackgroundColor();

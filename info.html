@@ -5,12 +5,12 @@ permalink: /info/
 ---
 <section id="variableGradient" class="variableGradient fixed top-0 left-0 right-0 bottom-0 z-0">
 </section>
-  <div class="pb-l relative z3">
+  <div class=" relative z3">
     <header class="cf py-l">
       <div class="float-right col-12 md-col-4" >
         <figure class="measure-narrow" style="max-width:16em;">
           <div class="overflow-hidden circle">
-            <img src="{{site.baseurl}}/img/alex_bw_2019.jpg" alt="Portrait of Alex Bloom, wearing a hat, gently smiling with a calm demeanor.">
+            <img src="{{site.baseurl}}/img/alex_bw_2019.jpg" onclick="homeBackgroundColor();" style="cursor:pointer;" alt="Portrait of Alex Bloom, wearing a hat, gently smiling with a calm demeanor.">
           </div>
           <figcaption class="h6 black text-center pt-s">📷 <a class="black-5" href="https://studiokwong.com/">Kevin Kwong</a></figcaption>
         </figure>
@@ -79,15 +79,6 @@ permalink: /info/
           <h3 class="bold">About this site</h3>
           <p class="h4 measure">This site collects no data or analytics, because I value your privacy. If you have webfonts enabled, the text is set in <a href="https://rsms.me/inter/">Inter UI</a>. If you have feedback or critique, please <a href="mailto:hello@alexbloom.co">contact me</a>.</p>
         </div>
-        <!-- <div class="col col-12 md-col-9">
-          <ul class="h3 list-reset">
-            <li class="pb-xs">He/him</li>
-            <li class="pb-xs"><a href="https://photos.app.goo.gl/8cSbwiQ721S1McxZ8" target=_blank>Furniture tinkerer</a></li>
-            <li class="pb-xs"><a href="https://www.16personalities.com/enfp-personality" target=_blank>ENFP-A</a></li>
-            <li class="pb-xs"><a href="{{site.baseurl}}/projects/gnarrboro/">Ramp builder</a></li>
-            <li class="pb-xs"><a href="{{site.baseurl}}/img/airborne.jpg" target=_blank>Sending it, responsibly.</a></li>
-          </ul>
-        </div> -->
       </section>
       <div class="text-right black-5 caps" style="font-size:.5rem;">
         Colors generated for you <br>
@@ -95,16 +86,15 @@ permalink: /info/
       </div>
     </div>
     <hr>
-    <section class="relative py-xl max-width-xl float-center">
+    <section class="relative pt-xl max-width-xl float-center">
       <h2>Thanks :)</h2>
       <p class="h3">Get in touch <a class="bold" href="mailto:hello@alexbloom.co"> hello@alexbloom.co &rarr; </a> </p>
     </section>
-    <hr>
+
   </div>
 
   <script>
     // Random Color Generation
-
     function homeBackgroundColor(){
       var random = (Math.floor(Math.random()*(360)));
       var hue = 'hsl(' + random + ',' + '95%,' + '90%)';
