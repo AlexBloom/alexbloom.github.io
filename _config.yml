@@ -1,10 +1,10 @@
 # Site settings
 title: Alex Bloom
 email: hello@alexbloom.co
-phone: 9195379227
+phone:
 author: Alex Bloom
 description: Disciplined design for people and planet.
-current_location: 35.9394124,-79.0780189
+current_location: Quarantine
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://alexbloom.co" # the base hostname & protocol for your site

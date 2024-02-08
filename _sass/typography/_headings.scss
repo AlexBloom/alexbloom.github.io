@@ -36,9 +36,9 @@ h3 {
   line-height:1.5;
 }
 
-p{
+p, ul, ol, .h3{
   font-size:1.125rem;
-  @include  breakpoint(lg){
+  @include  breakpoint(md){
     font-size: 1.25rem;
   }
 }
