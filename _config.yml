@@ -6,7 +6,7 @@ description: Disciplined design for people and planet.
 current_location: Quarantine
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://alexbloom.co" # the base hostname & protocol for your site
+url: "https://alexbloom.design" # the base hostname & protocol for your site
 
 facebook_username: alexanderlbloom
 twitter_username: alexbloom
