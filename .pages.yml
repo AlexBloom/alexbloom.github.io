@@ -20,10 +20,10 @@ content:
       - name: body
         label: Body
         type: rich-text
-  - name: pages
-    label: Pages
+  - name: projects
+    label: Projects
     type: collection
-    path: '_/'
+    path: '_projects'
     view:
       fields: [title]
     fields:
