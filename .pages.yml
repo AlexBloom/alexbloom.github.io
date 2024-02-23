@@ -20,16 +20,6 @@ content:
       - name: body
         label: Body
         type: rich-text
-  - name: projects
-    label: Projects
-    type: collection
-    path: '_projects'
-    view:
-      fields: [title]
-    fields:
-    - name: title
-      label: Title
-      type: string
   - name: config
     label: Jekyll config
     path: _config.yml
