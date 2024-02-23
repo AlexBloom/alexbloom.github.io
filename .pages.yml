@@ -20,6 +20,12 @@ content:
       - name: body
         label: Body
         type: rich-text
+  - name: pages
+    label: Pages
+    type: collection
+    path: '_/'
+    view:
+      fields: [title]
   - name: config
     label: Jekyll config
     path: _config.yml
