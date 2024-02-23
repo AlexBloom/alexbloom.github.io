@@ -26,6 +26,10 @@ content:
     path: '_/'
     view:
       fields: [title]
+    fields:
+    - name: title
+      label: Title
+      type: string
   - name: config
     label: Jekyll config
     path: _config.yml
