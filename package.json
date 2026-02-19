@@ -1,27 +1,34 @@
 {
-  "name": "alexbloom.github.io",
-  "version": "1.0.0",
-  "description": "## Author - Alex Bloom",
-  "main": "gulpfile.js",
+  "name": "alexbloom-portfolio",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AlexBloom/alexbloom.github.io.git"
-  },
-  "author": "alexbloom",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AlexBloom/alexbloom.github.io/issues"
-  },
-  "homepage": "https://github.com/AlexBloom/alexbloom.github.io#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-shell": "^0.7.1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "browser-sync": "^2.26.7",
-    "swiper": "^5.3.6"
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.6.0",
+    "lucide-react": "^0.475.0",
+    "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-navigation-menu": "^1.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9",
+    "eslint-config-next": "^15.1.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5"
   }
 }
