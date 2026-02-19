@@ -17,6 +17,7 @@ export interface Book {
   title: string;
   author: string;
   cover: string;
-  libraryLink?: string;
+  bookshopUrl?: string;
+  description?: string;
   notes?: string;
 }
