@@ -14,7 +14,7 @@ export function Footer() {
 
   return (
     <footer className="mt-auto border-t border-border">
-      <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="max-w-[960px] mx-auto px-6 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <p className="text-xs text-muted-foreground">
           © {year} Alex Bloom • <a href="/img/airborne.jpg" target="_blank">Send it responsibly.</a>
         </p>

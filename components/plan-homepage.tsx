@@ -6,16 +6,9 @@ import { Header } from "@/components/header";
 import { Slideshow } from "@/components/home/slideshow";
 import { CaseStudyOverlay } from "@/components/home/case-study-overlay";
 import { Separator } from "@/components/ui/separator";
-import type { AttentionPlan } from "@/components/plan-provider";
 import type { Project } from "@/types";
 
-interface PlanHomepageProps {
-  plan: AttentionPlan;
-}
-
-export function PlanHomepage({ plan }: PlanHomepageProps) {
-  const show5mSections = plan === "5m";
-
+export function PlanHomepage() {
   const [openProject, setOpenProject] = useState<Project | null>(null);
   const [sourceRect, setSourceRect] = useState<DOMRect | null>(null);
   const handleProjectClick = useCallback((p: Project, rect: DOMRect | null) => {
@@ -121,18 +114,6 @@ export function PlanHomepage({ plan }: PlanHomepageProps) {
             </div>
           </section>
 
-          {/* 5m+ sections */}
-          {show5mSections && (
-            <>
-              <Separator />
-              <section className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-y-3 gap-x-12 py-16">
-                <p className="text-xs text-muted-foreground uppercase tracking-widest">
-                  5m
-                </p>
-                <p className="text-sm text-muted-foreground">Extended content placeholder.</p>
-              </section>
-            </>
-          )}
         </div>
       </div>
     </div>
