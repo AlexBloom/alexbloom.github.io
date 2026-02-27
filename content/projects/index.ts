@@ -125,7 +125,7 @@ export const projects: Project[] = [
     slug: "woolley-market",
     title: "Woolley Market",
     subtitle: "Revitalizing and celebrating a town with history as rich as its soil.",
-    thumbnail: "/img/projects/woolleymarket/specialitems/neon.jpg",
+    thumbnail: "/img/projects/woolleymarket/specialitems/neon-detail.jpg",
     context: "Brand identity, environmental design, and digital experience for a community-owned artisan marketplace.",
     services: ["Brand Identity", "Environmental Design", "Web Design", "Creative Direction"],
     year: "2014",
