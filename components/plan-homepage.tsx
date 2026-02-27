@@ -15,7 +15,6 @@ interface PlanHomepageProps {
 
 export function PlanHomepage({ plan }: PlanHomepageProps) {
   const showHeader = plan === "5m";
-  const show1mSections = plan === "1m" || plan === "5m";
   const show5mSections = plan === "5m";
 
   const [openProject, setOpenProject] = useState<Project | null>(null);
@@ -103,50 +102,6 @@ export function PlanHomepage({ plan }: PlanHomepageProps) {
               </Link>
             </div>
           </section>
-
-          {/* 1m+ sections */}
-          {show1mSections && (
-            <>
-              {/* Loom video */}
-              <section>
-                <p className="text-xs text-muted-foreground uppercase tracking-widest mb-3">
-                  Introduction
-                </p>
-                <div className="relative w-full aspect-video bg-muted rounded-lg flex items-center justify-center">
-                  <p className="text-xs text-muted-foreground">
-                    Video coming soon
-                  </p>
-                  {/* Replace the div above with:
-                  <iframe
-                    src="https://www.loom.com/embed/YOUR_LOOM_ID"
-                    className="absolute inset-0 w-full h-full rounded-lg"
-                    allowFullScreen
-                  /> */}
-                </div>
-              </section>
-
-              {/* Services */}
-              <section>
-                <p className="text-xs text-muted-foreground uppercase tracking-widest mb-3">
-                  Services
-                </p>
-                <ul className="space-y-1.5">
-                  {[
-                    "Brand Identity",
-                    "Product Design",
-                    "Web Design",
-                    "UX Research",
-                    "Data Visualization",
-                    "Print Design",
-                  ].map((service) => (
-                    <li key={service} className="text-sm">
-                      {service}
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            </>
-          )}
 
           {/* 5m+ sections */}
           {show5mSections && (
