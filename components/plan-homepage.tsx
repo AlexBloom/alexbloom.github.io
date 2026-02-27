@@ -51,7 +51,7 @@ export function PlanHomepage({ plan }: PlanHomepageProps) {
         </div>
 
         {/* Core content */}
-        <div className="max-w-[1080px] mx-auto px-6 py-12 space-y-16">
+        <div className="max-w-[960px] mx-auto px-6 py-12 space-y-16">
 
           {/* Heading statement */}
           <section>
@@ -61,8 +61,8 @@ export function PlanHomepage({ plan }: PlanHomepageProps) {
           </section>
 
           {/* Contact */}
-          <section className="grid grid-cols-1 min-[480px]:grid-cols-[auto_1fr] gap-y-3 gap-x-12">
-            <p className="text-xs text-muted-foreground uppercase tracking-widest min-[480px]:pt-0.5">
+          <section className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-y-3 gap-x-12">
+            <p className="text-xs text-muted-foreground uppercase tracking-widest">
               Contact
             </p>
             <div className="space-y-1.5">
@@ -86,8 +86,8 @@ export function PlanHomepage({ plan }: PlanHomepageProps) {
           </section>
 
           {/* Newsletter */}
-          <section className="grid grid-cols-1 min-[480px]:grid-cols-[auto_1fr] gap-y-3 gap-x-12">
-            <p className="text-xs text-muted-foreground uppercase tracking-widest min-[480px]:pt-0.5">
+          <section className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-y-3 gap-x-12">
+            <p className="text-xs text-muted-foreground uppercase tracking-widest">
               Newsletter
             </p>
             <div>
