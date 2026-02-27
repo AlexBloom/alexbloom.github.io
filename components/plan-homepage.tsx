@@ -41,7 +41,7 @@ export function PlanHomepage({ plan }: PlanHomepageProps) {
 
       <div className={showHeader ? "pt-16" : ""}>
         {/* Plan switcher */}
-        <div className="max-w-[1200px] mx-auto px-6 pt-6 pb-2">
+        <div className="max-w-[1080px] mx-auto px-6 pt-6 pb-2">
           <PlanSwitcher />
         </div>
 
@@ -51,7 +51,7 @@ export function PlanHomepage({ plan }: PlanHomepageProps) {
         </div>
 
         {/* Core content */}
-        <div className="max-w-[1200px] mx-auto px-6 py-12 space-y-16">
+        <div className="max-w-[1080px] mx-auto px-6 py-12 space-y-16">
 
           {/* Heading statement */}
           <section>
@@ -60,38 +60,37 @@ export function PlanHomepage({ plan }: PlanHomepageProps) {
             </h1>
           </section>
 
-          {/* Contact + Newsletter — two columns above smallest mobile */}
-          <div className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-y-16 gap-x-12">
-            {/* Contact */}
-            <section>
-              <p className="text-xs text-muted-foreground uppercase tracking-widest mb-3">
-                Contact
-              </p>
-              <div className="space-y-1.5">
-                {[
-                  { label: "Email", href: "mailto:alexbloomdesign@gmail.com" },
-                  { label: "Signal", href: "#" },
-                  { label: "Linkedin", href: "#" },
-                  { label: "Github", href: "https://github.com/alexbloom" },
-                  { label: "Instagram", href: "#" },
-                ].map(({ label, href }) => (
-                  <div key={label}>
-                    <Link
-                      href={href}
-                      className="text-sm hover:text-muted-foreground transition-colors"
-                    >
-                      {label}
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </section>
+          {/* Contact */}
+          <section className="grid grid-cols-1 min-[480px]:grid-cols-[auto_1fr] gap-y-3 gap-x-12">
+            <p className="text-xs text-muted-foreground uppercase tracking-widest min-[480px]:pt-0.5">
+              Contact
+            </p>
+            <div className="space-y-1.5">
+              {[
+                { label: "Email", href: "mailto:alexbloomdesign@gmail.com" },
+                { label: "Signal", href: "#" },
+                { label: "Linkedin", href: "#" },
+                { label: "Github", href: "https://github.com/alexbloom" },
+                { label: "Instagram", href: "#" },
+              ].map(({ label, href }) => (
+                <div key={label}>
+                  <Link
+                    href={href}
+                    className="text-sm hover:text-muted-foreground transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </section>
 
-            {/* Newsletter */}
-            <section>
-              <p className="text-xs text-muted-foreground uppercase tracking-widest mb-3">
-                Newsletter
-              </p>
+          {/* Newsletter */}
+          <section className="grid grid-cols-1 min-[480px]:grid-cols-[auto_1fr] gap-y-3 gap-x-12">
+            <p className="text-xs text-muted-foreground uppercase tracking-widest min-[480px]:pt-0.5">
+              Newsletter
+            </p>
+            <div>
               <p className="text-sm font-medium mb-1">IC1000</p>
               <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
                 Monthly career strategy to level up anyone on the path less managed.
@@ -102,8 +101,8 @@ export function PlanHomepage({ plan }: PlanHomepageProps) {
               >
                 Subscribe
               </Link>
-            </section>
-          </div>
+            </div>
+          </section>
 
           {/* 1m+ sections */}
           {show1mSections && (
