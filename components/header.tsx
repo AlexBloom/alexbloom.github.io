@@ -10,7 +10,7 @@ const navLinks = [
 export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
-      <div className="max-w-[1080px] mx-auto flex items-center justify-between px-6 py-4">
+      <div className="max-w-[960px] mx-auto flex items-center justify-between px-6 py-4">
         <Link
           href="/"
           className="text-sm font-medium tracking-tight hover:opacity-70 transition-opacity"

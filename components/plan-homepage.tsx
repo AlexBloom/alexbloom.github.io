@@ -3,9 +3,9 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { Header } from "@/components/header";
-import { PlanSwitcher } from "@/components/plan-switcher";
 import { Slideshow } from "@/components/home/slideshow";
 import { CaseStudyOverlay } from "@/components/home/case-study-overlay";
+import { Separator } from "@/components/ui/separator";
 import type { AttentionPlan } from "@/components/plan-provider";
 import type { Project } from "@/types";
 
@@ -14,7 +14,6 @@ interface PlanHomepageProps {
 }
 
 export function PlanHomepage({ plan }: PlanHomepageProps) {
-  const showHeader = plan === "5m";
   const show5mSections = plan === "5m";
 
   const [openProject, setOpenProject] = useState<Project | null>(null);
@@ -35,32 +34,70 @@ export function PlanHomepage({ plan }: PlanHomepageProps) {
           : {}
       }
     >
-      {/* Header — 5m only */}
-      {showHeader && <Header />}
+      <Header />
 
-      <div className={showHeader ? "pt-16" : ""}>
-        {/* Plan switcher */}
-        <div className="max-w-[1080px] mx-auto px-6 pt-6 pb-2">
-          <PlanSwitcher />
-        </div>
-
+      <div className="pt-16">
         {/* Slideshow — full width */}
         <div className="mt-4">
           <Slideshow onProjectClick={handleProjectClick} />
         </div>
 
         {/* Core content */}
-        <div className="max-w-[960px] mx-auto px-6 py-12 space-y-16">
+        <div className="max-w-[960px] mx-auto px-6 py-12 space-y-0">
 
           {/* Heading statement */}
-          <section>
+          <section className="py-16">
             <h1 className="text-3xl font-bold leading-snug tracking-tight">
               Clarity and craft, with feeling.
             </h1>
           </section>
 
+          <Separator />
+
+          {/* Currently */}
+          <section className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-y-3 gap-x-12 py-16">
+            <p className="text-xs text-muted-foreground uppercase tracking-widest">
+              Currently
+            </p>
+            <ul className="space-y-1.5">
+              {[
+                "Writing a Book",
+                "Building an AI Underwriting Toolkit at HomeVision",
+                "Making a complete financial OS for Solos at Lettuce",
+                "~Vibing and Anti-Vibing~",
+              ].map((item) => (
+                <li key={item} className="text-sm">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <Separator />
+
+          {/* Newsletter */}
+          <section className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-y-3 gap-x-12 py-16">
+            <p className="text-xs text-muted-foreground uppercase tracking-widest">
+              Newsletter
+            </p>
+            <div>
+              <p className="text-sm font-medium mb-1">IC1000</p>
+              <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
+                Monthly career strategy to level up anyone on the path less managed.
+              </p>
+              <Link
+                href="#newsletter"
+                className="text-sm underline underline-offset-4 hover:text-muted-foreground transition-colors"
+              >
+                Subscribe
+              </Link>
+            </div>
+          </section>
+
+          <Separator />
+
           {/* Contact */}
-          <section className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-y-3 gap-x-12">
+          <section className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-y-3 gap-x-12 py-16">
             <p className="text-xs text-muted-foreground uppercase tracking-widest">
               Contact
             </p>
@@ -84,43 +121,17 @@ export function PlanHomepage({ plan }: PlanHomepageProps) {
             </div>
           </section>
 
-          {/* Newsletter */}
-          <section className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-y-3 gap-x-12">
-            <p className="text-xs text-muted-foreground uppercase tracking-widest">
-              Newsletter
-            </p>
-            <div>
-              <p className="text-sm font-medium mb-1">IC1000</p>
-              <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
-                Monthly career strategy to level up anyone on the path less managed.
-              </p>
-              <Link
-                href="#newsletter"
-                className="text-sm underline underline-offset-4 hover:text-muted-foreground transition-colors"
-              >
-                Subscribe
-              </Link>
-            </div>
-          </section>
-
           {/* 5m+ sections */}
           {show5mSections && (
-            <section>
-              <p className="text-xs text-muted-foreground uppercase tracking-widest mb-3">
-                Currently
-              </p>
-              <ul className="space-y-2">
-                {[
-                  "— Placeholder item one",
-                  "— Placeholder item two",
-                  "— Placeholder item three",
-                ].map((item) => (
-                  <li key={item} className="text-sm text-muted-foreground">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </section>
+            <>
+              <Separator />
+              <section className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-y-3 gap-x-12 py-16">
+                <p className="text-xs text-muted-foreground uppercase tracking-widest">
+                  5m
+                </p>
+                <p className="text-sm text-muted-foreground">Extended content placeholder.</p>
+              </section>
+            </>
           )}
         </div>
       </div>
