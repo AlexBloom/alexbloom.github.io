@@ -10,7 +10,11 @@ export interface Project {
   launchLink?: string;
   heroImages?: string[];
   featured: boolean;
+  hidden?: boolean;
   description?: string;
+  links?: { label: string; url: string }[];
+  videos?: { label: string; url: string }[];
+  credits?: { name: string; role: string; url?: string }[];
 }
 
 export interface Book {

@@ -62,13 +62,16 @@ export const projects: Project[] = [
     slug: "lyft",
     title: "Lyft",
     subtitle: "An overhaul of in-app help for millions of riders and drivers",
-    thumbnail: "/img/projects/thumbnails/lyft.jpg",
+    thumbnail: "/img/projects/thumbnails/Lyft.jpg",
     context: "An overhaul of in-app help experiences for millions of riders and drivers",
     services: ["Product Design"],
     year: "2020",
     featured: true,
     description:
       "At Lyft, I redesigned in-app help for both riders and drivers. For riders, I introduced a ride-first approach using AI and data science to surface the most likely issues for recent trips, replacing a tile-based menu with a more scannable list view. For drivers, I designed a tiered premium support model alongside a new help home screen, support chat, and AI automations for common issues.",
+    heroImages: [
+      "/img/projects/lyft/lyft-1.png",
+    ],
   },
   {
     slug: "airstream",
@@ -89,10 +92,10 @@ export const projects: Project[] = [
     thumbnail: "/img/projects/thumbnails/Bench.jpg",
     context: "Bookkeeping software for small businesses",
     services: ["Product Design"],
-    year: "2023",
+    year: "2024",
     featured: true,
     description:
-      "Placeholder — case study coming soon.",
+      "Utili, no hardware, private client.",
   },
   {
     slug: "public-equity",
@@ -129,7 +132,12 @@ export const projects: Project[] = [
     featured: false,
     description:
       "In January of 2014, I fell into one of the most interesting places and projects I've ever been able to work on. I was approached by Will Honea, the founder of the Market and a team of highly-dedicated people with uniquely focused experience in farming and market operations.\n\nI served as the market's sole creative director for 6 months, engaged at pre-incorporation stage through the market's first 50 hired employees. I oversaw, and in many cases— physically executed all aspects of the market's brand strategy, identity, packaging, interior, exterior, and digital design.",
-    links: [{ label: "woolleymarket.com", url: "http://woolleymarket.com" }],
+    credits: [
+      { name: "True Hand Society", role: "Brand, Illustration", url: "http://truehandsociety.com" },
+      { name: "Nathan Kane", role: "Photography", url: "http://nathankane.com" },
+      { name: "Sign Mart", role: "Neon, Production", url: "http://signmartusa.com" },
+      { name: "Skagit Valley Signs", role: "Digital Printing", url: "http://skagitvalleysigns.com" },
+    ],
     heroImages: [
       "/img/projects/woolleymarket/brand/logo-circle.gif",
       "/img/projects/woolleymarket/brand/logo-type.gif",
@@ -174,6 +182,23 @@ export const projects: Project[] = [
     featured: true,
     description:
       "Bike & Build organizes cross-country cycling trips that benefit affordable housing causes.",
+    heroImages: [
+      "/img/projects/bikebuild/photogrid.jpg",
+      "/img/projects/bikebuild/pacificphoto.jpg",
+      "/img/projects/bikebuild/fundraiserphoto.jpg",
+      "/img/projects/bikebuild/fundraiser_animation_browser.gif",
+      "/img/projects/bikebuild/devices.jpg",
+      "/img/projects/bikebuild/flow.png",
+      "/img/projects/bikebuild/routemap.gif",
+      "/img/projects/bikebuild/2015_annual_report.jpg",
+      "/img/projects/bikebuild/2015_jersey.jpg",
+      "/img/projects/bikebuild/2015_jerseys_front.jpg",
+      "/img/projects/bikebuild/2015_jerseys_back.jpg",
+      "/img/projects/bikebuild/2013-annual-report.jpg",
+      "/img/projects/bikebuild/2013_jerseys_front.jpg",
+      "/img/projects/bikebuild/2013_jerseys_back.jpg",
+      "/img/projects/bikebuild/card_sort.jpg",
+    ],
   },
   {
     slug: "gnarrboro",
@@ -200,6 +225,25 @@ export const projects: Project[] = [
     videos: [
       { label: "Film — Vimeo", url: "https://vimeo.com/130455113?fl=pl&fe=cm" },
       { label: "Video — YouTube", url: "https://youtu.be/jeP27ufIv3s" },
+    ],
+  },
+  {
+    slug: "canvas",
+    title: "Canvas",
+    subtitle: "Learning management platform for higher education",
+    thumbnail: "/img/projects/thumbnails/canvas.png",
+    context: "Learning management platform for higher education",
+    services: ["Product Design", "UX Research"],
+    year: "2018–2019",
+    featured: true,
+    description:
+      "Placeholder — case study coming soon.",
+    heroImages: [
+      "/img/projects/canvas/canvas-1.jpg",
+      "/img/projects/canvas/canvas-2.jpg",
+      "/img/projects/canvas/canvas-3.jpg",
+      "/img/projects/canvas/canvas-4.jpg",
+      "/img/projects/canvas/canvas-5.jpg",
     ],
   },
 ];
