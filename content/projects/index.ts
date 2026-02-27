@@ -231,7 +231,7 @@ export const projects: Project[] = [
     slug: "canvas",
     title: "Canvas",
     subtitle: "Learning management platform for higher education",
-    thumbnail: "/img/projects/thumbnails/canvas.png",
+    thumbnail: "/img/projects/thumbnails/canvas.jpg",
     context: "Learning management platform for higher education",
     services: ["Product Design", "UX Research"],
     year: "2018–2019",
