@@ -40,7 +40,7 @@ export function PlanHomepage() {
 
           {/* Heading statement */}
           <section className="py-16">
-            <h1 className="text-3xl font-bold leading-snug tracking-tight">
+            <h1 className="text-3xl lg:text-5xl font-bold leading-snug tracking-tight">
               Clarity and craft, with feeling.
             </h1>
           </section>
