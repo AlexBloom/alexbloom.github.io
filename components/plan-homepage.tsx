@@ -89,16 +89,16 @@ export function PlanHomepage() {
 
           <Separator />
 
-          {/* Contact */}
+          {/* Connect */}
           <section className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-y-3 gap-x-12 py-16">
             <p className="text-xs text-muted-foreground uppercase tracking-widest">
-              Contact
+              Connect
             </p>
             <div className="space-y-1.5">
               {[
                 { label: "Email", href: "mailto:alexbloomdesign@gmail.com" },
                 { label: "Signal", href: "#" },
-                { label: "Linkedin", href: "#" },
+                { label: "Are.na", href: "https://www.are.na/alex-bloom" },
                 { label: "Github", href: "https://github.com/alexbloom" },
                 { label: "Instagram", href: "#" },
               ].map(({ label, href }) => (
