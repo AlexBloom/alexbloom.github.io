@@ -49,7 +49,7 @@ export function PlanHomepage() {
 
           {/* Currently */}
           <section className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-y-3 gap-x-12 py-16">
-            <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-widest">
+            <p className="text-xs md:text-sm uppercase tracking-widest">
               Currently
             </p>
             <ul className="space-y-1.5">
@@ -59,7 +59,7 @@ export function PlanHomepage() {
                 "Making a complete financial OS for Solos at Lettuce",
                 "~Vibing and Anti-Vibing~",
               ].map((item) => (
-                <li key={item} className="text-sm md:text-base lg:text-lg">
+                <li key={item} className="text-sm md:text-base lg:text-lg text-muted-foreground">
                   {item}
                 </li>
               ))}
@@ -70,17 +70,17 @@ export function PlanHomepage() {
 
           {/* Newsletter */}
           <section className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-y-3 gap-x-12 py-16">
-            <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-widest">
+            <p className="text-xs md:text-sm uppercase tracking-widest">
               Newsletter
             </p>
             <div>
-              <p className="text-sm md:text-base lg:text-lg font-medium mb-1">IC1000</p>
+              <p className="text-sm md:text-base lg:text-lg font-medium text-muted-foreground mb-1">IC1000</p>
               <p className="text-sm md:text-base lg:text-lg text-muted-foreground mb-3 leading-relaxed">
                 Monthly career strategy to level up anyone on the path less managed.
               </p>
               <Link
                 href="#newsletter"
-                className="text-sm md:text-base lg:text-lg underline underline-offset-4 hover:text-muted-foreground transition-colors"
+                className="text-sm md:text-base lg:text-lg text-muted-foreground underline underline-offset-4 hover:text-foreground transition-colors"
               >
                 Subscribe
               </Link>
@@ -91,7 +91,7 @@ export function PlanHomepage() {
 
           {/* Connect */}
           <section className="grid grid-cols-1 min-[480px]:grid-cols-2 gap-y-3 gap-x-12 py-16">
-            <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-widest">
+            <p className="text-xs md:text-sm uppercase tracking-widest">
               Connect
             </p>
             <div className="space-y-1.5">
@@ -105,7 +105,7 @@ export function PlanHomepage() {
                 <div key={label}>
                   <Link
                     href={href}
-                    className="text-sm md:text-base lg:text-lg hover:text-muted-foreground transition-colors"
+                    className="text-sm md:text-base lg:text-lg text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {label}
                   </Link>
