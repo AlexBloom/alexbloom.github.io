@@ -5,6 +5,7 @@ const navLinks = [
   // { href: "/projects", label: "Projects" },
   { href: "/info", label: "Info" },
   { href: "/bookshelf", label: "Bookshelf" },
+  { href: "/vibes", label: "Vibes" },
 ];
 
 export function Header() {

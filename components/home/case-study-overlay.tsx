@@ -1,21 +1,18 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
 import type { Project } from "@/types";
 import { getVisibleProjects } from "@/content/projects";
 
 function toEmbedUrl(url: string): string {
-  // YouTube: youtu.be/ID or youtube.com/watch?v=ID
   const ytShort = url.match(/youtu\.be\/([^?&]+)/);
   if (ytShort) return `https://www.youtube.com/embed/${ytShort[1]}?autoplay=1`;
   const ytLong = url.match(/youtube\.com\/watch\?v=([^&]+)/);
   if (ytLong) return `https://www.youtube.com/embed/${ytLong[1]}?autoplay=1`;
-  // Vimeo: vimeo.com/ID
   const vimeo = url.match(/vimeo\.com\/(\d+)/);
   if (vimeo) return `https://player.vimeo.com/video/${vimeo[1]}?autoplay=1`;
   return url;
@@ -24,13 +21,15 @@ function toEmbedUrl(url: string): string {
 interface CaseStudyOverlayProps {
   project: Project;
   onClose: () => void;
-  /** Card's bounding rect at the moment of click; null on mobile (uses slide-up). */
+  onClosing?: () => void;
+  /** Card bounding rect at click time; null on mobile (uses fade-in). */
   sourceRect?: DOMRect | null;
 }
 
 export function CaseStudyOverlay({
   project: initialProject,
   onClose,
+  onClosing,
   sourceRect,
 }: CaseStudyOverlayProps) {
   const closeBtnRef = useRef<HTMLButtonElement>(null);
@@ -55,13 +54,41 @@ export function CaseStudyOverlay({
     setContentKey((k) => k + 1);
   };
 
-  // FLIP zoom: panel starts at the card's screen position and expands to final.
-  // Only applies when sourceRect is provided (desktop).
+  // Single-step close: panel fades + shrinks back to card in one motion.
+  const handleCloseRef = useRef<() => void>(() => {});
+  handleCloseRef.current = () => {
+    const panel = panelRef.current;
+    if (!panel) { onClose(); return; }
+
+    onClosing?.();
+
+    if (sourceRect) {
+      const currentRect = panel.getBoundingClientRect();
+      const scaleX = sourceRect.width / currentRect.width;
+      const scaleY = sourceRect.height / currentRect.height;
+      const dx =
+        sourceRect.left + sourceRect.width / 2 - (currentRect.left + currentRect.width / 2);
+      const dy =
+        sourceRect.top + sourceRect.height / 2 - (currentRect.top + currentRect.height / 2);
+
+      panel.style.transformOrigin = "center center";
+      panel.style.transition =
+        "transform 0.25s cubic-bezier(0.4, 0, 0.6, 1), opacity 0.2s ease";
+      panel.style.transform = `translate(${dx}px, ${dy}px) scale(${scaleX}, ${scaleY})`;
+      panel.style.opacity = "0";
+      setTimeout(() => onClose(), 270);
+    } else {
+      panel.style.transition = "opacity 0.25s ease";
+      panel.style.opacity = "0";
+      setTimeout(() => onClose(), 270);
+    }
+  };
+
+  // FLIP open: panel expands from card bounding rect to full screen.
   useLayoutEffect(() => {
     const panel = panelRef.current;
     if (!panel || !sourceRect) return;
 
-    // Panel is already at its final layout position — capture it.
     const finalRect = panel.getBoundingClientRect();
     const scaleX = sourceRect.width / finalRect.width;
     const scaleY = sourceRect.height / finalRect.height;
@@ -70,25 +97,21 @@ export function CaseStudyOverlay({
     const dy =
       sourceRect.top + sourceRect.height / 2 - (finalRect.top + finalRect.height / 2);
 
-    // Start: place the panel at the card's position/size (inverted transform).
     panel.style.transform = `translate(${dx}px, ${dy}px) scale(${scaleX}, ${scaleY})`;
     panel.style.transformOrigin = "center center";
     panel.style.transition = "none";
-
-    // Force reflow so the browser registers the initial transform.
     void panel.offsetHeight;
 
-    // Play: animate to final position.
     requestAnimationFrame(() => {
       panel.style.transform = "translate(0px, 0px) scale(1)";
-      panel.style.transition =
-        "transform 0.42s cubic-bezier(0.16, 1, 0.3, 1)";
+      panel.style.transition = "transform 0.42s cubic-bezier(0.16, 1, 0.3, 1)";
     });
 
     return () => {
-      if (panelRef.current) {
-        panelRef.current.style.transform = "";
-        panelRef.current.style.transition = "";
+      const el = panelRef.current;
+      if (el) {
+        el.style.transform = "";
+        el.style.transition = "";
       }
     };
   }, [sourceRect]);
@@ -99,13 +122,13 @@ export function CaseStudyOverlay({
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") handleCloseRef.current();
       if (e.key === "ArrowRight") navigateRef.current("next");
       if (e.key === "ArrowLeft") navigateRef.current("prev");
     };
     document.addEventListener("keydown", handler);
     return () => document.removeEventListener("keydown", handler);
-  }, [onClose]);
+  }, []);
 
   useEffect(() => {
     const prev = document.body.style.overflow;
@@ -124,114 +147,111 @@ export function CaseStudyOverlay({
       ? { animation: "case-study-slide-prev 0.3s cubic-bezier(0.16,1,0.3,1) both" }
       : {};
 
+  const btnCls =
+    "inline-flex items-center justify-center w-8 h-8 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-30 disabled:pointer-events-none";
+
   return createPortal(
     <div
-      className="fixed inset-0 z-[100] flex flex-col md:items-center md:pt-14 md:pb-8 md:px-8"
+      className="fixed inset-0 z-[100]"
       role="dialog"
       aria-modal="true"
       aria-label={`${currentProject.title} case study`}
     >
-      {/* Backdrop */}
-      <div
-        className="absolute inset-0 bg-white/80"
-        style={{ animation: "plan-fade-in 0.2s ease both" }}
-        onClick={onClose}
-        aria-hidden="true"
-      />
-
-      {/* Panel */}
+      {/* Full-screen page panel */}
       <div
         ref={panelRef}
-        className={cn(
-          "case-study-panel",
-          "relative mt-auto bg-background overflow-y-auto",
-          "rounded-t-2xl max-h-[92dvh]",
-          "md:mt-0 md:rounded-2xl md:max-h-[80vh] md:w-full md:max-w-2xl md:shadow-xl"
-        )}
-        // When sourceRect is provided, our JS FLIP handles the entrance —
-        // suppress the CSS keyframe animation so they don't conflict.
-        style={sourceRect ? { animation: "none" } : undefined}
-        onClick={(e) => e.stopPropagation()}
+        className="absolute inset-0 bg-background overflow-y-auto"
+        style={
+          sourceRect
+            ? { animation: "none" }
+            : { animation: "case-study-fade-in 0.28s ease both" }
+        }
       >
-        {/* Top nav */}
-        <div className="flex items-center justify-between px-3 pt-3 pb-1">
-          <button
-            ref={closeBtnRef}
-            onClick={onClose}
-            className="inline-flex items-center justify-center w-8 h-8 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            aria-label="Close case study"
-          >
-            <X className="w-4 h-4" />
-          </button>
-          <div className="flex gap-0.5">
+        {/* Sticky top nav — constrained to 960px */}
+        <div className="sticky top-0 z-10 bg-background/90 backdrop-blur-sm">
+          <div className="max-w-[960px] mx-auto px-6 flex items-center justify-between py-3">
             <button
-              onClick={() => navigateRef.current("prev")}
-              disabled={!prevProject}
-              className="inline-flex items-center justify-center w-8 h-8 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-30 disabled:pointer-events-none"
-              aria-label="Previous project"
+              ref={closeBtnRef}
+              onClick={() => handleCloseRef.current()}
+              className={btnCls}
+              aria-label="Close case study"
             >
-              <ChevronLeft className="w-4 h-4" />
+              <X className="w-4 h-4" />
             </button>
-            <button
-              onClick={() => navigateRef.current("next")}
-              disabled={!nextProject}
-              className="inline-flex items-center justify-center w-8 h-8 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-30 disabled:pointer-events-none"
-              aria-label="Next project"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
+            <div className="flex gap-0.5">
+              <button
+                onClick={() => navigateRef.current("prev")}
+                disabled={!prevProject}
+                className={btnCls}
+                aria-label="Previous project"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                onClick={() => navigateRef.current("next")}
+                disabled={!nextProject}
+                className={btnCls}
+                aria-label="Next project"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Content — key changes on navigation to re-trigger slide animation */}
+        {/* Content — key re-triggers slide animation on navigation */}
         <div key={contentKey} className="case-study-content" style={contentAnimStyle}>
-          {/* Image carousel */}
+          {/* Image row — full viewport width, images at natural width × 50vh height */}
           <div
-            className="w-full overflow-x-auto flex gap-2 px-4 [&::-webkit-scrollbar]:hidden"
-            style={{ scrollSnapType: "x mandatory", scrollbarWidth: "none" }}
+            className="w-full overflow-x-auto flex [&::-webkit-scrollbar]:hidden mt-6"
+            style={{
+              scrollbarWidth: "none",
+              gap: 32,
+              height: "min(50vh, 560px)",
+              paddingLeft: "calc(max(0px, (100vw - 960px) / 2) + 1.5rem)",
+            }}
           >
             {images.map((src, i) => (
-              <div
+              <img
                 key={i}
-                className="relative shrink-0 rounded-lg overflow-hidden bg-muted"
+                src={src}
+                alt={i === 0 ? currentProject.title : `${currentProject.title} image ${i + 1}`}
                 style={{
-                  width: "clamp(280px, 72vw, 640px)",
-                  height: "clamp(260px, 60vh, 560px)",
-                  scrollSnapAlign: "start",
+                  height: "100%",
+                  width: "auto",
+                  flexShrink: 0,
+                  display: "block",
+                  marginRight: i === images.length - 1 ? "calc(max(0px, (100vw - 960px) / 2) + 1.5rem)" : 0,
                 }}
-              >
-                <Image
-                  src={src}
-                  alt={
-                    i === 0
-                      ? currentProject.title
-                      : `${currentProject.title} image ${i + 1}`
-                  }
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 640px) 80vw, 60vw"
-                />
-              </div>
+              />
             ))}
           </div>
 
-          {/* Text content */}
-          <div className="px-6 pt-6 pb-10 space-y-4 md:px-8">
-            <p className="text-xs text-muted-foreground uppercase tracking-widest">
-              {currentProject.year}
-            </p>
-            <h1 className="text-2xl font-medium tracking-tight leading-snug">
-              {currentProject.title}
-            </h1>
+          {/* Text — constrained to 960px */}
+          <div className="max-w-[960px] mx-auto px-6 pt-8 pb-24 space-y-4">
+            {/* Title row: title left, year right */}
+            <div className="flex items-baseline justify-between gap-4">
+              <h1 className="text-lg md:text-xl lg:text-3xl font-medium tracking-tight leading-snug">
+                {currentProject.title}
+              </h1>
+              <span className="text-xs text-muted-foreground uppercase tracking-widest shrink-0">
+                {currentProject.year}
+              </span>
+            </div>
+
             {currentProject.description && (
               <div className="space-y-2">
                 {currentProject.description.split("\n\n").map((para, i) => (
-                  <p key={i} className="text-sm text-muted-foreground leading-relaxed">
+                  <p
+                    key={i}
+                    className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed"
+                  >
                     {para}
                   </p>
                 ))}
               </div>
             )}
+
             <div className="flex flex-wrap gap-1.5">
               {currentProject.services.map((s) => (
                 <Badge key={s} variant="secondary" className="text-xs">
@@ -239,11 +259,10 @@ export function CaseStudyOverlay({
                 </Badge>
               ))}
             </div>
+
             {currentProject.videos && currentProject.videos.length > 0 && (
               <div className="pt-1 space-y-2">
-                <p className="text-xs text-muted-foreground uppercase tracking-widest">
-                  Watch
-                </p>
+                <p className="text-xs text-muted-foreground uppercase tracking-widest">Watch</p>
                 <div className="flex flex-wrap gap-3">
                   {currentProject.videos.map(({ label, url }) => (
                     <button
@@ -257,11 +276,10 @@ export function CaseStudyOverlay({
                 </div>
               </div>
             )}
+
             {currentProject.links && currentProject.links.length > 0 && (
               <div className="pt-1 space-y-2">
-                <p className="text-xs text-muted-foreground uppercase tracking-widest">
-                  Press
-                </p>
+                <p className="text-xs text-muted-foreground uppercase tracking-widest">Press</p>
                 <div className="flex flex-wrap gap-3">
                   {currentProject.links.map(({ label, url }) => (
                     <a
@@ -277,11 +295,10 @@ export function CaseStudyOverlay({
                 </div>
               </div>
             )}
+
             {currentProject.credits && currentProject.credits.length > 0 && (
               <div className="pt-1 space-y-2">
-                <p className="text-xs text-muted-foreground uppercase tracking-widest">
-                  With
-                </p>
+                <p className="text-xs text-muted-foreground uppercase tracking-widest">With</p>
                 <div className="space-y-1">
                   {currentProject.credits.map(({ name, role, url }) => (
                     <div key={name} className="text-sm">
@@ -297,12 +314,13 @@ export function CaseStudyOverlay({
                       ) : (
                         <span>{name}</span>
                       )}
-                      <span className="text-muted-foreground"> — {role}</span>
+                      {role && <span className="text-muted-foreground"> — {role}</span>}
                     </div>
                   ))}
                 </div>
               </div>
             )}
+
             {currentProject.launchLink && (
               <div className="pt-1">
                 <a
@@ -318,6 +336,8 @@ export function CaseStudyOverlay({
           </div>
         </div>
       </div>
+
+      {/* Video embed overlay */}
       {activeVideoUrl &&
         createPortal(
           <div

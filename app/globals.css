@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 60 9.1% 97.8%;
+    --background: 60 4.8% 95.9%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -24,6 +24,7 @@
     --input: 240 5.9% 90%;
     --ring: 240 5.9% 10%;
     --radius: 0.5rem;
+    --stone-50: #fafaf9;
   }
 
   .dark {
@@ -54,7 +55,8 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-color: var(--stone-50);
   }
 }
 

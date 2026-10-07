@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Required for geist font package (next/font/local from node_modules)
+  transpilePackages: ["geist"],
   // Emit a fully static site into `out/` — compatible with GitHub Pages
   output: "export",
 

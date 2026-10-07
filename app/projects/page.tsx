@@ -1,8 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
-import { projects } from "@/content/projects";
+import { getVisibleProjects } from "@/content/projects";
+
+function endYear(year: string): number {
+  if (/present/i.test(year) || /ongoing/i.test(year)) return 9999;
+  const nums = year.match(/\d{4}/g);
+  if (!nums) return 0;
+  return Math.max(...nums.map(Number));
+}
+
+function startYear(year: string): number {
+  const nums = year.match(/\d{4}/g);
+  if (!nums) return 0;
+  return Math.min(...nums.map(Number));
+}
+
+const projects = getVisibleProjects()
+  .slice()
+  .sort((a, b) => {
+    const endDiff = endYear(b.year) - endYear(a.year);
+    if (endDiff !== 0) return endDiff;
+    return startYear(b.year) - startYear(a.year);
+  });
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -47,11 +67,11 @@ export default function ProjectsPage() {
               </div>
 
               {/* Services */}
-              <div className="flex flex-wrap gap-1.5 mt-3">
+              <div className="flex flex-wrap gap-x-2 gap-y-1 mt-3">
                 {project.services.map((service) => (
-                  <Badge key={service} variant="secondary">
+                  <span key={service} className="text-xs text-muted-foreground">
                     {service}
-                  </Badge>
+                  </span>
                 ))}
               </div>
             </Link>

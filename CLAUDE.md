@@ -12,6 +12,8 @@ npm run lint     # ESLint
 
 There are no automated tests. The build command (`next build`) is the primary correctness check.
 
+**After editing any component or page, always run `npm run lint` on the changed files before finishing.** Fix any ESLint errors (e.g. unescaped entities, unused imports) before considering the task done.
+
 ## Deployment
 
 Pushing to the `next` branch triggers the GitHub Actions workflow (`.github/workflows/deploy.yml`), which builds and deploys the static output to the `gh-pages` branch. The live site is at `alexbloom.design`.
