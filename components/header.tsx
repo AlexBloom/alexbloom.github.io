@@ -5,7 +5,7 @@ const navLinks = [
   // { href: "/projects", label: "Projects" },
   { href: "/info", label: "Info" },
   { href: "/bookshelf", label: "Bookshelf" },
-  { href: "/vibes", label: "Vibes" },
+  // Vibes is temporarily hidden; its page is preserved in app/_vibes.
 ];
 
 export function Header() {

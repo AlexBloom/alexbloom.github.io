@@ -34,7 +34,7 @@ export default async function ProjectPage({ params }: Props) {
     <div className="max-w-5xl mx-auto px-6 py-16">
       {/* Back */}
       <Button variant="ghost" size="sm" className="-ml-2 mb-8" asChild>
-        <Link href="/projects">← All projects</Link>
+        <Link href="/projects">All projects</Link>
       </Button>
 
       {/* Hero images carousel */}
@@ -154,7 +154,7 @@ export default async function ProjectPage({ params }: Props) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View project →
+              View project
             </Link>
           </Button>
         </div>

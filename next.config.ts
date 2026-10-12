@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { PHASE_DEVELOPMENT_SERVER } from "next/constants";
 
 const nextConfig: NextConfig = {
   // Required for geist font package (next/font/local from node_modules)
@@ -16,4 +17,10 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default function config(phase: string): NextConfig {
+  return {
+    ...nextConfig,
+    // Builds must not overwrite the cache used by a running local preview.
+    distDir: phase === PHASE_DEVELOPMENT_SERVER ? ".next-dev" : ".next-build",
+  };
+}

@@ -54,7 +54,7 @@ export default function ProjectsPage() {
               {/* Meta */}
               <div className="flex items-start justify-between gap-2">
                 <div>
-                  <h2 className="font-medium group-hover:underline underline-offset-4">
+                  <h2 className="link-label font-medium">
                     {project.title}
                   </h2>
                   <p className="text-sm text-muted-foreground mt-0.5">

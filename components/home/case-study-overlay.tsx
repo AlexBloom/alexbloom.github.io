@@ -329,7 +329,7 @@ export function CaseStudyOverlay({
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-sm font-medium underline underline-offset-4 hover:text-muted-foreground transition-colors"
                 >
-                  View live project &rarr;
+                  View live project
                 </a>
               </div>
             )}

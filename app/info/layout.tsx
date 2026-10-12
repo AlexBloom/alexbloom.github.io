@@ -1,4 +1,3 @@
-import { Header } from "@/components/header";
 
 export default function InfoLayout({
   children,
@@ -7,8 +6,7 @@ export default function InfoLayout({
 }) {
   return (
     <>
-      <Header />
-      <div className="pt-16">{children}</div>
+      {children}
     </>
   );
 }

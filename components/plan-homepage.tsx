@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import { Header } from "@/components/header";
 import { Slideshow } from "@/components/home/slideshow";
 import { CaseStudyOverlay } from "@/components/home/case-study-overlay";
 import { Separator } from "@/components/ui/separator";
@@ -30,9 +29,8 @@ export function PlanHomepage() {
           : {}
       }
     >
-      <Header />
 
-      <div className="pt-16">
+      <div>
         {/* Slideshow — hidden for now; component + data preserved */}
         {false && (
           <div className="mt-4">
@@ -58,7 +56,7 @@ export function PlanHomepage() {
                 rel="noopener noreferrer"
                 className="group text-sm md:text-base lg:text-lg text-muted-foreground hover:text-foreground transition-colors"
               >
-                Work samples <span className="relative inline-flex overflow-hidden w-[1em] h-[1em] align-middle"><span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:translate-x-full group-hover:-translate-y-full">↗</span><span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out -translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0">↗</span></span>
+                Work samples
               </Link>
             </p>
           </section>
@@ -83,7 +81,7 @@ export function PlanHomepage() {
                         href="https://homevision.co"
                         className="group text-muted-foreground hover:text-foreground transition-colors"
                       >
-                        HomeVision <span className="relative inline-flex overflow-hidden w-[1em] h-[1em] align-middle"><span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:translate-x-full group-hover:-translate-y-full">↗</span><span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out -translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0">↗</span></span>
+                        HomeVision
                       </Link>
                     </>
                   ),
@@ -97,7 +95,7 @@ export function PlanHomepage() {
                         href="https://lettuce.co"
                         className="group text-muted-foreground hover:text-foreground transition-colors"
                       >
-                        Lettuce <span className="relative inline-flex overflow-hidden w-[1em] h-[1em] align-middle"><span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:translate-x-full group-hover:-translate-y-full">↗</span><span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out -translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0">↗</span></span>
+                        Lettuce
                       </Link>
                     </>
                   ),
@@ -128,7 +126,7 @@ export function PlanHomepage() {
                     href="#newsletter"
                     className="group text-sm md:text-base lg:text-lg text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    Subscribe <span className="relative inline-flex overflow-hidden w-[1em] h-[1em] align-middle"><span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:translate-x-full group-hover:-translate-y-full">↗</span><span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out -translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0">↗</span></span>
+                    Subscribe
                   </Link>
                 </div>
               </section>
@@ -155,7 +153,7 @@ export function PlanHomepage() {
                     href={href}
                     className="group text-sm md:text-base lg:text-lg text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    {label} <span className="relative inline-flex overflow-hidden w-[1em] h-[1em] align-middle"><span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:translate-x-full group-hover:-translate-y-full">↗</span><span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out -translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0">↗</span></span>
+                    {label}
                   </Link>
                 </div>
               ))}

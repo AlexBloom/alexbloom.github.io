@@ -234,6 +234,7 @@ const books: Book[] = [
 export default function BookshelfPage() {
   return (
     <div className="max-w-[960px] mx-auto px-6 py-16">
+      <p className="mb-8 text-sm"><Link href="/" className="underline underline-offset-4 hover:opacity-65">← Back to home</Link></p>
       <div className="mb-10">
         <h1 className="text-3xl lg:text-5xl font-bold leading-snug tracking-tight mb-2">Bookshelf</h1>
         <p className="text-muted-foreground">
@@ -296,9 +297,9 @@ export default function BookshelfPage() {
                   href={book.bookshopUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group text-xs text-muted-foreground hover:text-foreground transition-colors mt-1 inline-flex items-center gap-0.5"
+                  className="group text-xs text-muted-foreground hover:text-foreground transition-colors mt-1 inline-flex items-center"
                 >
-                  Read <span className="relative inline-flex overflow-hidden w-[1em] h-[1em] align-middle"><span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out group-hover:translate-x-full group-hover:-translate-y-full">↗</span><span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-in-out -translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0">↗</span></span>
+                  Read
                 </Link>
               )}
               {book.notes && (
