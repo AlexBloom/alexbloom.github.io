@@ -499,7 +499,7 @@ body { overflow-x: clip; }
 :root:is([data-theme="apple2"], [data-theme="casio"]) .device-frame {
   display: block;
   position: fixed;
-  inset: var(--device-inset) calc(var(--device-inset) + var(--theme-reserved-space)) var(--device-bottom);
+  inset: var(--device-inset) calc(var(--device-inset) + var(--theme-reserved-space)) var(--device-bottom) var(--device-inset);
   z-index: 200;
   pointer-events: none;
   border-style: solid;
