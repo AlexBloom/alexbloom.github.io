@@ -117,11 +117,15 @@ export function AnimatedLogo() {
         <div id="circle">
           <svg viewBox="0 0 100 100" aria-hidden="true">
             <defs>
-              <path id="ab-ring-path" d="M50,10 A40,40 0 1,1 50,90 A40,40 0 1,1 50,10"/>
               <mask id="ab-ring-knockout" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100" style={{ maskType: "luminance" }}>
                 <circle cx="50" cy="50" r="50" fill="white"/>
                 <circle cx="50" cy="50" r="36" fill="black"/>
-                <text id="ring-type"><textPath href="#ab-ring-path" textLength="245" lengthAdjust="spacing">YOU HAVE REACHED THE OFFICE OF · </textPath></text>
+                <g id="ring-type">
+                  {/* Explicit angles keep the ring evenly spaced across SVG engines and font loading. */}
+                  {Array.from("YOU HAVE REACHED THE OFFICE OF · ").map((character, index, characters) => (
+                    <text key={index} x="50" y="10" textAnchor="middle" transform={`rotate(${index * 360 / characters.length} 50 50)`}>{character}</text>
+                  ))}
+                </g>
               </mask>
             </defs>
             <circle cx="50" cy="50" r="50" fill="currentColor" mask="url(#ab-ring-knockout)"/>
