@@ -108,7 +108,7 @@ export function CaseStudyOverlay({
     });
 
     return () => {
-      const el = panelRef.current;
+      const el = panel;
       if (el) {
         el.style.transform = "";
         el.style.transition = "";

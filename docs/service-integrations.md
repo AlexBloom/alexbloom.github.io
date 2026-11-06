@@ -9,20 +9,14 @@ email inquiry available. Both the homepage and service detail pages use this
 configuration. Invalid provider URLs fail the build rather than shipping a broken
 checkout link.
 
-As of October 11, 2026, these Cal.com events have been created with descriptions
-and a required service-specific preparation question. All three are hidden from
-the Cal.com profile while pricing and the Stripe connection are pending:
+As of November 6, 2026, the active Cal.com booking links show matching site and
+hosted prices: Office Hours is $500 for 60 minutes, and Career Sessions is $300
+for 60 minutes. Career Sessions uses its own America/New_York schedule with all
+dates through December 31, 2026 blocked; sessions begin January 1, 2027.
 
-- Narrative: `https://cal.com/alexbloom/narrative` (90 minutes)
-- Office Hours: `https://cal.com/alexbloom/office-hours` (60 minutes)
-- Career Sessions: `https://cal.com/alexbloom/career-sessions` (60 minutes)
-
-Agreed one-time prices: Narrative $750 USD, Office Hours $500 USD, Career
-Sessions $300 USD, and async Critique $250 USD. These are displayed beside the
-site CTAs; set matching amounts in Cal.com and Stripe before enabling the links.
-
-Hidden Cal.com links can still be booked directly; hiding is not an access gate.
-The site keeps its email inquiry flow until each integration is enabled.
+Both links are enabled. Hidden Cal.com profile entries can still be booked by
+direct link. Critique and Narrative are paused and have no public site routes.
+Fractional engagements are waitlist-only, with no public price displayed.
 
 ## Live sessions
 
@@ -30,7 +24,6 @@ Create one Cal.com event for each service:
 
 | Service | Duration | Preparation questions |
 | --- | --- | --- |
-| Narrative | 90 minutes | Audience, goal, current pitch/website |
 | Office Hours | 60 minutes | Design decision, screens/prototype, constraints |
 | Career Sessions | 60 minutes | Goals, portfolio or interview materials |
 
@@ -78,3 +71,5 @@ Stripe test mode to check critique checkout, receipts, and the confirmation
 instructions. Test a Cal.com booking with payment, timezone selection,
 confirmation, cancellation, and rescheduling. Replace any Stripe test link with
 the live link after verification. The fractional Tally waitlist is independent.
+
+Narrative is paused. Its draft copy is retained in `content/paused-services.ts`; do not add pricing or a booking URL without new approval.

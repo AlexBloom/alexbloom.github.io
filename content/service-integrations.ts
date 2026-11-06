@@ -5,9 +5,8 @@ export const serviceIntegrations: Record<string, {
   enabled: boolean;
 }> = {
   critique: { provider: "stripe", url: "https://buy.stripe.com/14AaEXbaVfUn4RSeuE1oI00", enabled: true },
-  narrative: { provider: "cal", url: "https://cal.com/alexbloom/narrative", enabled: false },
-  "office-hours": { provider: "cal", url: "https://cal.com/alexbloom/office-hours", enabled: false },
-  "career-sessions": { provider: "cal", url: "https://cal.com/alexbloom/career-sessions", enabled: false },
+  "office-hours": { provider: "cal", url: "https://cal.com/alexbloom/office-hours", enabled: true },
+  "career-sessions": { provider: "cal", url: "https://cal.com/alexbloom/career-sessions", enabled: true },
 };
 
 export function getServiceIntegration(slug: string) {

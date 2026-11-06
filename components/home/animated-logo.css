@@ -74,13 +74,13 @@
 #ab-logo-component #logo #cross-outer-nwse:before{right:108%;top:48.5%}
 #ab-logo-component #logo #cross-outer-nwse:after{left:108%;top:48.5%}
 #ab-logo-component #logo #circle{border-radius:50%;width:100%;height:100%;margin:auto;background-size:cover;-webkit-transition-duration:.5s;-moz-transition-duration:.5s;-ms-transition-duration:.5s;-o-transition-duration:.5s;transition-duration:.5s}
-#ab-logo-component #logo #eye{position:absolute;width:90%;height:90%;margin:0 5%;padding:5% 0;top:0;left:0;display:flex;display:-webkit-flex;transition:all .3s}
+#ab-logo-component #logo #eye{position:absolute;width:90%;height:90%;margin:0 5%;padding:5% 0;top:0;left:0;display:flex;display:-webkit-flex;transition:transform .3s}
 #ab-logo-component #logo #eye:hover #pupil{transform:scale(1.5)}
 #ab-logo-component #logo #eye:hover #bracket-L:before{right:0%;-webkit-transform:rotate(35deg);transform:rotate(35deg)}
 #ab-logo-component #logo #eye:hover #bracket-L:after{right:0%;-webkit-transform:rotate(-35deg);transform:rotate(-35deg)}
 #ab-logo-component #logo #eye:hover #bracket-R:before{left:0%;-webkit-transform:rotate(-35deg);transform:rotate(-35deg)}
 #ab-logo-component #logo #eye:hover #bracket-R:after{left:0%;-webkit-transform:rotate(35deg);transform:rotate(35deg)}
-#ab-logo-component #logo #pupil{transition:all .3s;width:.5em;height:.5em;background-color:currentColor;margin:2.5em auto;border-radius:3em}
+#ab-logo-component #logo #pupil{transition:transform .3s;width:.5em;height:.5em;background-color:currentColor;margin:2.5em auto;border-radius:3em}
 #ab-logo-component #logo .eye-bracket{position:relative;float:left;height:0;margin-top:50%;margin-bottom:50%;width:45%;background-color:currentColor}
 #ab-logo-component #logo .eye-bracket:before,#ab-logo-component #logo .eye-bracket:after{display:block;content:' ';position:absolute;-webkit-transition-duration:.25s;-moz-transition-duration:.25s;-ms-transition-duration:.25s;-o-transition-duration:.25s;transition-duration:.25s;background-color:currentColor;width:60%;height:.25em;border-radius:.2em}
 #ab-logo-component #logo #bracket-L:before{right:0%;-webkit-transform:rotate(25deg);-webkit-transform-origin:top left;-moz-transform:rotate(25deg);-moz-transform-origin:0% 50%;transform:rotate(25deg);transform-origin:top left;bottom:-.1em}
@@ -101,6 +101,8 @@
     #ab-logo-component #ring-type{font-family:var(--font-geist-mono),monospace;font-size:8px;font-weight:700;fill:black}
 
     #ab-logo-component #logo #eye{height:100%;padding:0;box-sizing:border-box}
+
+    .homepage #ab-logo-component #eye:hover{opacity:1}
 
     #ab-logo-component #logo .eye-bracket{position:absolute;top:50%;margin:0;width:45%;height:0}
 
@@ -127,3 +129,27 @@
 @media (prefers-reduced-motion: reduce) {
  #ab-logo-component *, #ab-logo-component *::before, #ab-logo-component *::after { animation: none !important; transition: none !important; }
 }
+
+/* The stamp is one color, including the clickable eye and its hover state. */
+#ab-logo-component #eye,
+#ab-logo-component #eye:hover { color: inherit; }
+
+#ab-logo-component #logo,
+#ab-logo-component #logo::before,
+#ab-logo-component #circle,
+#ab-logo-component #logo .logo-cross::before,
+#ab-logo-component #logo .logo-cross::after,
+#ab-logo-component #logo .eye-bracket::before,
+#ab-logo-component #logo .eye-bracket::after { transition-property: transform, opacity; }
+
+.trapper-logo-box { display: none; }
+:root[data-theme="trapper"] #ab-logo-component .stage { position: relative; }
+:root[data-theme="trapper"] .trapper-logo-box { display: block; position: absolute; inset: 0; width: 100%; height: 100%; filter: drop-shadow(0 9px 12px #0005); }
+:root[data-theme="trapper"] #ab-logo-component .logo-wrap { transform: translate(0, -0.85rem) scale(0.85, 0.71); }
+:root[data-theme="trapper"] #ab-logo-component { color: hsl(var(--background)); }
+
+.kells-logo-ornament { display: none; }
+:root[data-theme="kells"] #ab-logo-component .stage { position: relative; }
+:root[data-theme="kells"] .kells-logo-ornament { display: block; position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+:root[data-theme="kells"] #ab-logo-component .logo-wrap { transform: translate(0, 0) scale(0.68); }
+:root[data-theme="kells"] #ab-logo-component #logo::before { border-style: double; border-width: 0.35em; }

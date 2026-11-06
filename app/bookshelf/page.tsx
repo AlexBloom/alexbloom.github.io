@@ -28,7 +28,7 @@ const books: Book[] = [
   },
   {
     title: "The Architecture of Happiness",
-    author: "Alain De Botton",
+    author: "Alain de Botton",
     cover: "/img/bookshelf/the-architecture-of-happiness.jpg",
     bookshopUrl: "https://bookshop.org/p/books/the-architecture-of-happiness-alain-de-botton/7608d0e22673642c?ean=9780307277244&next=t",
   },
@@ -118,7 +118,7 @@ const books: Book[] = [
     bookshopUrl: "https://archive.org/details/jimtolpinswoodwo0000tolp",
   },
   {
-    title: "The Life Changing Magic of Tidying Up",
+    title: "The Life-Changing Magic of Tidying Up",
     author: "Marie Kondo",
     cover: "/img/bookshelf/the-life-changing-magic-of-tidying-up.jpg",
     bookshopUrl: "https://bookshop.org/p/books/the-life-changing-magic-of-tidying-up-the-japanese-art-of-decluttering-and-organizing-marie-kondo/b9098c8a583a56c9",
@@ -173,7 +173,7 @@ const books: Book[] = [
     bookshopUrl: "https://bookshop.org/p/books/steal-like-an-artist-10-things-nobody-told-you-about-being-creative-austin-kleon/c4f42fc8a7e0c44d",
   },
   {
-    title: "Sunset Furniture you can Build",
+    title: "Sunset Furniture You Can Build",
     author: "Sunset Books",
     cover: "/img/bookshelf/furniture-you-can-build.png",
     bookshopUrl: "https://archive.org/details/furnitureyoucanb00suns",

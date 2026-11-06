@@ -22,7 +22,7 @@ export function PlanHomepage() {
   return (
     <>
     <div
-      className="flex flex-col min-h-screen transition-[filter,opacity] duration-[250ms]"
+      className="flex flex-col min-h-screen transition-[filter,opacity] duration-300"
       style={
         isBlurred
           ? { filter: "blur(4px)", opacity: 0.6, pointerEvents: "none" }

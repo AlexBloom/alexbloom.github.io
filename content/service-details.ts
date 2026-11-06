@@ -1,33 +1,5 @@
 // Illustrative outcomes describe possible work, not past client results.
 export const serviceDetails = {
-  "critique": {
-    "format": "Async · Recorded feedback within 24 hours",
-    "intro": "A focused review when you need an outside perspective on a product or feature. Bring your own work or a competitor’s, and one question that will make the feedback useful.",
-    "steps": [
-      "Purchase the critique through Stripe, providing the product or prototype link and your key question at checkout. Email your receipt and supporting context to alexbloomdesign@pm.me.",
-      "We confirm the scope and what I’ll review before the critique begins.",
-      "Within 24 hours of the agreed start, you receive a Loom of 15 minutes or less with prioritized recommendations."
-    ],
-    "takeaway": "A recorded walkthrough you can revisit or share with your team, with a clear order of priorities.",
-    "example": {
-      "scenario": "An onboarding flow loses people before they reach the first useful moment.",
-      "outcome": "A critique could identify where the flow asks for too much too early, recommend a shorter path to value, and prioritize the changes to try first."
-    }
-  },
-  "narrative": {
-    "format": "Live workshop · 1.5 hours",
-    "intro": "A working session to clarify what your company does, why it matters, and how to tell that story to a specific audience.",
-    "steps": [
-      "Share your current pitch, website, or notes, and tell me whether the story is for fundraising, hiring, or business development.",
-      "In the workshop, we work through the audience, the problem, your point of view, and the evidence behind it.",
-      "We shape a narrative structure together and identify what to refine or validate next."
-    ],
-    "takeaway": "A working narrative outline and a clearer sense of which claims, examples, and proof points belong in your story.",
-    "example": {
-      "scenario": "A founder has a feature-heavy pitch but struggles to explain why the company should exist.",
-      "outcome": "The session could produce an opening centered on the customer’s problem, a concise explanation of the company’s approach, and a sequence of supporting proof points."
-    }
-  },
   "office-hours": {
     "format": "Live 1:1 · One hour",
     "intro": "Bring one concrete design decision. We’ll use the hour to examine the options, make the trade-offs explicit, and choose a path forward.",
@@ -43,7 +15,7 @@ export const serviceDetails = {
     }
   },
   "fractional-engagement": {
-    "format": "From $15,000/month · Three-month minimum · Waitlist only",
+    "format": "Waitlist only",
     "intro": "Principal design expertise and hands-on work, partnering directly with founders and design, product, and technical leaders. I help with product direction, prototyping, design systems, hiring and team building, and modernizing design with AI. Headhunter introductions are welcome; engagements require a direct working relationship with the client.",
     "steps": [
       "Leave your email to get notified when 2027 fractional bookings open. Your name is optional.",
@@ -57,7 +29,7 @@ export const serviceDetails = {
     }
   },
   "career-sessions": {
-    "format": "Live 1:1 · One hour · New for 2027",
+    "format": "Live 1:1 · One hour · Now Booking for 2027",
     "intro": "A focused session for students, designers going freelance, and people transitioning into a design career. Bring the challenge you want to work through.",
     "steps": [
       "Share your goals and any relevant material: a portfolio, an interview prompt, or notes about your solo practice.",

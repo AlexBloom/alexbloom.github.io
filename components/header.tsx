@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   // { href: "/projects", label: "Projects" },
-  { href: "/info", label: "Info" },
+  { href: "/#about", label: "About" },
   { href: "/bookshelf", label: "Bookshelf" },
   // Vibes is temporarily hidden; its page is preserved in app/_vibes.
 ];

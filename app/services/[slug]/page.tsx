@@ -6,6 +6,8 @@ import { ServiceBooking } from "@/components/service-booking";
 import { serviceDetails } from "@/content/service-details";
 import { serviceBookingDescription } from "@/content/service-integrations";
 
+export const dynamicParams = false;
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -29,7 +31,7 @@ export default async function ServicePage({ params }: Props) {
   return (
     <>
       <div className="homepage mx-auto w-full max-w-[40em] px-6 pb-16 pt-12 sm:pt-20">
-        <Link href="/#services">Back to services</Link>
+        <Link href="/#services">Back</Link>
         <header className="mt-8 space-y-4">
           <h1 className="text-3xl font-medium tracking-tight">{service.title}</h1>
           <p className="text-sm text-muted-foreground">{detail.format}</p>
@@ -63,7 +65,6 @@ export default async function ServicePage({ params }: Props) {
 
         <div className="mt-12 flex flex-wrap items-center gap-x-5 gap-y-3">
           <ServiceBooking service={service} />
-          <Link href="/#services">Back to services</Link>
         </div>
       </div>
     </>

@@ -13,7 +13,7 @@ export const projects: Project[] = [
     year: "2023-2024",
     featured: true,
     description:
-      "Growth features (referrals, ai talent match, exec hiring cost calculator) for Continuum, a fractional talent marketplace for elite tech executives.",
+      "Growth features (referrals, AI talent matching, exec hiring cost calculator) for Continuum, a fractional talent marketplace for elite tech executives.",
     links: [
       { label: "joincontinuum.com", url: "https://joincontinuum.com" },
       {
@@ -34,11 +34,6 @@ export const projects: Project[] = [
     description:
       "MIRA (Machine Intelligence Review Assistant) is a comprehensive AI toolkit for mortgage underwriting.",
     heroImages: [
-      "/img/projects/homevision/homevision-1.jpg",
-      "/img/projects/homevision/homevision-2.jpg",
-      "/img/projects/homevision/homevision-3.jpg",
-      "/img/projects/homevision/homevision-4.jpg",
-      "/img/projects/homevision/homevision-5.jpg",
     ],
   },
   {
@@ -57,7 +52,7 @@ export const projects: Project[] = [
     slug: "faircomp",
     title: "Faircomp",
     subtitle: "AI interview and negotiation toolkit for job seekers in tech",
-    thumbnail: "/img/projects/thumbnails/faircomp.jpg",
+    thumbnail: "",
     context: "AI interview and negotiation toolkit for job seekers in tech",
     services: ["Product Design", "Creative Direction"],
     year: "2024",
@@ -70,11 +65,6 @@ export const projects: Project[] = [
       { label: "Fast Company", url: "https://fastcompany.com" },
     ],
     heroImages: [
-      "/img/projects/faircomp/faircomp-1.jpg",
-      "/img/projects/faircomp/faircomp-2.jpg",
-      "/img/projects/faircomp/faircomp-3.jpg",
-      "/img/projects/faircomp/faircomp-4.jpg",
-      "/img/projects/faircomp/faircomp-5.jpg",
     ],
   },
   {
@@ -105,23 +95,19 @@ export const projects: Project[] = [
       "Complete renovation and rebuild of a 1965 Airstream Overlander travel trailer. Solar-powered, off-grid ready, and equipped with modern amenities.",
     credits: [
         { name: "Lauren Bloom", role: "Co-Owner, General Henchpersoning", url: "" },
-        { name: "Amy Bloom", role: "Curtains", url: "http://.com" },
-        { name: "Barton Bloom", role: "AC Devices, Drawers", url: "http://.com" },
-        { name: "Steve Bucko", role: "Upholstery", url: "http://.com" },
-        { name: "Samson Cheung", role: "Awnings", url: "http://.com" },
-        { name: "Joseph Condon", role: "Wheel wells", url: "http://.com" },
-        { name: "Pina Welders", role: "Chassis", url: "http://.com" },
-        { name: "Sydney Harris", role: "Veneering, Painting, & Finishing", url: "http://.com" },
-        { name: "Stan Rapp", role: "Flooring Consultation", url: "http://.com" },
-        { name: "Marshall Thompson", role: "Scaffolding", url: "http://.com" },
+        { name: "Amy Bloom", role: "Curtains", url: "" },
+        { name: "Barton Bloom", role: "AC Devices, Drawers", url: "" },
+        { name: "Steve Bucko", role: "Upholstery", url: "" },
+        { name: "Samson Cheung", role: "Awnings", url: "" },
+        { name: "Joseph Condon", role: "Wheel wells", url: "" },
+        { name: "Pina Welders", role: "Chassis", url: "" },
+        { name: "Sydney Harris", role: "Veneering, Painting, & Finishing", url: "" },
+        { name: "Stan Rapp", role: "Flooring Consultation", url: "" },
+        { name: "Marshall Thompson", role: "Scaffolding", url: "" },
       ],
       heroImages: [
       "/img/projects/silvershaka/galley_sketches.jpg",
       "/img/projects/silvershaka/interior_couch.jpg",
-      "/img/projects/silvershaka/interior_tv%20lift.jpg",
-      "/img/projects/silvershaka/image%20137.jpg",
-      "/img/projects/silvershaka/image%20152.jpg",
-      "/img/projects/silvershaka/image%20153.jpg",
       "/img/projects/silvershaka/exterior_florida.jpg",
       "/img/projects/silvershaka/repainted_chassis.jpg",
       "/img/projects/silvershaka/interior_blank.jpg",
@@ -143,7 +129,7 @@ export const projects: Project[] = [
     year: "2024",
     featured: true,
     description:
-      "Dining bench, 60in. x 18in. x 18in. Built exclusively of utile wood and titebond III glue.",
+      "Dining bench, 60 × 18 × 18 inches. Built exclusively from utile wood and Titebond III glue.",
     heroImages: [
       "/img/projects/utilebench/bench_angle.jpg",
       "/img/projects/utilebench/bench_end.jpg",
@@ -173,11 +159,6 @@ export const projects: Project[] = [
     description:
       "Exhibition branding and modular exhibit wall design for Public Ledger, a collective street photography exhibition showcasing the work of Philadelphia street photographers.",
     heroImages: [
-      "/img/projects/publicledger/publicledger-1.jpg",
-      "/img/projects/publicledger/publicledger-2.jpg",
-      "/img/projects/publicledger/publicledger-3.jpg",
-      "/img/projects/publicledger/publicledger-4.jpg",
-      "/img/projects/publicledger/publicledger-5.jpg",
     ],
   },
   {
@@ -190,12 +171,12 @@ export const projects: Project[] = [
     year: "2014",
     featured: false,
     description:
-      "In January of 2014, I fell into one of the most interesting places and projects I've ever been able to work on. I was approached by Will Honea, the founder of the Market and a team of highly-dedicated people with uniquely focused experience in farming and market operations.\n\nI served as the market's sole creative director for 6 months, engaged at pre-incorporation stage through the market's first 50 hired employees. I oversaw, and in many cases— physically executed all aspects of the market's brand strategy, identity, packaging, interior, exterior, and digital design.",
+      "In January of 2014, I fell into one of the most interesting places and projects I've ever been able to work on. I was approached by Will Honea, the founder of the Market and a team of highly dedicated people with uniquely focused experience in farming and market operations.\n\nI served as the market's sole creative director for 6 months, engaged at pre-incorporation stage through the market's first 50 hired employees. I oversaw, and in many cases, physically executed all aspects of the market's brand strategy, identity, packaging, interior, exterior, and digital design.",
     credits: [
       { name: "True Hand Society", role: "Brand, Illustration", url: "http://truehandsociety.com" },
-      { name: "Nathan Kane", role: "Painting,Photography", url: "http://nathankane.com" },
-      { name: "Sign Mart", role: "Neon, Production", url: "http://signmartusa.com" },
-      { name: "Skagit Valley Signs", role: "Digital Printing", url: "http://skagitvalleysigns.com" },
+      { name: "Nathan Kane", role: "Painting, Photography", url: "" },
+      { name: "Sign Mart", role: "Neon, Production", url: "" },
+      { name: "Skagit Valley Signs", role: "Digital Printing", url: "" },
     ],
     heroImages: [
       "/img/projects/woolleymarket/brand/logo-circle.gif",
