@@ -1,0 +1,300 @@
+import type { Project } from "@/types";
+
+// Project data. Each slug maps to a route at /projects/[slug].
+// Add thumbnail images to public/img/projects/thumbnails/ for new entries.
+export const projects: Project[] = [
+  {
+    slug: "continuum",
+    title: "Continuum",
+    subtitle: "Growth",
+    thumbnail: "/img/projects/thumbnails/continuum.jpg",
+    context: "Elite fractional tech talent marketplace",
+    services: ["Product Design"],
+    year: "2023-2024",
+    featured: true,
+    description:
+      "Growth features (referrals, AI talent matching, exec hiring cost calculator) for Continuum, a fractional talent marketplace for elite tech executives.",
+    links: [
+      { label: "joincontinuum.com", url: "https://joincontinuum.com" },
+      {
+        label: "Forbes",
+        url: "https://www.forbes.com/sites/frederickdaso/2022/07/12/continuum-raises-12m-to-build-the-fractional-executive-marketplace/",
+      },
+    ],
+  },
+  {
+    slug: "homevision",
+    title: "HomeVision Mira",
+    subtitle: "Product Naming, Brand, Core Experience, Management",
+    thumbnail: "/img/projects/thumbnails/HomeVision.png",
+    context: "AI-powered underwriting software for mortgage lending",
+    services: ["Design Management", "Product Design", "Product Marketing"],
+    year: "2020–Present",
+    featured: true,
+    description:
+      "MIRA (Machine Intelligence Review Assistant) is a comprehensive AI toolkit for mortgage underwriting.",
+    heroImages: [
+    ],
+  },
+  {
+    slug: "lettuce",
+    title: "Lettuce",
+    subtitle: "Core Product Experiences, Growth",
+    thumbnail: "/img/projects/thumbnails/lettuce.jpg",
+    context: "Automated finance & accounting for businesses of one",
+    services: ["Product Design", "Design Systems"],
+    year: "2023–Present",
+    featured: true,
+    description:
+      "Core product experiences for Lettuce, including the customer dashboard, onboarding, payroll setup, automated tax savings and payments, and money movement flows.",
+  },
+  {
+    slug: "faircomp",
+    title: "Faircomp",
+    subtitle: "AI interview and negotiation toolkit for job seekers in tech",
+    thumbnail: "",
+    context: "AI interview and negotiation toolkit for job seekers in tech",
+    services: ["Product Design", "Creative Direction"],
+    year: "2024",
+    featured: true,
+    description:
+      "Faircomp was built on a simple question: what if employees could access verified, real-time comp data? I created product models to validate and bring this idea to market — including a free offer evaluation tool that used LLMs and verified user salary data to generate compensation insights. The platform was featured in Forbes, CNBC, and Fast Company.",
+    links: [
+      { label: "Forbes", url: "https://forbes.com" },
+      { label: "CNBC", url: "https://cnbc.com" },
+      { label: "Fast Company", url: "https://fastcompany.com" },
+    ],
+    heroImages: [
+    ],
+  },
+  {
+    slug: "lyft",
+    title: "LYFT",
+    subtitle: "Rider & Driver Help Automation",
+    thumbnail: "/img/projects/thumbnails/Lyft.jpg",
+    context: "An overhaul of in-app help experiences for millions of riders and drivers",
+    services: ["Product Design"],
+    year: "2020",
+    featured: true,
+    description:
+      "At Lyft, I redesigned in-app help for both riders and drivers. For riders, I introduced a ride-first approach using AI and data science to surface the most likely issues for recent trips, replacing a tile-based menu with a more scannable list view. For drivers, I designed a tiered premium support model alongside a new help home screen, support chat, and AI automations for common issues.",
+    heroImages: [
+      "/img/projects/lyft/lyft-1.png",
+    ],
+  },
+  {
+    slug: "airstream",
+    title: "The Silver Shaka",
+    subtitle: "Design & Build",
+    thumbnail: "/img/projects/thumbnails/Airstream.jpg",
+    context: "Design & build of a 1965 Airstream Overlander travel trailer",
+    services: ["Interior Design", "Engineering", "Sheet metal fabrication", "Fastener Fabrication", "Solar Power System Design & Installation", "Electrical System Design & Installation", "Plumbing System Design & Installation", "HVAC System Design & Installation", "Appliance Installation", "Interior Finishing", "Exterior Finishing", "Custom Cabinetry Design & Build", "Custom Countertop Fabrication and Installation"],
+    year: "2020–2023",
+    featured: true,
+    description:
+      "Complete renovation and rebuild of a 1965 Airstream Overlander travel trailer. Solar-powered, off-grid ready, and equipped with modern amenities.",
+    credits: [
+        { name: "Lauren Bloom", role: "Co-Owner, General Henchpersoning", url: "" },
+        { name: "Amy Bloom", role: "Curtains", url: "" },
+        { name: "Barton Bloom", role: "AC Devices, Drawers", url: "" },
+        { name: "Steve Bucko", role: "Upholstery", url: "" },
+        { name: "Samson Cheung", role: "Awnings", url: "" },
+        { name: "Joseph Condon", role: "Wheel wells", url: "" },
+        { name: "Pina Welders", role: "Chassis", url: "" },
+        { name: "Sydney Harris", role: "Veneering, Painting, & Finishing", url: "" },
+        { name: "Stan Rapp", role: "Flooring Consultation", url: "" },
+        { name: "Marshall Thompson", role: "Scaffolding", url: "" },
+      ],
+      heroImages: [
+      "/img/projects/silvershaka/galley_sketches.jpg",
+      "/img/projects/silvershaka/interior_couch.jpg",
+      "/img/projects/silvershaka/exterior_florida.jpg",
+      "/img/projects/silvershaka/repainted_chassis.jpg",
+      "/img/projects/silvershaka/interior_blank.jpg",
+      "/img/projects/silvershaka/interior_electrical.jpg",
+      "/img/projects/silvershaka/shaka_bellypan.jpg",
+      "/img/projects/silvershaka/interior_in_use.jpg",
+      "/img/projects/silvershaka/interior_galley.jpg",
+      "/img/projects/silvershaka/interior_bedframes.jpg",
+      "/img/projects/silvershaka/interior_bathroom.jpg",
+    ],
+  },
+  {
+    slug: "bench",
+    title: "Utile Dining Bench",
+    subtitle: "Design & Build",
+    thumbnail: "/img/projects/thumbnails/Bench.jpg",
+    context: "Design & Build",
+    services: ["Design & Build"],
+    year: "2024",
+    featured: true,
+    description:
+      "Dining bench, 60 × 18 × 18 inches. Built exclusively from utile wood and Titebond III glue.",
+    heroImages: [
+      "/img/projects/utilebench/bench_angle.jpg",
+      "/img/projects/utilebench/bench_end.jpg",
+    ],
+  },
+  {
+    slug: "public-equity",
+    title: "Community Capital Solutions",
+    subtitle: "Ongoing",
+    thumbnail: "/img/projects/thumbnails/PublicEquity.jpg",
+    context: "The anti-capitalism capitalism club.",
+    services: ["Product Design", "Prototyping"],
+    year: "Ongoing",
+    featured: true,
+    description:
+      "Anti-capitalism capitalism club. Invest in your local community, not the stock market.",
+  },
+  {
+    slug: "public-ledger",
+    title: "Public Ledger",
+    subtitle: "Exhibition Branding",
+    thumbnail: "/img/projects/thumbnails/PublicLedger.jpg",
+    context: "Philadelphia Collective Street Photography Exhibition",
+    services: ["Product Design"],
+    year: "2023, 2024",
+    featured: true,
+    description:
+      "Exhibition branding and modular exhibit wall design for Public Ledger, a collective street photography exhibition showcasing the work of Philadelphia street photographers.",
+    heroImages: [
+    ],
+  },
+  {
+    slug: "woolley-market",
+    title: "The Woolley Market",
+    subtitle: "Environmental Design",
+    thumbnail: "/img/projects/woolleymarket/specialitems/neon-detail.jpg",
+    context: "Brand identity, environmental design, and digital experience for a community-owned artisan marketplace.",
+    services: ["Creative Direction", "Environmental Design"],
+    year: "2014",
+    featured: false,
+    description:
+      "In January of 2014, I fell into one of the most interesting places and projects I've ever been able to work on. I was approached by Will Honea, the founder of the Market and a team of highly dedicated people with uniquely focused experience in farming and market operations.\n\nI served as the market's sole creative director for 6 months, engaged at pre-incorporation stage through the market's first 50 hired employees. I oversaw, and in many cases, physically executed all aspects of the market's brand strategy, identity, packaging, interior, exterior, and digital design.",
+    credits: [
+      { name: "True Hand Society", role: "Brand, Illustration", url: "http://truehandsociety.com" },
+      { name: "Nathan Kane", role: "Painting, Photography", url: "" },
+      { name: "Sign Mart", role: "Neon, Production", url: "" },
+      { name: "Skagit Valley Signs", role: "Digital Printing", url: "" },
+    ],
+    heroImages: [
+      "/img/projects/woolleymarket/brand/logo-circle.gif",
+      "/img/projects/woolleymarket/brand/logo-type.gif",
+      "/img/projects/woolleymarket/brand/logo-tusks.gif",
+      "/img/projects/woolleymarket/brand/logo-saw.gif",
+      "/img/projects/woolleymarket/collateral/butcherpaper.jpg",
+      "/img/projects/woolleymarket/collateral/giftcard.jpg",
+      "/img/projects/woolleymarket/collateral/shirt.jpg",
+      "/img/projects/woolleymarket/metcalf.jpg",
+      "/img/projects/woolleymarket/specialitems/modelt.jpg",
+      "/img/projects/woolleymarket/specialitems/modeltpoint.jpg",
+      "/img/projects/woolleymarket/exterior/corner.jpg",
+      "/img/projects/woolleymarket/exterior/frontentrance.jpg",
+      "/img/projects/woolleymarket/exterior/frontlogo.jpg",
+      "/img/projects/woolleymarket/exterior/marquee.jpg",
+      "/img/projects/woolleymarket/exterior/paintingwall.jpg",
+      "/img/projects/woolleymarket/exterior/gateway.jpg",
+      "/img/projects/woolleymarket/exterior/rearentrance.jpg",
+      "/img/projects/woolleymarket/exterior/rearlogo.jpg",
+      "/img/projects/woolleymarket/exterior/coldbeer.jpg",
+      "/img/projects/woolleymarket/exterior/painting_window.jpg",
+      "/img/projects/woolleymarket/fisherman.jpg",
+      "/img/projects/woolleymarket/interior/fisherman.jpg",
+      "/img/projects/woolleymarket/specialitems/neon-detail.jpg",
+      "/img/projects/woolleymarket/barn.jpg",
+      "/img/projects/woolleymarket/interior/murals.jpg",
+      "/img/projects/woolleymarket/interior/produce.jpg",
+      "/img/projects/woolleymarket/interior/frozen.jpg",
+      "/img/projects/woolleymarket/interior/hangingsigns.jpg",
+      "/img/projects/woolleymarket/interior/cafe.jpg",
+    ],
+  },
+  {
+    slug: "bike-and-build",
+    title: "Bike & Build",
+    subtitle: "Apparel, Websites",
+    thumbnail: "/img/projects/bikebuild/2014_jerseys.jpg",
+    context:
+      "Bike & Build organizes cross-country cycling trips that benefit affordable housing causes.",
+    services: ["Brand Identity", "Print Design"],
+    year: "2013–2015",
+    featured: true,
+    description:
+      "Bike & Build organizes cross-country cycling trips that benefit affordable housing causes.",
+    heroImages: [
+      "/img/projects/bikebuild/photogrid.jpg",
+      "/img/projects/bikebuild/pacificphoto.jpg",
+      "/img/projects/bikebuild/fundraiserphoto.jpg",
+      "/img/projects/bikebuild/fundraiser_animation_browser.gif",
+      "/img/projects/bikebuild/devices.jpg",
+      "/img/projects/bikebuild/flow.png",
+      "/img/projects/bikebuild/routemap.gif",
+      "/img/projects/bikebuild/2015_annual_report.jpg",
+      "/img/projects/bikebuild/2015_jersey.jpg",
+      "/img/projects/bikebuild/2015_jerseys_front.jpg",
+      "/img/projects/bikebuild/2015_jerseys_back.jpg",
+      "/img/projects/bikebuild/2013-annual-report.jpg",
+      "/img/projects/bikebuild/2013_jerseys_front.jpg",
+      "/img/projects/bikebuild/2013_jerseys_back.jpg",
+      "/img/projects/bikebuild/card_sort.jpg",
+    ],
+  },
+  {
+    slug: "gnarrboro",
+    title: "Gnarrboro",
+    subtitle: "Brand identity for an outdoor adventure company",
+    thumbnail: "/img/projects/thumbnails/gnarrboro.jpg",
+    context: "Gnarrboro — an annual BMX jam on ramps made from trash.",
+    services: ["Brand Identity", "Print Design"],
+    year: "2015–2017",
+    featured: true,
+    description:
+      "Co-inventor, promoter, and unofficial \"construction foreman\" of an annual BMX jam on ramps made of trash at Back Alley Bikes in Carrboro, North Carolina.",
+    heroImages: [
+      "/img/projects/gnarrboro/gnarrboro1_flyer.gif",
+      "/img/projects/gnarrboro/gnarrboro2_flyer.gif",
+      "/img/projects/gnarrboro/carjump.jpg",
+      "/img/projects/gnarrboro/flair.jpg",
+      "/img/projects/gnarrboro/carve.jpg",
+      "/img/projects/gnarrboro/hangs.jpg",
+      "/img/projects/gnarrboro/table.jpg",
+      "/img/projects/gnarrboro/toothpick.jpg",
+      "/img/projects/gnarrboro/band.jpg",
+    ],
+    videos: [
+      { label: "Film — Vimeo", url: "https://vimeo.com/130455113?fl=pl&fe=cm" },
+      { label: "Video — YouTube", url: "https://youtu.be/jeP27ufIv3s" },
+    ],
+    credits: [
+      { name: "Neal Cart", role: "Co-inventor", url: "" },
+      { name: "Back Alley Bikes", role: "", url: "http://backalleybikes.net" },
+      { name: "Adam Balfour", role: "", url: "" },
+      { name: "Jay Benallal", role: "", url: "" },
+      { name: "Darren Bouldin", role: "", url: "" },
+      { name: "Cole Brisson", role: "", url: "" },
+      { name: "David Bryan", role: "", url: "" },
+      { name: "Tony Davis", role: "", url: "" },
+      { name: "Richard Jackson", role: "", url: "" },
+      { name: "Cody Moore", role: "", url: "" },
+      { name: "Todd Nichols", role: "", url: "" },
+      { name: "Sage & Mesa Pivrotto", role: "", url: "" },
+      { name: "Leigh Ramsdell", role: "", url: "" },
+      { name: "Jared Whalen", role: "", url: "" },
+      { name: "Joel Wood", role: "", url: "" },
+      ],
+  },
+
+];
+
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find((p) => p.slug === slug);
+}
+
+export function getFeaturedProjects(): Project[] {
+  return projects.filter((p) => p.featured && !p.hidden);
+}
+
+export function getVisibleProjects(): Project[] {
+  return projects.filter((p) => !p.hidden);
+}
