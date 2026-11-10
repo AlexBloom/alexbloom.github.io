@@ -19,6 +19,7 @@ function WaveLine({ active }: { active: boolean }) {
     let phase = 0;
     let intensity = 0;
     function draw(time: number) {
+      if (motion.matches || document.hidden) { syncMotion(); return; }
       const elapsed = previous ? Math.min((time - previous) / 1000, 0.05) : 0;
       previous = time;
       intensity += ((energized.current ? 1 : 0) - intensity) * (1 - Math.exp(-elapsed * 10));
@@ -33,8 +34,21 @@ function WaveLine({ active }: { active: boolean }) {
       path.current?.setAttribute("d", points.join(" "));
       frame = requestAnimationFrame(draw);
     }
-    frame = requestAnimationFrame(draw);
-    return () => cancelAnimationFrame(frame);
+    function syncMotion() {
+      cancelAnimationFrame(frame);
+      frame = 0;
+      previous = 0;
+      if (motion.matches) path.current?.setAttribute("d", "M2,12 L22,12");
+      if (!motion.matches && !document.hidden) frame = requestAnimationFrame(draw);
+    }
+    motion.addEventListener("change", syncMotion);
+    document.addEventListener("visibilitychange", syncMotion);
+    syncMotion();
+    return () => {
+      cancelAnimationFrame(frame);
+      motion.removeEventListener("change", syncMotion);
+      document.removeEventListener("visibilitychange", syncMotion);
+    };
   }, []);
 
   return <svg className="vibe-wave" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path ref={path} d="M2,12 L22,12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>;
@@ -87,15 +101,36 @@ export function ThemeToggle() {
   useEffect(() => {
     if (!open) return;
     if (bSideIds.has(sessionChoice.current ?? document.documentElement.dataset.theme ?? "")) setBSidesOpen(true);
-    panel.current?.querySelector<HTMLButtonElement>("button")?.focus();
-    function escape(event: KeyboardEvent) {
+    const sheet = panel.current;
+    const returnFocus = trigger.current;
+    if (!sheet) return;
+    const siblings = Array.from(sheet.parentElement?.children ?? [])
+      .filter((element): element is HTMLElement => element instanceof HTMLElement && element !== sheet)
+      .map((element) => ({ element, inert: element.inert }));
+    siblings.forEach(({ element }) => { element.inert = true; });
+    sheet.querySelector<HTMLButtonElement>("button")?.focus();
+    function onKey(event: KeyboardEvent) {
       if (event.key === "Escape") {
-        closeSheet();
-        trigger.current?.focus();
+        event.preventDefault();
+        setOpen(false);
+      } else if (event.key === "Tab") {
+        const controls = Array.from(sheet!.querySelectorAll<HTMLElement>("button, input:checked, a[href], [tabindex='0']"))
+          .filter((element) => !element.closest("[hidden], [inert]") && !element.matches(":disabled"));
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault(); last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault(); first?.focus();
+        }
       }
     }
-    document.addEventListener("keydown", escape);
-    return () => document.removeEventListener("keydown", escape);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      siblings.forEach(({ element, inert }) => { element.inert = inert; });
+      returnFocus?.focus();
+    };
   }, [open]);
 
   function closeSheet() {
@@ -118,7 +153,7 @@ export function ThemeToggle() {
   function renderTheme(theme: (typeof themes)[number]) {
     return (
             <label key={theme.id} className="relative flex min-h-11 cursor-pointer items-center gap-3 rounded-md px-3 py-3 text-sm text-muted-foreground transition-colors hover:bg-muted has-[:checked]:bg-muted">
-              <input className="peer sr-only" type="radio" name="site-theme" value={theme.id} checked={choice === theme.id} onChange={() => {}} onClick={() => select(theme.id)} onKeyDown={(event) => { if (event.key === " ") { event.preventDefault(); select(theme.id); } }} />
+              <input className="peer sr-only" type="radio" name="site-theme" value={theme.id} checked={choice === theme.id} onChange={() => select(theme.id)} onClick={() => { if (choice === theme.id) closeSheet(); }} onKeyDown={(event) => { if (event.key === "Enter") { event.preventDefault(); select(theme.id); } }} />
               <span className="pointer-events-none absolute inset-0 rounded-md peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-[-2px] peer-focus-visible:outline-ring" />
               <span className="flex-1">{theme.label}</span>
               {choice === theme.id && <Check className="h-4 w-4 shrink-0" aria-hidden="true" />}
@@ -136,6 +171,8 @@ export function ThemeToggle() {
       </div>
       <aside
         ref={panel}
+        role="dialog"
+        aria-modal="true"
         id="vibe-check-sheet"
         aria-labelledby="vibe-check-title"
         aria-hidden={!open}
