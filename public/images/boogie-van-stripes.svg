@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220" preserveAspectRatio="none">
+<style>
+  .flow { animation: stripe-flow 8s linear infinite; }
+  @keyframes stripe-flow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: 600; } }
+  @media (prefers-reduced-motion: reduce) { .flow { animation: none; } }
+</style>
+<defs>
+  <filter id="soft-flow" x="-50%" y="-300%" width="200%" height="700%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="22"/></filter>
+
+<clipPath id="band-0"><path d="M0 100H736C826 100 826 20 916 20H1200V50H928C838 50 838 130 748 130H0Z"/></clipPath>
+<clipPath id="band-1"><path d="M0 130H748C838 130 838 50 928 50H1200V80H940C850 80 850 160 760 160H0Z"/></clipPath>
+<clipPath id="band-2"><path d="M0 160H760C850 160 850 80 940 80H1200V110H952C862 110 862 190 772 190H0Z"/></clipPath>
+<clipPath id="band-3"><path d="M0 190H772C862 190 862 110 952 110H1200V140H964C874 140 874 220 784 220H0Z"/></clipPath>
+</defs><path fill="#f9f8f5" d="M0 0H1200V20H916C826 20 826 100 736 100H0Z"/>
+<path fill="#b52619" d="M0 100H736C826 100 826 20 916 20H1200V50H928C838 50 838 130 748 130H0Z"/>
+<g clip-path="url(#band-0)">
+ <g fill="none" stroke-width="90" stroke-dasharray="120 480" filter="url(#soft-flow)">
+  <path class="flow" d="M-300 115H742C832 115 832 35 922 35H1500" stroke="#fff" stroke-opacity=".28"/>
+  <path class="flow" style="animation-delay:-4s" d="M-300 115H742C832 115 832 35 922 35H1500" stroke="#210c00" stroke-opacity=".22"/>
+ </g>
+</g>
+<path fill="#eb401b" d="M0 130H748C838 130 838 50 928 50H1200V80H940C850 80 850 160 760 160H0Z"/>
+<g clip-path="url(#band-1)">
+ <g fill="none" stroke-width="90" stroke-dasharray="120 480" filter="url(#soft-flow)">
+  <path class="flow" d="M-300 145H754C844 145 844 65 934 65H1500" stroke="#fff" stroke-opacity=".28"/>
+  <path class="flow" style="animation-delay:-4s" d="M-300 145H754C844 145 844 65 934 65H1500" stroke="#210c00" stroke-opacity=".22"/>
+ </g>
+</g>
+<path fill="#f58a1f" d="M0 160H760C850 160 850 80 940 80H1200V110H952C862 110 862 190 772 190H0Z"/>
+<g clip-path="url(#band-2)">
+ <g fill="none" stroke-width="90" stroke-dasharray="120 480" filter="url(#soft-flow)">
+  <path class="flow" d="M-300 175H766C856 175 856 95 946 95H1500" stroke="#fff" stroke-opacity=".28"/>
+  <path class="flow" style="animation-delay:-4s" d="M-300 175H766C856 175 856 95 946 95H1500" stroke="#210c00" stroke-opacity=".22"/>
+ </g>
+</g>
+<path fill="#f2bd39" d="M0 190H772C862 190 862 110 952 110H1200V140H964C874 140 874 220 784 220H0Z"/>
+<g clip-path="url(#band-3)">
+ <g fill="none" stroke-width="90" stroke-dasharray="120 480" filter="url(#soft-flow)">
+  <path class="flow" d="M-300 205H778C868 205 868 125 958 125H1500" stroke="#fff" stroke-opacity=".28"/>
+  <path class="flow" style="animation-delay:-4s" d="M-300 205H778C868 205 868 125 958 125H1500" stroke="#210c00" stroke-opacity=".22"/>
+ </g>
+</g>
+</svg>

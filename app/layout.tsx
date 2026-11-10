@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter_Tight } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { AttentionPlanProvider } from "@/components/plan-provider";
@@ -14,6 +15,12 @@ import { LiteBrite } from "@/components/lite-brite";
 import { KellsBorder } from "@/components/kells-border";
 import "./globals.css";
 import "@/components/home/animated-logo.css";
+
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  variable: "--font-inter-tight",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -36,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${GeistSans.variable} ${GeistMono.variable} ${interTight.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: `(${initializeTheme.toString()})();` }} />
       </head>
