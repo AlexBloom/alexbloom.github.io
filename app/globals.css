@@ -789,7 +789,7 @@ body { overflow-x: clip; }
 .ti-key { min-height: 0; aspect-ratio: 5 / 4; border-bottom-width: 2px; box-shadow: 0 3px 0 #77735c, 0 4px 3px #0008, inset 0 1px 2px #fff9; }
 .ti-zero { aspect-ratio: auto; }
 .ti-equals { box-shadow: 0 3px 0 #a34c11, 0 4px 3px #0008, inset 0 1px 2px #ffd084; }
-.ti-instructions { margin-top: 19px; font-family: Arial, sans-serif; font-size: clamp(7px, 1.9vw, 9px); line-height: 1.7; white-space: nowrap; text-align: center; color: #514a36; }
+.ti-instructions { margin-top: 19px; font-family: Arial, sans-serif; font-size: clamp(12px, 1.9vw, 14px); line-height: 1.7; white-space: normal; text-wrap: balance; text-align: center; color: #514a36; }
 @media (max-width: 380px) { .ti-calculator { padding: 24px 15px 15px; } .ti-face { padding-inline: 10px; } .ti-keys { gap: 8px 6px; } }
 
 :root[data-theme="trapper"] .trapper-cube { width: clamp(130px, 23vw, 340px); right: -4%; }
@@ -839,7 +839,7 @@ body { overflow-x: clip; }
 @keyframes lisa-letter-shimmer { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
 @keyframes lisa-star-bob { from { translate: 0 -8px; scale: 0.85; } to { translate: 4px 10px; scale: 1.1; } }
 @media (prefers-reduced-motion: reduce) {
-  :root[data-theme="lisa-frank"] body,
+  :root[data-theme="lisa-frank"] body { animation: none; }
   :root[data-theme="lisa-frank"] .site-content :is(h1, h2, h3),
   .lisa-rainbow-confetti svg,
   .sticker-foil-glint { animation: none; }

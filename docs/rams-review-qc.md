@@ -11,3 +11,10 @@ Source: release PR #18, Rams summary and two inline comments.
 The GitHub comment lists four detailed findings but counts three additional moderate accessibility refinements without their text. The Rams dashboard redirects to login. Those three findings cannot be certified addressed without their details; requested the user paste them.
 
 Validation: local production static export passed, including lint and type checks; diff whitespace checks passed. Browser keyboard selection and font decoding verified as above.
+
+Fresh review on PR #19 scored 92/100 and exposed four follow-ups, also addressed before release:
+
+- The sheet is now a named modal dialog. Background siblings become inert while open; Tab/Shift+Tab wrap within the sheet, Escape closes it, and focus returns to the trigger. These behaviors were verified in the browser.
+- TI-II instructions now use a 12–14px scale and wrap rather than overflowing in a single line.
+- Lisa Frank's body reduced-motion override is a standalone rule, making its effect explicit. CSS selector groups were valid already; this removes the reviewer's parsing ambiguity.
+- WaveLine stops scheduling animation frames when the document is hidden or reduced motion is enabled, and resumes when appropriate. It responds to live preference changes. The default active wave remains animated as the user requested; it is not flat when idle.
