@@ -250,7 +250,7 @@ a .link-label {
 
 @font-face {
   font-family: "Share Tech Mono";
-  src: url("/fonts/share-tech-mono/ShareTechMono-Regular.ttf") format("truetype");
+  src: url("/fonts/share-tech-mono/ShareTechMono-Regular.woff2") format("woff2"), url("/fonts/share-tech-mono/ShareTechMono-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -258,7 +258,7 @@ a .link-label {
 
 @font-face {
   font-family: "VT323";
-  src: url("/fonts/vt323/VT323-Regular.ttf") format("truetype");
+  src: url("/fonts/vt323/VT323-Regular.woff2") format("woff2"), url("/fonts/vt323/VT323-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -438,7 +438,7 @@ body { overflow-x: clip; }
 
 @font-face {
   font-family: "Michroma";
-  src: url("/fonts/michroma/Michroma-Regular.ttf") format("truetype");
+  src: url("/fonts/michroma/Michroma-Regular.woff2") format("woff2"), url("/fonts/michroma/Michroma-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -575,7 +575,7 @@ body { overflow-x: clip; }
 
 @font-face {
   font-family: "Audiowide";
-  src: url("/fonts/audiowide/Audiowide-Regular.ttf") format("truetype");
+  src: url("/fonts/audiowide/Audiowide-Regular.woff2") format("woff2"), url("/fonts/audiowide/Audiowide-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -796,7 +796,7 @@ body { overflow-x: clip; }
 
 @font-face {
   font-family: "Leckerli One";
-  src: url("/fonts/leckerlione/LeckerliOne-Regular.ttf") format("truetype");
+  src: url("/fonts/leckerlione/LeckerliOne-Regular.woff2") format("woff2"), url("/fonts/leckerlione/LeckerliOne-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -841,7 +841,8 @@ body { overflow-x: clip; }
 @media (prefers-reduced-motion: reduce) {
   :root[data-theme="lisa-frank"] body,
   :root[data-theme="lisa-frank"] .site-content :is(h1, h2, h3),
-  .lisa-rainbow-confetti svg { animation: none; }
+  .lisa-rainbow-confetti svg,
+  .sticker-foil-glint { animation: none; }
 }
 
 /* Encyclopedia typography and familiar blue references. */
@@ -859,7 +860,7 @@ body { overflow-x: clip; }
 :root[data-theme="wiki"] .site-content h3 { font-family: "Times New Roman", Times, serif; font-weight: 700; }
 :root[data-theme="wiki"] .homepage > header > .home-identity { font-family: Georgia, serif; }
 
-@font-face { font-family: "Uncial Antiqua"; src: url("/fonts/uncialantiqua/UncialAntiqua-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Uncial Antiqua"; src: url("/fonts/uncialantiqua/UncialAntiqua-Regular.woff2") format("woff2"), url("/fonts/uncialantiqua/UncialAntiqua-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
 :root[data-theme="kells"] {
   --theme-font: Georgia, "Times New Roman", serif;
   --retro-bg: 41 47% 83%; --retro-fg: 27 36% 20%;
@@ -929,9 +930,9 @@ body { overflow-x: clip; }
 .vibe-trigger:hover, .vibe-trigger:focus-visible { background: transparent; }
 .vibe-trigger .vibe-wave { width: 24px; height: 24px; flex-shrink: 0; }
 
-@font-face { font-family: "Archivo Black"; src: url("/fonts/archivo-black/ArchivoBlack-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Libre Caslon Text"; src: url("/fonts/libre-caslon/LibreCaslonText.ttf") format("truetype"); font-weight: 400 700; font-style: normal; font-display: swap; }
-@font-face { font-family: "Unifraktur Maguntia"; src: url("/fonts/unifrakturmaguntia/UnifrakturMaguntia-Book.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Archivo Black"; src: url("/fonts/archivo-black/ArchivoBlack-Regular.woff2") format("woff2"), url("/fonts/archivo-black/ArchivoBlack-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Libre Caslon Text"; src: url("/fonts/libre-caslon/LibreCaslonText.woff2") format("woff2"), url("/fonts/libre-caslon/LibreCaslonText.ttf") format("truetype"); font-weight: 400 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Unifraktur Maguntia"; src: url("/fonts/unifrakturmaguntia/UnifrakturMaguntia-Book.woff2") format("woff2"), url("/fonts/unifrakturmaguntia/UnifrakturMaguntia-Book.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
 .mta-station-heading, .newspaper-masthead { display: none; }
 :root[data-theme="mta"] {
   --theme-font: Helvetica, Arial, sans-serif;
@@ -1007,7 +1008,7 @@ body { overflow-x: clip; }
 :root[data-theme="winamp"] .homepage { max-width: 50rem; font-size: 0.85rem; line-height: 1.7; }
 :root[data-theme="winamp"] .homepage > header > :not(.winamp-player) { display: none; }
 :root[data-theme="winamp"] .winamp-player { display: block; padding: 6px; border: 3px solid; border-color: #91919b #111116 #111116 #91919b; background: linear-gradient(100deg, #454551, #262631 50%, #44444e); box-shadow: 0 8px 24px #0007; }
-.winamp-titlebar { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 22px; background: repeating-linear-gradient(0deg, #73737d 0 1px, #2d2d38 1px 3px); color: #d9d5c0; text-shadow: 1px 1px #000; font: bold 11px Arial, sans-serif; letter-spacing: 2px; }
+.winamp-titlebar { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 22px; background: repeating-linear-gradient(0deg, #73737d 0 1px, #2d2d38 1px 3px); color: #d9d5c0; text-shadow: 1px 1px #000; font: bold 14px Arial, sans-serif; letter-spacing: 2px; }
 .winamp-titlebar > span:nth-child(2) { background: #2e2e38; padding-inline: 10px; }
 .winamp-display { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 15px; background: #050805; padding: 15px; margin-block: 8px; border: 2px inset #777783; color: #9bff63; }
 .winamp-readout { min-width: 0; }
@@ -1018,15 +1019,15 @@ body { overflow-x: clip; }
 .winamp-display[data-playing="false"] .winamp-spectrum i { animation-play-state: paused; }
 :root[data-theme="winamp"] .winamp-track h1 { font: 400 clamp(19px, 3vw, 30px) "VT323", monospace; letter-spacing: 1px; text-transform: uppercase; color: #9bff63; }
 .winamp-track p { font: 18px "VT323", monospace; color: #9bff63; }
-.winamp-track > span { display: block; margin-top: 10px; font: 11px monospace; color: #dccf83; }
-.winamp-sliders { display: flex; justify-content: space-between; padding: 5px 8px 10px; color: #bbbd93; font: 9px monospace; }
+.winamp-track > span { display: block; margin-top: 10px; font: 12px monospace; color: #dccf83; }
+.winamp-sliders { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; padding: 5px 8px 10px; color: #bbbd93; font: 14px monospace; }
 .winamp-sliders label { display: flex; align-items: center; gap: 10px; }
 .winamp-sliders input { width: 140px; height: 12px; accent-color: #aab979; }
 .winamp-transport { display: flex; align-items: center; gap: 4px; padding: 4px 4px 12px; }
 .winamp-transport :is(button, a) { display: grid; place-items: center; width: 38px; height: 28px; border: 2px solid; border-color: #cdcdc7 #12121a #12121a #cdcdc7; background: linear-gradient(#b3b3af, #6c6d70); color: #20212a; border-radius: 1px; cursor: pointer; }
 .winamp-transport :is(button, a):active { border-color: #15151a #b8b8b4 #b8b8b4 #15151a; }
 .winamp-transport svg { width: 14px; height: 14px; fill: currentColor; }
-.winamp-transport > span { margin-left: auto; font: 9px monospace; color: #b1b1a7; }
+.winamp-transport > span { margin-left: auto; font: 14px monospace; color: #b1b1a7; }
 .winamp-playlist { background: #050805; padding: 8px; border: 2px inset #777783; }
 .winamp-playlist a { display: flex; justify-content: space-between; padding: 3px 8px; font: 14px "VT323", monospace; text-transform: uppercase; }
 :root[data-theme="winamp"] .winamp-playlist a[aria-current] { background: #19292d; color: #fff7b0; }
@@ -1055,11 +1056,11 @@ body { overflow-x: clip; }
 .lite-brite-board { width: 100%; position: relative; }
 .lite-brite-board canvas { position: fixed; inset: 0; width: 100%; height: 100dvh; cursor: grab; touch-action: pan-y; }
 .lite-brite-board canvas.is-editing { touch-action: none; }
-.lite-brite-tools { position: fixed; top: 18px; left: 18px; right: 80px; z-index: 20; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font: 11px var(--font-geist-mono), monospace; }
+.lite-brite-tools { position: fixed; top: 18px; left: 18px; right: 80px; z-index: 20; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font: 14px var(--font-geist-mono), monospace; }
 .lite-brite-tools button { background: #202026; color: #fff2a3; border: 1px solid #65606e; border-radius: 12px; padding: 8px 12px; cursor: pointer; }
 .lite-brite-tools button[aria-pressed="true"] { border-color: #ff689a; color: #ff9abb; }
-.lite-brite-tools span { color: #b4abbf; }
-@media (max-width: 599px) { .lite-brite-tools span { font-size: 9px; } }
+.lite-brite-tools span { color: #b4abbf; font-size: 12px; }
+@media (max-width: 599px) { .lite-brite-tools { right: 72px; gap: 6px; } }
 
 /* A reserved manuscript margin and a single, predictable initial treatment. */
 .kells-initial { display: none; }
@@ -1127,7 +1128,7 @@ body { overflow-x: clip; }
 /* 1977 Boogie Van — enamel, warm black, and four sunset pinstripes. */
 @font-face {
   font-family: "Cooper Black";
-  src: url("/fonts/cooper-black/CooperBlackStd.otf") format("opentype");
+  src: url("/fonts/cooper-black/CooperBlackStd.woff2") format("woff2"), url("/fonts/cooper-black/CooperBlackStd.otf") format("opentype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -1245,14 +1246,14 @@ body { overflow-x: clip; }
 /* Risograph: fluorescent spot inks, imperfect registration, uncoated stock. */
 @font-face {
   font-family: "Riso Knockout";
-  src: url("/fonts/knockout/Knockout-HTF49-Liteweight.otf") format("opentype");
+  src: url("/fonts/knockout/Knockout-HTF49-Liteweight.woff2") format("woff2"), url("/fonts/knockout/Knockout-HTF49-Liteweight.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Riso Knockout Wide";
-  src: url("/fonts/knockout/Knockout-HTF50-Welterweight.otf") format("opentype");
+  src: url("/fonts/knockout/Knockout-HTF50-Welterweight.woff2") format("woff2"), url("/fonts/knockout/Knockout-HTF50-Welterweight.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -1344,7 +1345,7 @@ body { overflow-x: clip; }
 /* Escher: isometric letterforms, folded planes, and a continuous drawing grid. */
 @font-face {
   font-family: "Nabla";
-  src: url("/fonts/nabla/Nabla.ttf") format("truetype");
+  src: url("/fonts/nabla/Nabla.woff2") format("woff2"), url("/fonts/nabla/Nabla.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;

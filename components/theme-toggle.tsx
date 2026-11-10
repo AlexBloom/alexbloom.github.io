@@ -118,7 +118,7 @@ export function ThemeToggle() {
   function renderTheme(theme: (typeof themes)[number]) {
     return (
             <label key={theme.id} className="relative flex min-h-11 cursor-pointer items-center gap-3 rounded-md px-3 py-3 text-sm text-muted-foreground transition-colors hover:bg-muted has-[:checked]:bg-muted">
-              <input className="peer sr-only" type="radio" name="site-theme" value={theme.id} checked={choice === theme.id} onChange={() => {}} onClick={() => select(theme.id)} onKeyDown={(event) => { if (event.key === " ") { event.preventDefault(); select(theme.id); } }} />
+              <input className="peer sr-only" type="radio" name="site-theme" value={theme.id} checked={choice === theme.id} onChange={() => select(theme.id)} onClick={() => { if (choice === theme.id) closeSheet(); }} onKeyDown={(event) => { if (event.key === "Enter") { event.preventDefault(); select(theme.id); } }} />
               <span className="pointer-events-none absolute inset-0 rounded-md peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-[-2px] peer-focus-visible:outline-ring" />
               <span className="flex-1">{theme.label}</span>
               {choice === theme.id && <Check className="h-4 w-4 shrink-0" aria-hidden="true" />}
