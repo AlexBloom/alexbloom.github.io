@@ -2,6 +2,9 @@ export const themes = [
   { id: "light", label: "Light" },
   { id: "dark", label: "Dark" },
   { id: "apple2", label: "MS-DOS" },
+  { id: "boogie-van", label: "1977 Boogie Van" },
+  { id: "risograph", label: "Risograph" },
+  { id: "escher", label: "Escher" },
   { id: "casio", label: "TI-II" },
   { id: "trapper", label: "Trapper Keeper" },
   { id: "mta", label: "MTA" },
@@ -22,7 +25,7 @@ export function initializeTheme(preference?: string) {
     try { choice = localStorage.getItem("theme") ?? "auto"; } catch { choice = "auto"; }
   }
   if (choice === "ti83") choice = "casio";
-  if (!["auto", "light", "dark", "casio", "matrix", "apple2", "snes", "lisa-frank", "trapper", "wiki", "kells", "mta", "newspaper", "winamp", "lite-brite"].includes(choice)) choice = "auto";
+  if (!["auto", "light", "dark", "casio", "matrix", "apple2", "snes", "lisa-frank", "trapper", "wiki", "kells", "mta", "newspaper", "winamp", "lite-brite", "boogie-van", "risograph", "escher"].includes(choice)) choice = "auto";
   const now = new Date();
   let hour = now.getHours();
   // Resolve the visitor's IANA timezone explicitly, including DST and midnight.

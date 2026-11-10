@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120">
+  <defs>
+    <clipPath id="apple">
+      <path d="M54 28C53 15 62 4 76 2C77 15 67 27 54 28ZM51 36C40 29 28 29 19 36C2 49 7 76 16 94C22 106 29 119 39 116C47 113 52 111 61 115C73 121 81 108 88 96L94 84C77 77 74 56 91 44C82 30 68 29 56 34L51 36Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#apple)">
+    <path fill="#61bb46" d="M0 0h100v43H0z"/>
+    <path fill="#fdb827" d="M0 43h100v15H0z"/>
+    <path fill="#f5821f" d="M0 58h100v15H0z"/>
+    <path fill="#e03a3e" d="M0 73h100v15H0z"/>
+    <path fill="#963d97" d="M0 88h100v15H0z"/>
+    <path fill="#009ddc" d="M0 103h100v17H0z"/>
+  </g>
+</svg>

@@ -22,14 +22,13 @@ export default function HomePage() {
         <header className="space-y-5">
           <WinampPlayer />
           <div className="mta-station-heading"><div className="mta-sign-rule" /><h1>Alex Bloom</h1><p>Designer</p><span className="mta-cities">PHL &lt;&gt; NYC</span></div>
-          <div className="newspaper-masthead"><p>Alex Bloom</p><h1>the office post</h1><div><span>Designer</span><span>PHL/NYC</span></div></div>
+          <div className="newspaper-masthead"><h1 className="newspaper-author">Alex Bloom</h1><p className="newspaper-title">the office post</p><div><span>Designer</span><span>PHL/NYC</span></div></div>
           <div className="wiki-article-heading" id="wiki-top"><h1>Alex Bloom</h1><p>Designer · PHL/NYC</p></div>
-          <h1 className="sr-only">The Virtual Office of Alex Bloom</h1>
           <div className="dos-home-hero">
             <AnimatedLogo />
             <DosBackdrop />
           </div>
-          <p><strong>Alex Bloom</strong><br />Designer<br />PHL/NYC</p>
+          <div className="home-identity"><h1>Alex Bloom</h1><p>Designer<br />PHL/NYC</p></div>
         </header>
         <figure className="wiki-infobox">
           <figcaption>Alex Bloom</figcaption>

@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Variable Inter Tight for the light and dark themes. */
+:root:not([data-theme]),
+:root[data-theme="light"],
+:root[data-theme="dark"] {
+  --theme-font: var(--font-inter-tight), var(--font-geist-sans), sans-serif;
+}
+
 /* Scale rem-based typography and spacing with the viewport. */
 @layer base {
   html {
@@ -296,7 +303,7 @@ a .link-label {
   color-scheme: dark;
 }
 
-:root:is([data-theme="casio"], [data-theme="matrix"], [data-theme="apple2"], [data-theme="snes"], [data-theme="lisa-frank"], [data-theme="trapper"], [data-theme="wiki"], [data-theme="kells"], [data-theme="mta"], [data-theme="newspaper"], [data-theme="winamp"], [data-theme="lite-brite"]) {
+:root:is([data-theme="casio"], [data-theme="matrix"], [data-theme="apple2"], [data-theme="snes"], [data-theme="lisa-frank"], [data-theme="trapper"], [data-theme="wiki"], [data-theme="kells"], [data-theme="mta"], [data-theme="newspaper"], [data-theme="winamp"], [data-theme="lite-brite"], [data-theme="boogie-van"], [data-theme="risograph"], [data-theme="escher"]) {
   --background: var(--retro-bg);
   --page-background: hsl(var(--retro-bg));
   --foreground: var(--retro-fg);
@@ -383,6 +390,11 @@ a .link-label {
   --border: 240 5.9% 90%;
   --ring: 240 3.8% 46.1%;
   --theme-font: var(--font-geist-sans);
+}
+:root:not([data-theme]) .theme-ui,
+:root[data-theme="light"] .theme-ui,
+:root[data-theme="dark"] .theme-ui {
+  --theme-font: var(--font-inter-tight), var(--font-geist-sans), sans-serif;
 }
 .dark .theme-ui,
 :root[data-theme="dark"] .theme-ui {
@@ -511,6 +523,16 @@ body { overflow-x: clip; }
   border-color: #928c7d #eee9db #e5dfd0 #9c9585;
   box-shadow: 0 0 0 100vmax #d4cebb, inset 0 4px 9px #0007, inset 0 -2px 5px #c8d7e51a;
 }
+:root[data-theme="apple2"] .device-frame::before {
+  content: "";
+  position: fixed;
+  left: calc(var(--device-inset) + 12px);
+  bottom: calc(var(--device-bottom) * 0.16);
+  width: clamp(14px, 1.8vw, 24px);
+  height: clamp(17px, 2.16vw, 29px);
+  background: url("/logos/apple-rainbow.svg") center / contain no-repeat;
+  filter: saturate(0.85) drop-shadow(0 1px 0 #fff5);
+}
 :root[data-theme="apple2"] .device-frame::after {
   content: "";
   position: fixed;
@@ -572,7 +594,7 @@ body { overflow-x: clip; }
   color-scheme: dark;
 }
 :root[data-theme="trapper"] .site-content :is(h1, h2, h3, h4, h5, h6),
-:root[data-theme="trapper"] .homepage > header > p {
+:root[data-theme="trapper"] .homepage > header > .home-identity {
   font-family: "Audiowide", var(--font-geist-sans), sans-serif;
 }
 :root[data-theme="trapper"] body {
@@ -790,7 +812,7 @@ body { overflow-x: clip; }
   animation: lisa-rainbow-drift 18s ease-in-out infinite alternate;
 }
 :root[data-theme="lisa-frank"] .site-content :is(h1, h2, h3),
-:root[data-theme="lisa-frank"] .homepage > header > p {
+:root[data-theme="lisa-frank"] .homepage > header > .home-identity {
   font-family: "Leckerli One", cursive;
   font-weight: 400;
 }
@@ -805,7 +827,7 @@ body { overflow-x: clip; }
 }
 :root[data-theme="lisa-frank"] .site-content h2 { font-size: 1.65em; }
 :root[data-theme="lisa-frank"] .site-content h3 { font-size: 1.3em; }
-:root[data-theme="lisa-frank"] .homepage > header > p { font-size: 1.15em; color: #a10978; }
+:root[data-theme="lisa-frank"] .homepage > header > .home-identity { font-size: 1.15em; color: #a10978; }
 .lisa-glitter span { font-size: clamp(14px, 2vw, 32px); text-shadow: 0 0 2px white, 0 0 6px white, 0 0 14px #ff33bd; }
 .lisa-glitter span:nth-child(5n) { font-size: clamp(25px, 3vw, 46px); }
 .lisa-rainbow-confetti { position: absolute; inset: 0; pointer-events: none; }
@@ -835,7 +857,7 @@ body { overflow-x: clip; }
 :root[data-theme="wiki"] .site-content :is(h1, h2) { font-family: Georgia, "Times New Roman", serif; font-weight: 400; border-bottom: 1px solid hsl(var(--border)); padding-bottom: 0.2em; }
 :root[data-theme="wiki"] .site-content h2 { font-size: 1.5em; }
 :root[data-theme="wiki"] .site-content h3 { font-family: "Times New Roman", Times, serif; font-weight: 700; }
-:root[data-theme="wiki"] .homepage > header > p { font-family: Georgia, serif; }
+:root[data-theme="wiki"] .homepage > header > .home-identity { font-family: Georgia, serif; }
 
 @font-face { font-family: "Uncial Antiqua"; src: url("/fonts/uncialantiqua/UncialAntiqua-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
 :root[data-theme="kells"] {
@@ -849,7 +871,7 @@ body { overflow-x: clip; }
 :root[data-theme="kells"] body { background-image: radial-gradient(ellipse at 50% 30%, #fff3cf99, transparent 70%), radial-gradient(ellipse at 0 80%, #a66a282e, transparent 65%), linear-gradient(90deg, #99723c33, transparent 15%, transparent 85%, #99723c33); background-attachment: fixed; }
 :root[data-theme="kells"] .site-content { position: relative; z-index: 1; line-height: 1.8; }
 :root[data-theme="kells"] .site-content :is(h1, h2, h3),
-:root[data-theme="kells"] .homepage > header > p { font-family: "Uncial Antiqua", Georgia, serif; font-weight: 400; }
+:root[data-theme="kells"] .homepage > header > .home-identity { font-family: "Uncial Antiqua", Georgia, serif; font-weight: 400; }
 :root[data-theme="kells"] .site-content h2 { color: #8c3527; font-size: 1.5em; border-bottom: 3px double #a68b54; padding-bottom: 0.25em; }
 :root[data-theme="kells"] .site-content h3 { color: #285f58; }
 .kells-ornaments { display: none; }
@@ -881,7 +903,7 @@ body { overflow-x: clip; }
 /* Vector-style article typography and responsive navigation. */
 :root[data-theme="wiki"] { --theme-font: sans-serif; }
 :root[data-theme="wiki"] .site-content :is(h1, h2),
-:root[data-theme="wiki"] .homepage > header > p { font-family: "Linux Libertine", Georgia, Times, "Source Serif 4", serif; }
+:root[data-theme="wiki"] .homepage > header > .home-identity { font-family: "Linux Libertine", Georgia, Times, "Source Serif 4", serif; }
 :root[data-theme="wiki"] .site-content h3 { font-family: sans-serif; }
 .wiki-contents, .wiki-infobox, .wiki-article-heading { display: none; }
 :root[data-theme="wiki"] .homepage > header > :not(.wiki-article-heading) { display: none; }
@@ -903,28 +925,9 @@ body { overflow-x: clip; }
   :root[data-theme="wiki"] .wiki-infobox { grid-column: 3; grid-row: 2 / span 6; align-self: start; margin-top: 1.8rem; }
 }
 
-/* A playful hover skin; the palette glyph keeps its neutral foreground. */
-/* A single angled rainbow sweep stays clipped inside the ghost button. */
-.vibe-trigger { position: relative; isolation: isolate; overflow: hidden; }
-.vibe-trigger::before {
-  content: "";
-  position: absolute;
-  inset: -50% -20%;
-  z-index: -1;
-  pointer-events: none;
-  background: linear-gradient(115deg, transparent 3%, #ff7bbbe6 15%, #ffd96bf2 32%, #9af0bbf2 49%, #82dafaf2 66%, #c1a0ffe6 83%, transparent 97%);
-  transform: translateX(110%);
-}
-.vibe-trigger:is(:hover, :focus-visible)::before {
-  animation: vibe-shimmer 550ms ease-out both;
-}
-@keyframes vibe-shimmer {
-  from { transform: translateX(110%); }
-  to { transform: translateX(-110%); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .vibe-trigger:is(:hover, :focus-visible)::before { animation: none; }
-}
+/* A quiet, two-pixel wave becomes more animated on hover or focus. */
+.vibe-trigger:hover, .vibe-trigger:focus-visible { background: transparent; }
+.vibe-trigger .vibe-wave { width: 24px; height: 24px; flex-shrink: 0; }
 
 @font-face { font-family: "Archivo Black"; src: url("/fonts/archivo-black/ArchivoBlack-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Libre Caslon Text"; src: url("/fonts/libre-caslon/LibreCaslonText.ttf") format("truetype"); font-weight: 400 700; font-style: normal; font-display: swap; }
@@ -949,8 +952,6 @@ body { overflow-x: clip; }
 :root[data-theme="mta"] .site-content h2 { font-family: "Archivo Black", Helvetica, sans-serif; font-weight: 400; border-top: 0.3rem solid currentColor; padding-top: 0.5rem; font-size: 1.65em; }
 :root[data-theme="mta"] .homepage > section { border-left: 7px solid #185bbb; padding-left: 1.3rem; position: relative; }
 :root[data-theme="mta"] .homepage > section::before { content: ""; position: absolute; width: 19px; height: 19px; left: -13px; top: 0.8rem; border: 4px solid #185bbb; border-radius: 50%; background: #fff; }
-:root[data-theme="mta"] .homepage > section:nth-of-type(3n) { border-left-color: #008542; }
-:root[data-theme="mta"] .homepage > section:nth-of-type(3n)::before { border-color: #008542; }
 :root[data-theme="mta"] .homepage article { border-bottom: 1px solid #484848; padding-block: 0.75rem 1.5rem; }
 :root[data-theme="mta"] .homepage article h3 { font-size: 1.3em; font-weight: 700; }
 :root[data-theme="mta"] .homepage article a { font-weight: 700; }
@@ -969,8 +970,8 @@ body { overflow-x: clip; }
 :root[data-theme="newspaper"] .homepage { max-width: 64rem; line-height: 1.7; }
 :root[data-theme="newspaper"] .homepage > header > :not(.newspaper-masthead) { display: none; }
 :root[data-theme="newspaper"] .newspaper-masthead { display: block; text-align: center; border-top: 2px solid currentColor; }
-.newspaper-masthead > p { font-style: italic; font-size: 0.7em; margin-top: 0.5rem; }
-:root[data-theme="newspaper"] .newspaper-masthead h1 { font-family: "Unifraktur Maguntia", "Old English Text MT", serif; font-weight: 400; font-size: clamp(2rem, 5.8vw, 4rem); line-height: 1.1; letter-spacing: 0; margin-block: 0.4rem 1rem; }
+.newspaper-masthead > .newspaper-author { font-family: "Libre Caslon Text", Georgia, serif; font-weight: 700; font-size: 2em; line-height: 1.2; margin-top: 0.5rem; }
+:root[data-theme="newspaper"] .newspaper-masthead .newspaper-title { font-family: "Unifraktur Maguntia", "Old English Text MT", serif; font-weight: 400; font-size: clamp(2rem, 5.8vw, 4rem); line-height: 1.1; letter-spacing: 0; margin-block: 0.4rem 1rem; }
 .newspaper-masthead > div { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.3em 1em; border-block: 3px double currentColor; padding-block: 0.45em; font-family: Arial, sans-serif; font-size: 0.5em; letter-spacing: 0.08em; }
 :root[data-theme="newspaper"] .site-content h2 { font-family: "Libre Caslon Text", Georgia, serif; font-size: 2em; letter-spacing: -0.04em; line-height: 1.2; font-weight: 700; border-top: 1px solid currentColor; padding-top: 0.65rem; }
 :root[data-theme="newspaper"] .homepage article h3 { font-size: 1.5em; font-weight: 700; letter-spacing: -0.035em; line-height: 1.2; }
@@ -1088,14 +1089,14 @@ body { overflow-x: clip; }
 :root[data-theme="mta"] .mta-station-heading h1,
 :root[data-theme="mta"] .site-content h2,
 :root[data-theme="mta"] .mta-station-heading > .mta-cities { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: -0.035em; }
-:root[data-theme="mta"] .homepage > section { --stop-color: #185bbb; padding-left: 2rem; border-left-color: var(--stop-color); }
+:root[data-theme="mta"] .homepage > section { --stop-color: #ee352e; padding-left: 2rem; border-left-color: var(--stop-color); }
 :root[data-theme="mta"] .homepage > section[aria-labelledby="introduction"] { --stop-number: "1"; }
-:root[data-theme="mta"] .homepage > section[aria-labelledby="currently"] { --stop-number: "2"; --stop-color: #008542; }
-:root[data-theme="mta"] .homepage > section[aria-labelledby="services"] { --stop-number: "3"; --stop-color: #ee352e; }
-:root[data-theme="mta"] .homepage > section[aria-labelledby="about"] { --stop-number: "4"; --stop-color: #f58220; }
-:root[data-theme="mta"] .homepage > section[aria-labelledby="more"] { --stop-number: "5"; --stop-color: #996633; }
-:root[data-theme="mta"] .homepage > section[aria-labelledby="connect"] { --stop-number: "6"; --stop-color: #b933ad; }
-:root[data-theme="mta"] .homepage > section::before { content: var(--stop-number); display: grid; place-items: center; width: 1.9rem; height: 1.9rem; left: -1.15rem; top: 0.55rem; border: 0; background: var(--stop-color); color: #fff; font: 700 1.2rem/1 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+:root[data-theme="mta"] .homepage > section[aria-labelledby="currently"] { --stop-number: "2"; --stop-color: #b933ad; }
+:root[data-theme="mta"] .homepage > section[aria-labelledby="services"] { --stop-number: "3"; --stop-color: #185bbb; }
+:root[data-theme="mta"] .homepage > section[aria-labelledby="about"] { --stop-number: "4"; --stop-color: #008542; }
+:root[data-theme="mta"] .homepage > section[aria-labelledby="more"] { --stop-number: "5"; --stop-color: #f58220; }
+:root[data-theme="mta"] .homepage > section[aria-labelledby="connect"] { --stop-number: "6"; --stop-color: #996633; }
+:root[data-theme="mta"] .homepage > section::before { content: var(--stop-number); display: grid; place-items: center; width: 1.9rem; height: 1.9rem; left: calc(-0.95rem - 3.5px); top: calc(0.15rem - 0.95rem); border: 0; background: var(--stop-color); color: #fff; font: 700 1.2rem/1 "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /* A static, optically balanced row that scales with its content column. */
 .client-logos { width: 100%; margin-top: 1.4rem; padding-block: 0.5rem; }
@@ -1121,3 +1122,425 @@ body { overflow-x: clip; }
 .lite-brite-board canvas { width: calc(100% - var(--theme-reserved-space)); }
 :root:is([data-theme="apple2"], [data-theme="casio"]) .device-frame::after { right: calc(var(--device-inset) + 18px + var(--theme-reserved-space)); }
 @media (prefers-reduced-motion: reduce) { body { transition: none; } }
+
+
+/* 1977 Boogie Van — enamel, warm black, and four sunset pinstripes. */
+@font-face {
+  font-family: "Cooper Black";
+  src: url("/fonts/cooper-black/CooperBlackStd.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root[data-theme="boogie-van"] {
+  --theme-font: "Cooper Black", "Cooper Std Black", Georgia, serif;
+  --retro-bg: 40 25% 97%;
+  --retro-fg: 22 28% 12%;
+  --retro-muted: 23 18% 36%;
+  --retro-surface: 38 26% 92%;
+  --retro-border: 30 20% 76%;
+  --retro-accent: 8 65% 35%;
+  --retro-hover: 22 28% 12%;
+  --retro-contrast: 40 25% 97%;
+  --boogie-red: #b52619;
+  --boogie-vermilion: #eb401b;
+  --boogie-orange: #f58a1f;
+  --boogie-gold: #f2bd39;
+  --boogie-stripes: linear-gradient(to bottom,
+    var(--boogie-red) 0% 25%, var(--boogie-vermilion) 25% 50%,
+    var(--boogie-orange) 50% 75%, var(--boogie-gold) 75% 100%);
+  color-scheme: light;
+}
+
+:root[data-theme="boogie-van"] body {
+  background-color: #2b1b13;
+}
+:root[data-theme="boogie-van"] .site-content {
+  --foreground: 40 25% 94%;
+  --muted-foreground: 38 37% 74%;
+  --link: 43 88% 65%;
+  --link-hover: 40 25% 97%;
+  --border: 25 25% 33%;
+  --muted: 23 30% 18%;
+  --card: 23 30% 18%;
+  --card-foreground: 40 25% 94%;
+  --primary: 43 88% 65%;
+  --primary-foreground: 22 39% 12%;
+  color: hsl(var(--foreground));
+  line-height: 1.75;
+  font-weight: 400;
+  font-synthesis: none;
+}
+:root[data-theme="boogie-van"] .site-content :is(h1, h2, h3, strong) {
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+:root[data-theme="boogie-van"] .homepage > header {
+  position: relative;
+  isolation: isolate;
+  padding-bottom: calc(25rem / 3);
+  color: #271c16;
+  --link: 5 76% 40%;
+}
+:root[data-theme="boogie-van"] .homepage > header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -4rem;
+  bottom: calc(22rem / 3);
+  left: 50%;
+  width: calc(100vw - var(--theme-reserved-space));
+  transform: translateX(-50%);
+  background: #f9f8f5;
+  pointer-events: none;
+}
+:root[data-theme="boogie-van"] .homepage > header::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 50%;
+  width: calc(100vw - var(--theme-reserved-space));
+  transform: translateX(-50%);
+  height: calc(22rem / 3);
+  background: url("/images/boogie-van-stripes.svg?v=3") center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+:root[data-theme="boogie-van"] .homepage > header > .home-identity {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+:root[data-theme="boogie-van"] .homepage > header > .home-identity h1 {
+  display: inline-block;
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  line-height: 1.15;
+  color: var(--boogie-red);
+  text-shadow: 1px 2px var(--boogie-gold);
+}
+:root[data-theme="boogie-van"] .site-content h2 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: var(--boogie-gold);
+}
+:root[data-theme="boogie-van"] .site-content h3 { font-size: 1.2rem; }
+:root[data-theme="boogie-van"] .site-content a {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+:root[data-theme="boogie-van"] .site-content footer::before {
+  content: "";
+  display: block;
+  height: 1.8rem;
+  background: var(--boogie-stripes);
+}
+:root[data-theme="boogie-van"] ::selection { background: var(--boogie-gold); color: #271c16; }
+
+/* The name is the primary heading; retain each theme's display treatment. */
+.home-identity h1 { font-size: 1.25em; font-weight: 700; line-height: 1.3; }
+:root[data-theme="lisa-frank"] .home-identity h1 { font-size: 1.65em; }
+:root[data-theme="kells"] .home-identity h1 { font-size: 1.5em; }
+
+
+/* Risograph: fluorescent spot inks, imperfect registration, uncoated stock. */
+@font-face {
+  font-family: "Riso Knockout";
+  src: url("/fonts/knockout/Knockout-HTF49-Liteweight.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Riso Knockout Wide";
+  src: url("/fonts/knockout/Knockout-HTF50-Welterweight.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root[data-theme="risograph"] {
+  --theme-font: "Riso Knockout Wide", Impact, sans-serif;
+  --retro-bg: 40 38% 93%;
+  --retro-fg: 247 42% 22%;
+  --retro-muted: 246 20% 39%;
+  --retro-surface: 40 38% 89%;
+  --retro-border: 247 35% 68%;
+  --retro-accent: 249 78% 46%;
+  --retro-hover: 325 92% 37%;
+  --retro-contrast: 40 38% 97%;
+  --riso-blue: #4936ed;
+  --riso-pink: #ff36ba;
+  --riso-orange: #ff5128;
+  --riso-yellow: #ffdc16;
+  color-scheme: light;
+}
+:root[data-theme="risograph"] body {
+  background-image: url("/images/riso-grain.svg");
+}
+:root[data-theme="risograph"] .site-content {
+  position: relative;
+  isolation: isolate;
+  line-height: 1.65;
+  text-shadow: none;
+}
+:root[data-theme="risograph"] .site-content :is(h1, h2, h3) {
+  font-family: "Riso Knockout", Impact, "Arial Narrow", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+  line-height: 1;
+  color: #7133a6;
+  text-shadow: 1px 0.5px #ef3d5280, -1px -0.5px #4936ed80;
+}
+:root[data-theme="risograph"] .home-identity h1 {
+  font-size: clamp(3.2rem, 13vw, 8rem);
+  color: #7133a6;
+  text-shadow: 2px 1px #ef3d5299, -1px -1px #4936ed99;
+}
+:root[data-theme="risograph"] .home-identity p {
+  margin-top: 0.7rem;
+  font-size: 1.15rem;
+}
+:root[data-theme="risograph"] .site-content h2 { font-size: clamp(2.7rem, 7vw, 3.7rem); }
+:root[data-theme="risograph"] .site-content h3 { font-size: 2rem; }
+:root[data-theme="risograph"] .homepage > header {
+  position: relative;
+  padding-bottom: 2rem;
+}
+:root[data-theme="risograph"] .homepage > header::before {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 12px;
+  background: linear-gradient(to bottom, #ff4b32cc 0 10px, transparent 10px),
+    linear-gradient(to bottom, transparent 0 2px, #ffdc16 2px 12px);
+  background-blend-mode: multiply;
+  pointer-events: none;
+}
+:root[data-theme="risograph"] .homepage > header::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 1.4rem;
+  width: clamp(4rem, 18vw, 9rem);
+  height: clamp(4rem, 18vw, 9rem);
+  background: repeating-linear-gradient(0deg, transparent 0 3px, #f9f4e655 3px 4px), var(--riso-yellow);
+  border-radius: 50%;
+  box-shadow: -0.4rem 0.25rem 0 var(--riso-pink), 0.35rem -0.15rem 0 var(--riso-blue);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+:root[data-theme="risograph"] #ab-logo-component {
+  color: var(--riso-blue);
+  filter: drop-shadow(2px 1px 0 #ff36ba) drop-shadow(-1px -1px 0 #ffdc16);
+}
+:root[data-theme="risograph"] .site-content a {
+  text-decoration-color: var(--riso-pink);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+:root[data-theme="risograph"] .client-logos { color: var(--riso-blue); }
+:root[data-theme="risograph"] ::selection { background: var(--riso-yellow); color: #302052; }
+
+/* Escher: isometric letterforms, folded planes, and a continuous drawing grid. */
+@font-face {
+  font-family: "Nabla";
+  src: url("/fonts/nabla/Nabla.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-palette-values --escher-ink {
+  font-family: "Nabla";
+  base-palette: 0;
+  override-colors: 0 #252e29, 1 #505c54, 2 #78847a, 3 #aab1a5,
+    4 #d3d5c8, 5 #e8e7da, 6 #f8f5e8, 7 #b9beb0, 8 #647268, 9 #34463c;
+}
+:root[data-theme="escher"] {
+  --theme-font: var(--font-geist-sans), sans-serif;
+  --retro-bg: 49 25% 91%;
+  --retro-fg: 144 12% 17%;
+  --retro-muted: 140 7% 35%;
+  --retro-surface: 48 27% 94%;
+  --retro-border: 135 10% 63%;
+  --retro-accent: 150 24% 25%;
+  --retro-hover: 150 35% 14%;
+  --retro-contrast: 48 27% 94%;
+  --radius: 0;
+  color-scheme: light;
+}
+:root[data-theme="escher"] body {
+  background-image: url("/images/escher-grid.svg");
+  background-size: 96px 166.276px;
+}
+:root[data-theme="escher"] .homepage {
+  max-width: 58rem;
+  padding: 10rem 3rem 14rem;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 1.5rem;
+  row-gap: clamp(12rem, 32vw, 22rem);
+}
+:root[data-theme="escher"] .homepage > header {
+  grid-column: 2 / 12;
+  position: relative;
+  padding: 2rem 0 3rem;
+  border-bottom: 1px solid hsl(var(--border));
+  transform: skewY(-30deg);
+}
+:root[data-theme="escher"] .dos-home-hero { display: none; }
+:root[data-theme="escher"] .home-identity h1,
+:root[data-theme="escher"] .site-content :is(h1, h2) {
+  font-family: "Nabla", var(--font-geist-sans), sans-serif;
+  font-palette: --escher-ink;
+  font-variation-settings: "EDPT" 125, "EHLT" 12;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+}
+:root[data-theme="escher"] .home-identity h1 {
+  font-size: clamp(2.5rem, 6.5vw, 4.8rem);
+  margin-bottom: 1.25rem;
+}
+:root[data-theme="escher"] .home-identity p {
+  margin-left: 38%;
+  padding-left: 1rem;
+  border-left: 2px solid hsl(var(--foreground));
+  transform: none;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+}
+:root[data-theme="escher"] .homepage > section:not([hidden]) {
+  grid-column: 2 / 10;
+  position: relative;
+  isolation: isolate;
+  margin-top: 0;
+  padding: 1.5rem 1.75rem 2rem;
+  background: hsl(var(--retro-surface));
+  border: 1px solid hsl(var(--foreground));
+  transform: skewY(-30deg);
+  transform-origin: center;
+}
+:root[data-theme="escher"] .homepage > section:nth-of-type(2n):not([hidden]) {
+  grid-column: 4 / 12;
+  transform: skewY(30deg);
+}
+/* The face baselines sit at ±30° to horizontal (60° to vertical),
+   matching the triangular grid. Text inherits the same plane as its box. */
+:root[data-theme="escher"] .homepage > section:not([hidden])::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  right: -1rem;
+  width: 1rem;
+  transform: skewY(49.106605deg);
+  transform-origin: left top;
+  background: #78847a;
+  border: 1px solid hsl(var(--foreground));
+  pointer-events: none;
+}
+:root[data-theme="escher"] .homepage > section:nth-of-type(2n):not([hidden])::before {
+  right: auto;
+  left: -1rem;
+  transform-origin: right top;
+  transform: skewY(-49.106605deg);
+  background: #aab1a5;
+}
+:root[data-theme="escher"] .site-content h2 { font-size: clamp(1.5rem, 3.3vw, 2.3rem); }
+:root[data-theme="escher"] .site-content h3 {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+:root[data-theme="escher"] .site-content a { text-underline-offset: .2em; }
+:root[data-theme="escher"] .homepage > section p { font-size: .9rem; line-height: 1.7; }
+:root[data-theme="escher"] .site-content footer { border-top: 1px solid hsl(var(--border)); }
+:root[data-theme="escher"] ::selection { background: #344f3f; color: #faf7e9; }
+@media (max-width: 640px) {
+  :root[data-theme="escher"] .homepage { padding: 7rem 1.5rem 10rem; column-gap: 0; row-gap: 11rem; }
+  :root[data-theme="escher"] .homepage > header { grid-column: 1 / 13; }
+  :root[data-theme="escher"] .homepage > section:not([hidden]) { grid-column: 1 / 12; padding: 1.25rem; }
+  :root[data-theme="escher"] .homepage > section:nth-of-type(2n):not([hidden]) { grid-column: 2 / 13; }
+}
+
+/* Halftone ink dropout stays inside the letterforms and offset ink shadows. */
+:root[data-theme="risograph"] .site-content h1,
+:root[data-theme="risograph"] #ab-logo-component,
+:root[data-theme="risograph"] .homepage > header::before,
+:root[data-theme="risograph"] .site-content hr,
+:root[data-theme="risograph"] .homepage > section:not([hidden]):has(h2) ~ section:not([hidden]):has(h2)::before {
+  -webkit-mask-image: url("/images/riso-type-dots.svg");
+  mask-image: url("/images/riso-type-dots.svg");
+  -webkit-mask-size: 2px 2px;
+  mask-size: 2px 2px;
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
+}
+:root[data-theme="risograph"] .site-content {
+  font-size: 1.15rem;
+  letter-spacing: 0.015em;
+  font-synthesis: none;
+}
+
+:root[data-theme="risograph"] .site-content h3 .text-sm {
+  text-shadow: none;
+  text-transform: none;
+  font-family: "Riso Knockout Wide", Impact, sans-serif;
+}
+:root[data-theme="risograph"] .site-content hr {
+  height: 3px;
+  border: 0;
+  background: #ffdc16;
+  box-shadow: 0 -1px #ff4b32cc;
+}
+
+:root[data-theme="risograph"] .site-content :is(p, li, small) {
+  color: #34328c;
+}
+:root[data-theme="risograph"] .homepage > section:not([hidden]):has(h2) ~ section:not([hidden]):has(h2)::before {
+  content: "";
+  display: block;
+  height: 12px;
+  margin-bottom: 2rem;
+  background: linear-gradient(to bottom, #ff4b32cc 0 10px, transparent 10px),
+    linear-gradient(to bottom, transparent 0 2px, #ffdc16 2px 12px);
+  background-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* Misregistered spot-color blocks wrap naturally with inline links. */
+:root[data-theme="risograph"] .site-content a:not(#eye):not(.client-logo-row a) {
+  color: #302477;
+  text-decoration: none;
+  background: #ffdc1699;
+  box-shadow: 2px 2px 0 #ff36ba66;
+  padding-inline: 0.12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-color 150ms, box-shadow 150ms;
+}
+:root[data-theme="risograph"] .site-content a:not(#eye):not(.client-logo-row a):is(:hover, :focus-visible) {
+  background: #ffdc16;
+  box-shadow: 3px 3px 0 #ff36ba99;
+}
+
+/* Light and dark headings step up on an eight-pixel type scale. */
+:root:is(:not([data-theme]), [data-theme="light"], [data-theme="dark"]) .site-content h1 {
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+:root:is(:not([data-theme]), [data-theme="light"], [data-theme="dark"]) .site-content h2 {
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+:root:is(:not([data-theme]), [data-theme="light"], [data-theme="dark"]) .site-content h3 {
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
