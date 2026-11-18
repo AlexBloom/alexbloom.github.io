@@ -28,7 +28,7 @@ export function LiteBrite() {
     const element = canvas.current;
     const context = element.getContext("2d");
     if (!context) return;
-    const source: { text: string; href?: string }[] = [
+    const source: { text: string; href?: string; linkText?: string }[] = [
       { text: "Alex Bloom" }, { text: "Designer / PHL/NYC" },
     ];
     document.querySelectorAll(".site-content main h2, .site-content main h3, .site-content main p, .site-content main li, .site-content main small, .site-content main a, .site-content footer p").forEach((node) => {
@@ -37,7 +37,7 @@ export function LiteBrite() {
       const copy = node.cloneNode(true) as Element;
       copy.querySelectorAll(".kells-initial").forEach((art) => art.remove());
       const text = copy.textContent?.replace(/\s+/g, " ").trim();
-      if (text) source.push({ text, href: link?.getAttribute("href") ?? undefined });
+      if (text) source.push({ text, href: link?.getAttribute("href") ?? undefined, linkText: link?.textContent?.replace(/\s+/g, " ").trim().toUpperCase() });
     });
     let pegs: Peg[] = [];
     let step = 5;
@@ -92,11 +92,22 @@ export function LiteBrite() {
           line += (line ? " " : "") + rest;
         }
         if (line) lines.push(line);
+        let cursor = 0;
+        const fullText = block.text.toUpperCase();
+        const linkStart = block.linkText ? fullText.indexOf(block.linkText) : -1;
+        const linkEnd = linkStart + (block.linkText?.length ?? 0);
         lines.forEach((text) => {
+          const lineStart = fullText.indexOf(text, cursor);
+          cursor = lineStart + text.length;
           ink.clearRect(0, 0, glyph.width, 12);
           ink.font = "bold 10px monospace";
           ink.fillStyle = "white";
           Array.from(text).forEach((character, index) => ink.fillText(character, index * 7, 9));
+          if (block.href && linkStart >= 0 && lineStart >= 0) {
+            const start = Math.max(0, linkStart - lineStart);
+            const end = Math.min(text.length, linkEnd - lineStart);
+            if (end > start) ink.fillRect(start * 7, 11, (end - start) * 7, 1);
+          }
           const pixels = ink.getImageData(0, 0, glyph.width, 12).data;
           for (let y = 0; y < 12; y++) for (let x = 0; x < glyph.width; x++) {
             if (pixels[(y * glyph.width + x) * 4 + 3] > 110) pegs.push({ x, y: row + y, color: colors[index % colors.length], href: block.href });

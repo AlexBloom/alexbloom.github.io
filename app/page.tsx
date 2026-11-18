@@ -52,7 +52,7 @@ export default function HomePage() {
           <ul>
             <li>Building AI underwriting tools at <a href="https://www.homevision.co/">HomeVision</a>.</li>
             <li>Crafting a financial OS for businesses of one at <a href="https://lettuce.co">Lettuce</a>.</li>
-            <li>Special projects at Legacy Systems.</li>
+            <li>Exploring new <a href="https://github.com/AlexBloom">design tools</a>.</li>
           </ul>
         </ThemeSection>
 

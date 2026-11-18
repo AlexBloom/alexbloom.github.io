@@ -2,7 +2,7 @@
 export const serviceDetails = {
   "office-hours": {
     "format": "Live 1:1 · One hour",
-    "intro": "Bring one concrete design decision. We’ll use the hour to examine the options, make the trade-offs explicit, and choose a path forward.",
+    "intro": "Bring one concrete design decision or a product / feature to audit and critique. We’ll use the hour to examine the options, make the trade-offs explicit, and choose a path forward.",
     "steps": [
       "Send the decision, relevant screens or prototypes, and any constraints ahead of time.",
       "We compare the options against user needs, business goals, and what your team can realistically build.",
