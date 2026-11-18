@@ -16,7 +16,7 @@ export const services = [
     price: "$500",
     paragraphs: [
       "Staff-level perspective on one specific design decision.",
-      "In a one-hour 1:1, we work through your problems and options and land on a recommended path. We can review your product / feature, talk through hiring, or getting more out of your design function.",
+      "In a one-hour 1:1, we work through your problems and options and land on a recommended path. We can audit and critique your product / feature, talk through hiring, or explore how to get more out of your design function.",
     ],
     action: "Book",
   },

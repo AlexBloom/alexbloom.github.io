@@ -11,7 +11,6 @@ export const pausedServices = [
     ],
     action: "Book",
   },
-
   {
     slug: "narrative",
     title: "Narrative",
@@ -37,7 +36,6 @@ export const pausedServiceDetails = {
       "outcome": "A critique could identify where the flow asks for too much too early, recommend a shorter path to value, and prioritize the changes to try first."
     }
   },
-
   "narrative": {
     "format": "Live workshop · 1.5 hours",
     "intro": "A working session to clarify what your company does, why it matters, and how to tell that story to a specific audience.",

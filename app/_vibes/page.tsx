@@ -1,3 +1,4 @@
+import { ProgressiveList } from "@/components/progressive-list";
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 
@@ -47,7 +48,7 @@ const vibes = [
   "IMG_2506.webp",
   "IMG_2508.webp",
   "IMG_2512.webp",
-  "IMG_2799.gif",
+  "IMG_2799.gif.webp",
   "IMG_3048.webp",
   "IMG_3614.webp",
   "IMG_3655.webp",
@@ -79,7 +80,7 @@ export default function VibesPage() {
         </p>
       </div>
 
-      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
+      <ProgressiveList initialCount={12} batchSize={12} label="photos" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
         {vibes.map((file) => (
           <li key={file} className="relative aspect-square overflow-hidden rounded-lg bg-muted">
             <img
@@ -90,7 +91,7 @@ export default function VibesPage() {
             />
           </li>
         ))}
-      </ul>
+      </ProgressiveList>
     </div>
   );
 }
