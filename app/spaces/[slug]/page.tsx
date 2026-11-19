@@ -29,7 +29,7 @@ export default async function SpacePage({ params }: Props) {
   return (
     <div className="mx-auto max-w-[960px] px-6 py-16">
       <p className="mb-8 text-sm">
-        <Link href="/spaces" className="underline underline-offset-4 hover:opacity-65">← All spaces</Link>
+        <Link href="/spaces" className="underline underline-offset-4 hover:opacity-65">← Design IRL</Link>
       </p>
       <header className="mb-10 space-y-4">
         <h1 className="text-3xl font-bold leading-snug tracking-tight lg:text-5xl">{space.title}</h1>
@@ -55,7 +55,7 @@ export default async function SpacePage({ params }: Props) {
         <div className="mb-10 max-w-2xl space-y-6">
           {space.story.map((section) => (
             <section key={section.title}>
-              <h2 className="text-lg font-semibold tracking-tight">{section.title}</h2>
+              {section.title && <h2 className="text-lg font-semibold tracking-tight">{section.title}</h2>}
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{section.text}</p>
             </section>
           ))}
@@ -71,9 +71,9 @@ export default async function SpacePage({ params }: Props) {
           ))}
         </ul>
       )}
-      <SpaceGallery images={space.images} videos={space.videos} />
+      <SpaceGallery images={space.images} videos={space.videos} showGroups={space.showGroups} hideCaptions={space.hideCaptions} />
       <p className="mt-12 text-sm">
-        <Link href="/spaces" className="underline underline-offset-4 hover:opacity-65">← All spaces</Link>
+        <Link href="/spaces" className="underline underline-offset-4 hover:opacity-65">← Design IRL</Link>
       </p>
     </div>
   );
