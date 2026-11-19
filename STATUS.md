@@ -1,11 +1,11 @@
 # Project status
 
-Production is live at https://alexbloom.design/ (verified November 17, 2026).
+Production is live at https://alexbloom.design/ (verified November 19, 2026).
 
-- Development branch: `dev`; current site release commit: `510e9f6`.
-- Production branch: `master`; released merge: `e8da3b793d7297869b899794e5d9238105f3e11f`.
-- Release PR: https://github.com/AlexBloom/alexbloom.github.io/pull/20
-- Successful deployment: https://github.com/AlexBloom/alexbloom.github.io/actions/runs/44231581717
+- Development branch: `dev`; current site release commit: `c09aad7`.
+- Production branch: `master`; released merge: `4b34f4a76b781efd04799691981d66552e18200a`.
+- Release PR: https://github.com/AlexBloom/alexbloom.github.io/pull/21
+- Successful deployment: https://github.com/AlexBloom/alexbloom.github.io/actions/runs/44611155679
 - Hosting: GitHub Pages Actions, existing custom domain and HTTPS preserved.
 - Deployment requires explicit user authorization, promotion through a PR, and a manual workflow dispatch on master. Dev pushes and PRs only build.
 - The existing Pages environment permissions were retained. An optional environment branch-policy update was rejected by automatic approval review and was not applied.
@@ -20,3 +20,5 @@ Service copy update released November 6, 2026: Career Sessions, Office Hours, an
 Theme release verified November 9, 2026: compact animated wave with touch-safe activation, B-Sides menu grouping, selection-only left-to-right wipe, Inter Tight variable font for light/dark themes, heading hierarchy, MTA marker alignment/colors, rainbow Apple bezel mark, and Boogie Van/Risograph/Escher themes. Local production export, GitHub dev/PR builds, and Rams Design Review passed. The first Pages publish timed out syncing files; retrying the failed deployment job succeeded. Production homepage content, all 14 referenced font/CSS/JavaScript assets, and new theme artwork returned HTTP 200. Verification was HTTP-based; no new visual browser review was performed during this release.
 
 Spaces/media/theme release verified November 17, 2026: expanded project galleries and archive content, stacked Spaces index, scroll-triggered blended photo/video galleries, optimized WebP/H.264 media, project years and credits, plus Lite Brite/MTA/Boogie Van and heading fixes. Release commit `510e9f6` promoted through PR #20. Both dev and PR builds passed; production deployment `44231581717` succeeded. The duplicate queued dispatch `44231607254` was canceled. Production homepage, Spaces index, Murphy Wall, Silver Shaka, Slot Shelving, and static stripe artwork returned HTTP 200 with expected release content. Local desktop/mobile and theme browser checks passed before release. Arches renovation remains hidden from index/static routes in the released content.
+
+Design IRL release verified November 19, 2026: renamed section and homepage link, restored cards, consolidated Furniture, archived Pantry Remodel, refined Woolley Market and Murphy Wall, and trimmed/resequenced Airstream. Landscape photos span full width; portrait pairs and explicit diagram/chassis pairs retain mobile stacking. Local build, lint, TypeScript, and browser checks passed. PR #21 merged; deployment 44611155679 succeeded. Homepage, index, Furniture, Airstream, and Murphy Wall returned HTTP 200 with expected release content.
