@@ -88,7 +88,7 @@ export default function HomePage() {
           <ul>
             <li><Link href="/bookshelf">Books</Link></li>
             {/* Tools is temporarily hidden while its page is being developed. */}
-            <li><Link href="/spaces">Spaces</Link></li>
+            <li><Link href="/spaces">Design IRL</Link></li>
             <li><a href="https://www.figma.com/deck/L956p48owB2lqLKA0ulN2i/Alex-Bloom---Design-Samples-2025?node-id=0-1&t=AUQeoePTY8qXAe1Y-1" target="_blank" rel="noopener noreferrer">Work Samples</a></li>
           </ul>
         </ThemeSection>
